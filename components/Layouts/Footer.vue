@@ -9,7 +9,7 @@
         <mdb-col col="12" sm="3" class="mt-5 col-1">
           <img
             :src="brand"
-            :style="`${$device.isMobile ? 'width:450px;' : ''}`"
+            :style="`${$device.isMobile ? 'width:450px;' : 'width:700px;'}`"
           />
 
           <p class="mb-0">
@@ -50,7 +50,7 @@
 </template>
 
 <script>
-import LogoBrand from "~/assets/images/logo/brand.svg";
+import LogoBrand from "~/assets/images/logo/new-logo.png";
 export default {
   data() {
     return {
