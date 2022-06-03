@@ -5,7 +5,7 @@
     <mdb-container>
       <mdb-row class="justify-content-center mt-5">
         <mdb-col lg="12" sm="12" xs="12">
-          <HomepageHeaderCard :bg="bg_image" :items="items" :token="token" />
+          <HomepageNewHeader :bg="bg_image" :items="items" :token="token" />
         </mdb-col>
       </mdb-row>
 
@@ -28,6 +28,10 @@
     <HomepageParallaxHome />
     <!-- berita -->
     <HomepageBerita :lists="lists.list_berita" />
+
+    <!-- panel footer -->
+    <HomepagePanelFooterTarget />
+    <!-- End panel footer -->
     <!-- visi misi content -->
     <HomepageVisiMisi />
     <!-- End out container -->

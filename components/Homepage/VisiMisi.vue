@@ -91,6 +91,7 @@ export default {
 }
 
 .visi__misi:before {
-  background-color: #004899;
+  /*background-color: #004899;*/
+  background-color: #048281;
 }
 </style>

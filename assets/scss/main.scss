@@ -5,11 +5,11 @@
 
 // Component HOMEPAGE
 
-// Jumbotron component
+// Jumbotron component / Header
 .jumbotron__home{
-	margin-top: 2.5rem;
+	margin-top: 2.5rem!important;
+	margin-bottom: 9.5rem!important;
 	object-fit: cover;
-	background-color:$color-secondary;
 	background-repeat: no-repeat;
 	background-position: center;
 	-webkit-background-size: cover;
@@ -19,35 +19,16 @@
 	height: 550px;
 	position:relative;
 
-	&:after{
-		content: '';
-		display: block;
-		width: 100%;
-		height: 100%;
-		margin-left: -1rem;
-		background-image: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0));
-		position: absolute;
-		bottom:0;
-		border-radius: 10px;
-	}
 	@include jumbotron_mobile($default);
 }
-
 .banner{
-	z-index: 1;
-	.jumbotron__home{
-		margin-top: 3.5rem;
-		width: $bg-jumbo-width;
-		max-height: $bg-jumbo-height;
-		position:relative;
-
-		@include jumbotron_mobile($default);
+	margin-top:-7rem;
+	margin-bottom: 8rem;
+	img{
+		object-fit:cover;
+		width: 100%;
+		height:30vh;
 	}
-	position: relative;
-	// img{
-	// 	object-fit: cover;
-	// 	max-width: 100%;
-	// }
 	.carousel-control-prev-icon,
 	.carousel-control-next-icon {
 		height: 40px !important;
@@ -65,42 +46,9 @@
 			background-color: linear-gradient(to top, $color-primary, $bg-second-primary);
 		}
 		.active{
-			background-color: $bg-second-primary !important;	
+			background-color: $primary-button !important;	
 		}
 	}
-	.container{
-		z-index: 1000;
-		max-width: 1000px;
-		position: absolute;
-		left: 0;
-		right: 0;
-		top: 75%;
-		text-align: left;
-		transform: translateY(-50%);
-		h2, p{
-			text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.5);
-			font-weight: 600;
-		}
-		h2{
-			font-size: 13px;
-		}
-		p{
-			font-size:10px;
-		}
-		&:after{
-			content: "";
-			display: block;
-			width: 100%;
-			left:25px;
-			top:0;
-			position:absolute;
-			background-image: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5));
-		}
-	}
-}
-.carousel{
-	border-radius: 10px;
-	overflow: hidden;
 }
 
 .my__btn-primary{
@@ -108,21 +56,25 @@
 }
 
 @media (min-width: 992px) {
-	.banner{
-		z-index: 1;
-		.jumbotron__home{
-			margin-top: 5.5rem;
-			margin-bottom: 8rem;
-			width: $bg-jumbo-width;
-			max-height: $bg-jumbo-height;
-			position:relative;
+	.jumbotron__home{
+		margin-top: 5rem!important;
+		margin-bottom: 13rem!important;
+		width: $bg-jumbo-width;
+		max-height: $bg-jumbo-height;
+		position:relative;
 
-			@include jumbotron_desktop($default);
-		}
-		position: relative;
+		@include jumbotron_desktop($default);
+	}
+	.banner{
+		margin-top:3rem;
+		margin-bottom: 1rem;
+		margin-left: 4rem;
 		img{
-			max-width: 100%;
+			object-fit:contain;
+			width: 100%;
+			height:75vh;
 		}
+
 		.carousel-control-prev-icon,
 		.carousel-control-next-icon {
 			height: 50px !important;
@@ -136,47 +88,19 @@
 			z-index: 9999;
 			li{
 				width:20px;
-				height: 20px;
+				height:20px;
 				background-color: linear-gradient(to top, $color-primary, $bg-second-primary);
 			}
 			.active{
-				background-color: $bg-second-primary !important;	
+				background-color: $primary-button!important;	
 			}
 		}
+	}
 
-		.container{
-			h2, p{
-				text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.5);
-				font-weight: 700;
-				font-size: 21px;
-			}
-			h2{
-				margin-top:2rem;
-			}
-			p{
-				width: 600px;
-				text-align: justify;
-				font-size: 12px;
-				line-height: 31px;
-			}
-			button{
-				background-color:$color-primary;
-				font-size: 14px;
-				border-radius:8px;
-			}
-			
-			.my__btn-primary{
-				font-size:14px;
-				font-weight: 600;
-				line-height: 21.79px;
-				@include button_primary;
-			}
-		}
+	.my__btn-primary{
+		@include button_primary;
 	}
-	.carousel{
-		border-radius: 10px;
-		overflow: hidden;
-	}
+
 }
 
 // List pelatihan&webinar component&ppkc component
@@ -716,7 +640,7 @@
 	background-attachment: scroll;
 	text-align: center;
 	margin:0;
-	z-index: -1;
+	// z-index: -1;
 	&:before{
 		position: absolute;
 		content: "";
@@ -729,12 +653,11 @@
 		opacity: 0.6;
 	}
 	.visi-misi__content{
-		color:$default!important;
+		color:$default;
 		// margin-left: -5rem;
 		width:80%;
 		z-index: 9999;
 		h1{
-			color:$default!important;
 			font-size:27px;
 			font-weight: 700;
 			line-height: 32.68px;
@@ -819,6 +742,7 @@
 	}
 }
 // End visi-misi content
+
 
 // Visi & Misi Content
 .panel__footer{

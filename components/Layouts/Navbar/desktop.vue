@@ -13,7 +13,7 @@
     <mdb-navbar-brand>
       <nuxt-link to="/">
         <!-- <MoleculesLayoutMoleculesBrand /> -->
-        <img :src="require('~/assets/images/logo/new-logo.png')" class="img-fluid">
+        <img :src="require('~/assets/images/logo/new-logo-2.png')" class="img-fluid">
       </nuxt-link>
     </mdb-navbar-brand>
     <mdb-navbar-toggler>
