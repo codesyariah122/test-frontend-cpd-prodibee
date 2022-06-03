@@ -5,7 +5,7 @@ export default {
   // mode: 'spa',
   // target: 'static',
   loading: {
-    color: "#2f80ed",
+    color: "#048281",
     height: "15px",
   },
   generate: {
