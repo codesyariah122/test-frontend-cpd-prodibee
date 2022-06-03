@@ -93,7 +93,7 @@ export default {
           ctaText: "Start Chat",
           borderRadius: "25",
           autoShow: false,
-          phoneNumber: "628164851356",
+          phoneNumber: "6281318288129",
         },
       };
       s.onload = function () {

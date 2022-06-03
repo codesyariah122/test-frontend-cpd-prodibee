@@ -43,7 +43,7 @@ export default {
       parallax: {
         data: {
           context: {
-            heading: "Unduh Aplikasi CPD Online",
+            heading: "Unduh Aplikasi Tedika",
             text: "Dapatkan informasi pelatihan aktual dan berdiskusi sesama peserta pelatihan",
           },
           bg: ParallaxImage,

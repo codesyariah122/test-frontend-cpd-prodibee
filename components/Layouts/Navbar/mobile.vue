@@ -139,18 +139,11 @@
     data() {
       return {
         links: [
-          { id: 1, name: "Sejarah", link: "/cpd/sejarah" },
-          { id: 2, name: "Visi & Misi", link: "/cpd/visi-misi" },
-          {
-            id: 3,
-            name: "Struktur Organisasi",
-            link: "/cpd/struktur-organisasi",
-          },
-          { id: 4, name: "Fasilitas", link: "/cpd/fasilitas" },
-          { id: 5, name: "Berita", link: "/cpd/berita"},
-          { id: 6, name: "Testimoni", link: "/cpd/testimoni" },
-          { id: 7, name: "Fasilitator", link: "/cpd/fasilitator" },
-          { id: 8, name: "Yayasan & Direksi", link: "/cpd/yayasan-direksi" },
+          { id: 1, name: "Tentang kami", link: "/tedika/tentang-kami"},
+          { id: 2, name: "Produk/Layanan", link: "/tedika/product-layanan"},
+          { id: 3, name: "Berita", link: "/tedika/berita"},
+          { id: 4, name: "Testimoni", link: "/tedika/testimoni" },
+          { id: 5, name: "Fasilitator", link: "/tedika/fasilitator" }
         ],
       }
     },

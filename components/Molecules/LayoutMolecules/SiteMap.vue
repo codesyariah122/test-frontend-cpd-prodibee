@@ -6,27 +6,27 @@
         <ul class="list-group">
           <li class="list-group-item bg-transparent border-0 p-0 mb-2">
             <a href="tel:+62246580019">
-              Telepon 021-3101870
+              <b>Telepon:</b> 0813 1828 8129
             </a>
           </li>
-          <li class="list-group-item bg-transparent border-0 p-0 mb-2">
+          <!-- <li class="list-group-item bg-transparent border-0 p-0 mb-2">
             <a href="">
-              Fax 021-3101870
+              <b>Fax:</b> 021-3101870
             </a>
           </li>
           <li class="list-group-item bg-transparent border-0 p-0 mb-2">
             <a href="tel:+6282111552424">
-              Hotline 021-3904441
+              <b>Hotline:</b> 021-3904441
             </a>
           </li>
           <li class="list-group-item bg-transparent border-0 p-0 mb-2">
             <a href="tel:62246593452">
-              Call Center 021-3904441 ext 2437
+              <b>Call Center:</b> 021-3904441 ext 2437
             </a>
-          </li>
+          </li> -->
           <li class="list-group-item bg-transparent border-0 p-0 mb-2">
             <a href="mailto:rs@ppkcsultanagung.co.id">
-              Email mypasiencare@gmail.com
+              <b>Email:</b> marketing@tedika.id
             </a>
           </li>
         </ul>
@@ -39,17 +39,17 @@
         <ul class="list-group">
           <li class="list-group-item bg-transparent border-0 p-0 mb-5">
             <a href="https://id-id.facebook.com/people/Pusat-Pengembangan-Kesehatan-Carolus-PPKC/100063841689266/">
-             <img :src="require('~/assets/icons/socials/facebook.svg')">&nbsp;CPD Online
+             <img :src="require('~/assets/icons/socials/facebook.svg')">&nbsp;tedika.indonesia
             </a>
           </li>
           <li class="list-group-item bg-transparent border-0 p-0 mb-5">
             <a href="http://ppkcarolus.com/">
-              <img :src="require('~/assets/icons/socials/twitter.svg')">&nbsp;@cpdonline
+              <img :src="require('~/assets/icons/socials/twitter.svg')">&nbsp;@tedika.indonesia
             </a>
           </li>
           <li class="list-group-item bg-transparent border-0 p-0 mb-5">
             <a href="https://www.instagram.com/ppkc_carolus/?hl=id">
-              <img :src="require('~/assets/icons/socials/instagram.svg')">&nbsp;@cpdonline
+              <img :src="require('~/assets/icons/socials/instagram.svg')">&nbsp;@tedika.indonesia
             </a>
           </li>
         </ul>
@@ -102,8 +102,8 @@
           <div class="col-sm-12">
             <ul class="list-group">
              <li class="list-group-item bg-transparent border-0 p-0 mb-3">
-              <a href="http://ppkcarolus.com/"></i>
-                  Situs Resmi CPD Online <mdb-icon icon="external-link-alt" size="sm" />
+              <a href="http://tedika.id"></i>
+                  Situs Resmi Tedika <mdb-icon icon="external-link-alt" size="sm" />
                 </a>
               </li>
             </ul>
