@@ -43,7 +43,7 @@
       </mdb-nav-item>
       <mdb-dropdown tag="li" class="nav-item">
         <mdb-dropdown-toggle tag="a" navLink slot="toggle" waves-fixed class="no-caret">
-          Tentang Diklat <mdb-icon icon="external-link-alt" />
+          Tentang Tedika <mdb-icon icon="external-link-alt" />
         </mdb-dropdown-toggle>
         <mdb-dropdown-menu :class="`${$device.isDesktop ? 'mt-4' : ''}`">
           <mdb-dropdown-item v-for="item in links" :key="item.id">
@@ -53,9 +53,7 @@
           </mdb-dropdown-item>
         </mdb-dropdown-menu>
       </mdb-dropdown>
-      <mdb-nav-item waves-fixed>
-        <nuxt-link to="/ppkc/berita" tag="li" navLink > Berita </nuxt-link>
-      </mdb-nav-item>
+
     </mdb-navbar-nav>
     <!-- check user login -->
 
@@ -94,7 +92,7 @@
             >
             <b-avatar v-if="profiles.photo !== 'https://api.ppkc-online.com/image-profiles/null'" variant="primary" :src="profiles.photo" size="1.7rem"></b-avatar>
             <b-avatar v-else variant="primary" :text="slug.charAt(0)" size="1.7rem"></b-avatar> 
-              &nbsp; <b>{{ profiles.nama }}</b>
+            &nbsp; <b>{{ profiles.nama }}</b>
           </nuxt-link>
           <!-- <mdb-icon far icon="user-circle" size="lg"/>  -->
                     <!-- <a :href="`/profile/${$username(slug)}`" class="text-center">
@@ -141,18 +139,19 @@
     data() {
       return {
         links: [
-        { id: 1, name: "Sejarah", link: "/ppkc/sejarah" },
-        { id: 2, name: "Visi & Misi", link: "/ppkc/visi-misi" },
-        {
-          id: 3,
-          name: "Struktur Organisasi",
-          link: "/ppkc/struktur-organisasi",
-        },
-        { id: 4, name: "Fasilitas", link: "/ppkc/fasilitas" },
-        { id: 5, name: "Testimoni", link: "/ppkc/testimoni" },
-        { id: 6, name: "Fasilitator", link: "/ppkc/fasilitator" },
-        { id: 7, name: "Yayasan & Direksi", link: "/ppkc/yayasan-direksi" }
-        ]
+          { id: 1, name: "Sejarah", link: "/cpd/sejarah" },
+          { id: 2, name: "Visi & Misi", link: "/cpd/visi-misi" },
+          {
+            id: 3,
+            name: "Struktur Organisasi",
+            link: "/cpd/struktur-organisasi",
+          },
+          { id: 4, name: "Fasilitas", link: "/cpd/fasilitas" },
+          { id: 5, name: "Berita", link: "/cpd/berita"},
+          { id: 6, name: "Testimoni", link: "/cpd/testimoni" },
+          { id: 7, name: "Fasilitator", link: "/cpd/fasilitator" },
+          { id: 8, name: "Yayasan & Direksi", link: "/cpd/yayasan-direksi" },
+        ],
       }
     },
 

@@ -40,7 +40,7 @@
           waves-fixed
           class="no-caret"
           >
-          Tentang CPD Online <mdb-icon icon="external-link-alt" size="md" />
+          Tentang Tedika <mdb-icon icon="external-link-alt" size="md" />
         </mdb-dropdown-toggle>
         <mdb-dropdown-menu :class="`${$device.isDesktop ? 'mt-3' : ''}`">
           <mdb-dropdown-item v-for="item in links" :key="item.id">
@@ -50,9 +50,7 @@
           </mdb-dropdown-item>
         </mdb-dropdown-menu>
       </mdb-dropdown>
-      <mdb-nav-item waves-fixed>
-        <nuxt-link to="/ppkc/berita" tag="li" navLink > Berita </nuxt-link>
-      </mdb-nav-item>
+      
     </mdb-navbar-nav>
   </mdb-container>
 </mdb-dropdown-menu>
@@ -122,17 +120,18 @@ export default {
   data() {
     return {
       links: [
-        { id: 1, name: "Sejarah", link: "/ppkc/sejarah" },
-        { id: 2, name: "Visi & Misi", link: "/ppkc/visi-misi" },
+        { id: 1, name: "Sejarah", link: "/cpd/sejarah" },
+        { id: 2, name: "Visi & Misi", link: "/cpd/visi-misi" },
         {
           id: 3,
           name: "Struktur Organisasi",
-          link: "/ppkc/struktur-organisasi",
+          link: "/cpd/struktur-organisasi",
         },
-        { id: 4, name: "Fasilitas", link: "/ppkc/fasilitas" },
-        { id: 5, name: "Testimoni", link: "/ppkc/testimoni" },
-        { id: 6, name: "Fasilitator", link: "/ppkc/fasilitator" },
-        { id: 7, name: "Yayasan & Direksi", link: "/ppkc/yayasan-direksi" },
+        { id: 4, name: "Fasilitas", link: "/cpd/fasilitas" },
+        { id: 5, name: "Berita", link: "/cpd/berita"},
+        { id: 6, name: "Testimoni", link: "/cpd/testimoni" },
+        { id: 7, name: "Fasilitator", link: "/cpd/fasilitator" },
+        { id: 8, name: "Yayasan & Direksi", link: "/cpd/yayasan-direksi" },
       ],
     };
   },
