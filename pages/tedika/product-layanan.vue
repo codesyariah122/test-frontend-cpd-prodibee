@@ -1,5 +1,5 @@
 <template>
 	<div>
-		<h1>Product / Layanan</h1>
+		<h1>Produk / Layanan</h1>
 	</div>
 </template>
