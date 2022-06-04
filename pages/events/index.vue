@@ -57,6 +57,12 @@
 					if(data.list_kegiatan_terdekat.length > 0){
 						this.empty = false
 						this.lists = data.list_kegiatan_terdekat
+						console.log(this.lists.length)
+						if(this.lists.length < 9){
+							this.listToShow = 3
+						}else{
+							this.listToShow = 9
+						}
 						// if (this.lists.length <= this.listToShow) {
 						// 	SampleEvents.map(d => {
 						// 		this.lists.push(d)
