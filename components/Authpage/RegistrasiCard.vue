@@ -9,7 +9,7 @@
         
         <p class="text-left">
           Buat akun baru untuk mengakses seluruh layanan dan informasi pelatihan
-          CPD Online
+          Tedika Indonesia
         </p>
 
         <!-- Input login -->
