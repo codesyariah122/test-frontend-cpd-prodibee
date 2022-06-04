@@ -6,21 +6,21 @@
 	height: 100vh;
 	.card__login{
 		border-radius:8px;
-		top:90px;
+		top:120px;
 		width: 100%;
 		height: auto;
 		background: $bg-auth;
-		margin-bottom: 10rem;
+		margin-bottom: 12rem;
 		@include inside_card_auth_mobile;
 	}
 	.card__registrasi{
 		border-radius:8px;
-		top:90px;
+		top:120px;
 		width: 100%;
 		height: auto;
 		background: $bg-auth;
 		color:$default;
-		margin-bottom: 10rem;
+		margin-bottom: 13rem;
 		@include inside_card_auth_mobile;
 	}
 

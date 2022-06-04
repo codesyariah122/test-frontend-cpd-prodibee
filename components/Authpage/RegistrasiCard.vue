@@ -50,10 +50,17 @@
           class="form-control"
           placeholder="Ulangi Password"
           v-model="fields.confirm_password"
+          v-on:keyup="CheckPassword"
           />
         </div>
 
-        <div class="form-group">
+        <div v-if="showCheckPassword && fields.confirm_password">
+          <span :class="classStatus">
+            {{passwordStatus}} <i v-if="iconStatus" :class="iconStatus"></i>
+          </span>
+        </div>
+
+        <div class="form-group mt-3">
           <div @click="showPassword">
             <span v-if="showing_pass === false" style="cursor: pointer">
               <mdb-icon far icon="eye" /> Check Password
@@ -126,11 +133,16 @@
       return {
         fields: {},
         showing_pass: false,
+        showCheckPassword: null,
+        passwordStatus: null,
+        classStatus: null,
+        iconStatus: null
       };
     },
 
     methods: {
       RegistrasiProfile() {
+        this.showCheckPassword=false
         const params = {
           nama: this.fields.nama,
           email: this.fields.email,
@@ -140,7 +152,22 @@
         this.$emit("registrasi-profile", params);
       },
 
+      CheckPassword(){
+        this.showCheckPassword=true
+        console.log(this.fields.passwords)
+        if(this.fields.password !== this.fields.confirm_password){
+          this.passwordStatus = "Password Tidak Sama"
+          this.classStatus = 'text-danger'
+          this.iconStatus = "fas fa-exclamation-triangle"
+        }else{
+          this.passwordStatus = "Ok lanjutkan pendaftaran"
+          this.iconStatus = "fas fa-check"
+          this.classStatus = 'text-success'
+        }
+      },
+
       showPassword() {
+        this.showCheckPassword=false
         const password1 = document.querySelector("#password1");
         const password2 = document.querySelector("#password2");
         if (password1.type === "password" && password2.type === "password") {
