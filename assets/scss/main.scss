@@ -640,6 +640,7 @@
 	background-attachment: scroll;
 	text-align: center;
 	margin:0;
+	margin-top: 5rem;
 	// z-index: -1;
 	&:before{
 		position: absolute;
@@ -940,7 +941,7 @@
 				line-height: 19.07px;	
 			}
 			address{
-				margin-top: -.3rem;
+				margin-top: 1rem;
 				font-size:14px;
 				font-weight: 600!important;
 				line-height: 31px;
@@ -950,7 +951,6 @@
 		}
 
 		.col-2{
-			width: 100%!important;
 			color:$default-gray;
 			margin-left: -5rem;
 			margin-top: -1rem;
@@ -970,7 +970,7 @@
 				}
 				ul li{
 					font-size: 14px;
-					font-weight: 600;
+					font-weight: 400;
 					line-height: 21.07px;
 					margin-bottom:1.5rem;
 				}
