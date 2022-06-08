@@ -73,8 +73,7 @@ export default {
     this.CheckToken()
   },
   mounted() {
-    this.CarouselItem(),
-    this.scrollTo()
+    this.CarouselItem()
   },
 
   methods: {
