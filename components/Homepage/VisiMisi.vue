@@ -11,7 +11,7 @@
         <mdb-col class="mb-5" sm="8" md="8" lg="8">
           <h1>Visi</h1>
           <p v-if="context.visi">{{ context.visi }}</p>
-          <br />
+          
           <h1>Misi</h1>
           <ol v-if="context.misi">
             <li v-for="n in context.misi.length" v-if="n % 2 == 1">
