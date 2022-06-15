@@ -171,9 +171,9 @@
 	}
 	.display-6{
 		color:$second-black;
-		margin-top: 190px;
+		margin-top: 160px;
 		font-weight: 700;
-		font-size:45px;
+		font-size:35px;
 		width: 80%;
 		line-height: 55px;
 	}
@@ -317,7 +317,7 @@
 	text-transform: capitalize;
 	letter-spacing: 1.3px;
 	&:hover{
-		color: $scroll-bar-color!important;
+		color: $gray!important;
 		background-color: $bg-hover-first;
 	}
 }

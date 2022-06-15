@@ -148,8 +148,8 @@
 				margin-top: .1rem;
 				.card{
 					border-radius:13px;
-					width: 270px!important;
-					height: 270px!important;
+					width: 280px!important;
+					height: 280px!important;
 					img{
 						border-radius: 13px;
 					}
@@ -281,6 +281,10 @@
 
 	.my__btn-primary{
 		@include button_primary;
+	}
+
+	.my__btn-secondary{
+		@include button_secondary;
 	}
 
 }
