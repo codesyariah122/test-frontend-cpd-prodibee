@@ -148,8 +148,8 @@
 				margin-top: .1rem;
 				.card{
 					border-radius:13px;
-					width: 280px!important;
-					height: 280px!important;
+					width: 275px!important;
+					height: 275px!important;
 					img{
 						border-radius: 13px;
 					}
@@ -163,6 +163,7 @@
 				padding: 5px;
 				margin-top: 2rem;
 				margin-left:6rem!important;
+				width: 195px;
 				height: 35vh;
 				background-color: transparent;
 				z-index: -1;
@@ -842,6 +843,7 @@
 	.visi-misi__content{
 		color:$default;
 		// margin-left: -5rem;
+		margin-top:2rem;
 		width:80%;
 		z-index: 9999;
 		h1{
