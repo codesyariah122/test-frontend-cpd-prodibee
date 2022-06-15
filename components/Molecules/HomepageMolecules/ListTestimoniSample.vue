@@ -20,7 +20,7 @@
 				</mdb-card>
 			</mdb-col>
 		</mdb-row> -->
-		<mdb-col lg="12" xs="12" sm="12" class="text-center mb-5">
+		<mdb-col lg="12" xs="12" sm="12" class="text-center mt-3 mb-5">
 			<mdb-alert color="info">Belum ada testimoni !</mdb-alert>
 		</mdb-col>
 	</div>
