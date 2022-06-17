@@ -7,7 +7,7 @@
           <mdb-col lg="12" xs="12" sm="12">
             <h2>Testimoni</h2>
             <p>
-              CPD Online telah melakukan berbagai macam pelatihan dan telah
+              Tedika Indonesia telah melakukan berbagai macam pelatihan dan telah
               banyak membantu meningkatkan kemampuan tenaga kesehatan
             </p>
           </mdb-col>
