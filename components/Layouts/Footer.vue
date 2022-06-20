@@ -1,6 +1,7 @@
 <template>
   <!-- Footer -->
-  <mdb-footer class="footer__layout font-small">
+
+  <mdb-footer class="footer__layout font-small" >
     <mdb-container class="text-left footer__sitemap">
       <mdb-row
       :class="`${$device.isMobile ? 'd-flex justify-content-center' : 'row'}`"
@@ -14,7 +15,7 @@
 
         <p class="mb-0">
           <b>PT TELEMEDIKA INDONESIA MANAJEMEN
-          (TEDIKA)</b> merupakan perusahaan teknologi <br> di Indonesia yang berfokus pada layanan berbasis pendidikan dan pelatihan di bidang kesehatan, memiliki member tenaga kesehatan yang teregistrasi maupun calon tenaga kesehatan serta Berpartner dengan ikatan himpunan kesehatan dan organisasi profesi.
+          (TEDIKA)</b> <br> merupakan perusahaan teknologi <br> di Indonesia yang berfokus pada layanan berbasis pendidikan dan pelatihan di bidang kesehatan, memiliki member tenaga kesehatan yang teregistrasi maupun calon tenaga kesehatan serta Berpartner dengan ikatan himpunan kesehatan dan organisasi profesi.
         </p>
         <address>Cipinang Indah Raya Blok M No 1,
         Jakarta Timur 13420</address>
@@ -23,7 +24,7 @@
       <mdb-col
       col="12"
       :sm="`${$device.isDesktop ? '9' : '12'}`"
-      :class="`${$device.isMobile ? 'mt-2 col-2' : 'mt-2 col-2'}`"
+      :class="`${$device.isMobile ? 'mt-2 col-2' : 'col-2'}`"
       >
       <!-- sitemap footer content -->
       <MoleculesLayoutMoleculesSiteMap />
@@ -42,7 +43,7 @@
       <mdb-container fluid>
         &copy;Copyright {{ $moment(year).year() }}
         <a target="_blank" href="http://tedika.id"
-        >Tedika</a
+        >Tedika Indonesia</a
         >. All Rights Reserved
       </mdb-container>
     </div>

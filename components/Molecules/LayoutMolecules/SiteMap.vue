@@ -1,6 +1,6 @@
 <template>
   <div>
-    <mdb-row class="d-flex justify-content-center">
+    <mdb-row class="d-flex justify-content-center" :style="`${$device.isDesktop ? 'margin-left: 2rem;' : ''}`">
       <div class="col-md-3 col-sm-12 col-6 p-0 float-left mb-3 kontak-footer">
         <h5 class="mb-4 font-weight-bold text-uppercase">Kontak</h5>
         <ul class="list-group">
@@ -42,12 +42,12 @@
              <img :src="require('~/assets/icons/socials/facebook.svg')">&nbsp;tedika.indonesia
             </a>
           </li>
-          <li class="list-group-item bg-transparent border-0 p-0 mb-5">
+          <li class="list-group-item bg-transparent border-0 p-0 mb-5 mt-3">
             <a href="http://ppkcarolus.com/">
               <img :src="require('~/assets/icons/socials/twitter.svg')">&nbsp;@tedika.indonesia
             </a>
           </li>
-          <li class="list-group-item bg-transparent border-0 p-0 mb-5">
+          <li class="list-group-item bg-transparent border-0 p-0 mb-5 mt-3">
             <a href="https://www.instagram.com/ppkc_carolus/?hl=id">
               <img :src="require('~/assets/icons/socials/instagram.svg')">&nbsp;@tedika.indonesia
             </a>
