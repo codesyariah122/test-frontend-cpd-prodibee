@@ -311,7 +311,9 @@
 
 @mixin button_secondary{
 	background-color:$bg-button-gray!important;
+	// background-color: transparent;
 	color:$default-black;
+	color: $color-primary;
 	font-weight: 600;
 	font-size:14px;
 	text-transform: capitalize;
@@ -321,6 +323,7 @@
 		background-color: $bg-hover-first;
 	}
 }
+
 
 // Card pelatihan
 @mixin listDesktop($color){

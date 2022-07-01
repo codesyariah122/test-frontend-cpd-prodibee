@@ -1,7 +1,7 @@
 <template>
   <div>
     <mdb-navbar
-    class="fixed-top"
+    class="fixed-top shadow-none"
     light
     color="white"
     expand="large"
@@ -17,7 +17,7 @@
       </nuxt-link>
     </mdb-navbar-brand>
     <mdb-navbar-toggler>
-      <mdb-navbar-nav left>
+      <mdb-navbar-nav right>
         <mdb-nav-item active waves-fixed >
           <nuxt-link to="/" tag="li" navLink > Home </nuxt-link>
         </mdb-nav-item>
@@ -96,13 +96,13 @@ style="font-size: 31px !important"
 
   <nuxt-link 
   to="/auth/login"
-  class="my__btn-secondary ml-2 rounded-pill btn btn-md shadow-none"
+  class="ml-2 btn btn-outline-primary btn-md shadow-none"
   size="md"
   >Masuk</nuxt-link>
 
   <nuxt-link
   to="/auth/registrasi"
-  class="my__btn-primary rounded-pill btn btn-md shadow-none"
+  class="my__btn-primary btn btn-md shadow-none"
   size="md"
   >Daftar</nuxt-link>
 </div>

@@ -77,6 +77,16 @@
 		margin-top: .7rem;
 	}
 }
+
+.btn-outline-primary{
+	color: $color-primary!important;
+	border-color: $color-primary!important;
+	border-width: thick;
+	&:hover{
+		color: $color-primary!important;
+		border-color: $color-primary!important;
+	}
+}
 @media (min-width: 992px) {
 	.navbar-brand{
 		img{
@@ -84,7 +94,7 @@
 		}
 	}
 	.nav-link {
-		margin-left: 1.5rem;
+		margin-left: .5rem;
 		@include navbar_desktop;
 	}
 	.dropdown-menu{
@@ -162,5 +172,14 @@
 	}
 	.animated-icon2{
 		background-color:$default-black!important;
+	}
+	.btn-outline-primary{
+		color: $color-primary!important;
+		border-color: $color-primary!important;
+		border-width: thick;
+		&:hover{
+			color: $color-primary!important;
+			border-color: $color-primary!important;
+		}
 	}
 }
