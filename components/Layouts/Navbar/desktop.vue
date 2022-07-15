@@ -97,7 +97,7 @@ style="font-size: 31px !important"
   <nuxt-link 
   to="/auth/login"
   class="ml-2 btn btn-outline-primary btn-md shadow-none"
-  size="md"
+  size="md" style="border-radius: 5px;"
   >Masuk</nuxt-link>
 
   <nuxt-link

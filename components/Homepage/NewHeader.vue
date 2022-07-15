@@ -12,21 +12,21 @@
         <!-- Context -->
         <b-col md="7" xs="12" sm="12">
           <h2 class="display-6 text-capitalize">
-            kembangkan kompetensi tenaga kesehatan
+            kembangkan <span class="block-text">kompetensi</span> tenaga kesehatan
           </h2>
           <p>
            Tingkatkan kemampuan kompetensi sebagai tenaga kesehatan dengan ratusan kelas online bersertifikat resmi
          </p>
          <b-button
          v-if="!token.accessToken"
-         :class="`my__btn-primary rounded-pill ${$device.isMobile ? 'btn-block btn-sm' : ''}`"
+         :class="`my__btn-primary shadow-none ${$device.isMobile ? 'btn-block btn-sm' : ''}`"
          @click="$router.push({ name: 'auth-registrasi' })"
          >Daftar Sekarang</b-button
          >
          
         <b-button
         v-if="token.accessToken"
-        :class="`my__btn-secondary rounded-pill ${$device.isMobile ? 'btn-block btn-sm mt-3' : ''}`" :style="`${$device.isDesktop ? 'width: 450px;' : ''}`"
+        :class="`my__btn-secondary ${$device.isMobile ? 'btn-block btn-sm mt-3' : ''}`" :style="`${$device.isDesktop ? 'width: 450px;' : ''}`"
         @click="$router.push({ path: `/profile/${$username(slug)}/events` })"
         >Lihat kelas saya</b-button>
       </b-col>

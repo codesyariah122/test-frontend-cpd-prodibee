@@ -122,8 +122,8 @@
 			border-radius:13px;
 			padding: 5px;
 			margin-top: 2rem;
-			margin-left:6rem!important;
-			height: 31vh;
+			margin-left:6.5rem!important;
+			height: 33vh;
 			background-color: transparent;
 			z-index: -1;
 		}
@@ -176,6 +176,11 @@
 		font-size:35px;
 		width: 80%;
 		line-height: 55px;
+		.block-text{
+			background-color: $color-primary;
+			color:$default;
+			padding: 10px;
+		}
 	}
 	p{
 		color:$second-gray;
@@ -311,6 +316,7 @@
 	font-size:14px;
 	text-transform: capitalize;
 	letter-spacing: 1.3px;
+	border-radius: 5px;
 	&:hover{
 		color: $bg-blue-gray!important;
 	}
@@ -323,6 +329,7 @@
 	font-size:14px;
 	text-transform: capitalize;
 	letter-spacing: 1.3px;
+	border-radius: 5px;
 	&:hover{
 		color: $gray!important;
 		background-color: $bg-hover-first;
