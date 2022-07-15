@@ -12,7 +12,8 @@
         <!-- Context -->
         <b-col md="7" xs="12" sm="12">
           <h2 class="display-6 text-capitalize">
-            kembangkan <span class="block-text">kompetensi</span> tenaga kesehatan
+            <span class="copywrite">Tedika Health Education</span> <br>
+            <span style="margin-top:-1rem!important;">kembangkan <span class="block-text">kompetensi</span> tenaga kesehatan</span>
           </h2>
           <p>
            Tingkatkan kemampuan kompetensi sebagai tenaga kesehatan dengan ratusan kelas online bersertifikat resmi
