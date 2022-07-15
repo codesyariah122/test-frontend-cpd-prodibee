@@ -130,7 +130,8 @@ export default {
   },
 
   mounted() {
-    console.log(this.event_id ? this.event_id : "-");
+    console.log(this.event_id ? this.event_id : "-"),
+    this.scroll()
   },
 
   methods: {
@@ -147,6 +148,24 @@ export default {
         this.SetEventLogin(data);
       } else {
         this.$router.push({ name: "auth-login" });
+      }
+    },
+
+    scroll() {
+      window.onscroll = () => {
+        let bottomOfWindow = window.pageYOffset
+        let fixeNav= document.querySelector('.fixed-top')
+          // console.log(bottomOfWindow)
+          
+          if (bottomOfWindow) {
+           this.scrolledToBottom = true // replace it with your code
+           fixeNav.classList.remove('shadow-none')
+           fixeNav.classList.add('z-depth-2')
+         }else{
+          this.scrolledToBottom = false
+          fixeNav.classList.add('shadow-none')
+          fixeNav.classList.remove('z-depth-2')
+        }
       }
     },
 
@@ -169,5 +188,3 @@ export default {
   },
 };
 </script>
-
-

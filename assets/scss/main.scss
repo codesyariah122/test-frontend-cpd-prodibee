@@ -60,7 +60,7 @@
    and (max-height : 1280px) {
 	.jumbotron__home{
 		margin-top: 3.5rem!important;
-		margin-bottom: 13rem!important;
+		margin-bottom: 15rem!important;
 		object-fit: cover;
 		background-repeat: no-repeat;
 		background-position: center;
@@ -240,8 +240,8 @@
 
 @media (min-width: 992px) {
 	.jumbotron__home{
-		margin-top: 5rem!important;
-		margin-bottom: 13rem!important;
+		margin-top: 1rem!important;
+		margin-bottom: 14rem!important;
 		width: $bg-jumbo-width;
 		max-height: $bg-jumbo-height;
 		position:relative;
@@ -249,8 +249,8 @@
 		@include jumbotron_desktop($default);
 	}
 	.banner{
-		margin-top:3rem;
-		margin-bottom: 1rem;
+		margin-top:1rem;
+		margin-bottom: 3rem;
 		margin-left: 4rem;
 		img{
 			object-fit:contain;

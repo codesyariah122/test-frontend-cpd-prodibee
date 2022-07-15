@@ -1,7 +1,7 @@
 <template>
 	<b-col md="5" class="jumbo__art-img">
 		<b-row cols="12" class="d-flex justify-content-start">
-			<b-col sm="3" class="col-card-1">  
+			<!-- <b-col sm="3" class="col-card-1">  
 				<mdb-card class="z-depth-2">
 					<mdb-row  class="d-flex justify-content-between">
 						<mdb-col md="7">
@@ -23,15 +23,16 @@
 						</mdb-col>
 					</mdb-row>
 				</mdb-card>
-			</b-col>
-			<b-col  sm="9" class="first-box"></b-col>
+			</b-col> -->
+			<!-- <b-col  sm="9" class="first-box"></b-col> -->
 			<b-col  sm="9" class="card__image-box">
-				<mdb-card>
+				<img :src="require('~/assets/images/homepage/jumbo-img-1.svg')" alt="Card image cap"/>
+				<!-- <mdb-card>
 					<mdb-card-image :src="require('~/assets/images/homepage/jumbo-img-1.svg')" alt="Card image cap"></mdb-card-image>
-				</mdb-card>
+				</mdb-card> -->
 			</b-col>
-			<b-col  sm="9" class="second-box float-right"></b-col>
-			<b-col  sm="9" class="col-card-2">
+			<!-- <b-col  sm="9" class="second-box float-right"></b-col> -->
+			<!-- <b-col  sm="9" class="col-card-2">
 				<mdb-card class="z-depth-2">
 					<mdb-row  class="d-flex justify-content-between">
 						<mdb-col md="9">
@@ -53,7 +54,7 @@
 						</mdb-col>
 					</mdb-row>
 				</mdb-card>
-			</b-col>
+			</b-col> -->
 		</b-row>
 	</b-col>
 </template>

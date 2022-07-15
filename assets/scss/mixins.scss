@@ -239,7 +239,14 @@
 			position: absolute;
 			margin-left: 1rem;
 			margin-top: 1rem;
+			img{
+				width: 400px;
+				height: 400px;
+				border-radius: 13px;
+				box-shadow: 35px 55px 1px 1px #EAFDFB;
+			}
 			.card{
+				box-shadow: 12px 12px 2px 1px #EAFDFB;
 				border-radius:13px;
 				width: 400px!important;
 				height: 400px!important;
@@ -256,7 +263,7 @@
 			padding: 5px;
 			margin-top: 5.7rem!important;
 			margin-left: 7.5rem!important;
-			height: 37vh;
+			height: 39vh;
 			background-color: transparent;
 			z-index: -1;
 		}
@@ -311,9 +318,7 @@
 
 @mixin button_secondary{
 	background-color:$bg-button-gray!important;
-	// background-color: transparent;
 	color:$default-black;
-	color: $color-primary;
 	font-weight: 600;
 	font-size:14px;
 	text-transform: capitalize;
@@ -323,7 +328,6 @@
 		background-color: $bg-hover-first;
 	}
 }
-
 
 // Card pelatihan
 @mixin listDesktop($color){
