@@ -47,6 +47,10 @@ export default {
         href: "https://ppkc-online.com/",
       },
       { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+      { 
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Poppins&display=swap",      
+      },
       {
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css?family=Open+Sans",
