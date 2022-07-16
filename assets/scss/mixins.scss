@@ -31,28 +31,7 @@
 	position: relative;
 }
 @mixin jumbotron_mobile($color) {
-	.container__jumbotron{
-		margin-top: -2rem;
-		@include container_jumbotron();
-	}
 	
-	.display-6{
-		color:$second-black;
-		margin-top: 1rem;
-		font-weight: 700;
-		font-size:23px;
-		line-height: 31px;
-	}
-	
-	p{
-		color:$second-gray;
-		font-weight: 500;
-		width: 100%;
-		font-size:14px;
-		text-align: justify;
-		line-height: 21px;
-		word-spacing: 12px;
-	}
 
 	.jumbo__art-img{
 		width: 100%;
@@ -174,9 +153,9 @@
 		color:$default-black;
 		margin-top: 160px;
 		font-weight: 700;
-		font-size:51px;
+		font-size:51px!important;
 		width: 100%;
-		line-height: 85px;
+		line-height: 80px!important;
 		.block-text{
 			background-color: $color-primary;
 			color:$default;

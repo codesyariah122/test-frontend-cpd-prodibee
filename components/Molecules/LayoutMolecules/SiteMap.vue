@@ -37,17 +37,17 @@
       <div class="col-md-3 col-sm-12 col-6 p-0 mb-3 float-left social-media">
         <h5 class="mb-4 font-weight-bold text-uppercase">Social Media</h5>
         <ul class="list-group">
-          <li class="list-group-item bg-transparent border-0 p-0 mb-5">
+          <li :class="`${$device.isDesktop ? 'mb-5' : 'mb-2'} list-group-item bg-transparent border-0 p-0`">
             <a href="https://id-id.facebook.com/people/Pusat-Pengembangan-Kesehatan-Carolus-PPKC/100063841689266/">
              <img :src="require('~/assets/icons/socials/facebook.svg')">&nbsp;tedika.indonesia
             </a>
           </li>
-          <li class="list-group-item bg-transparent border-0 p-0 mb-5 mt-3">
+          <li :class="`${$device.isDesktop ? 'mb-5 mt-3' : 'mb-2'} list-group-item bg-transparent border-0 p-0`">
             <a href="http://ppkcarolus.com/">
               <img :src="require('~/assets/icons/socials/twitter.svg')">&nbsp;@tedika.indonesia
             </a>
           </li>
-          <li class="list-group-item bg-transparent border-0 p-0 mb-5 mt-3">
+          <li :class="`${$device.isDesktop ? 'mb-5 mt-3' : 'mb-2'} list-group-item bg-transparent border-0 p-0`">
             <a href="https://www.instagram.com/ppkc_carolus/?hl=id">
               <img :src="require('~/assets/icons/socials/instagram.svg')">&nbsp;@tedika.indonesia
             </a>

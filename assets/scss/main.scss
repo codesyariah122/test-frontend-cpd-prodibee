@@ -19,6 +19,40 @@
 	height: 550px;
 	position:relative;
 
+	.container__jumbotron{
+		margin-top: 1rem;
+		@include container_jumbotron();
+	}
+	
+	.display-6{
+		color:$second-black;
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+		font-weight: 800;
+		font-size:25px!important;
+		line-height: 37px!important;
+		.block-text{
+			background-color: $color-primary;
+			color:$default;
+			padding: 2px;
+		}
+		.copywrite{
+			color: $color-primary;
+			font-size: 14px;
+			margin-bottom: -5rem;
+		}
+	}
+	
+	p{
+		color:$second-gray;
+		font-weight: 500;
+		width: 100%;
+		font-size:14px;
+		text-align: justify;
+		line-height: 21px;
+		word-spacing: 12px;
+	}
+
 	@include jumbotron_mobile($default);
 }
 .banner{
@@ -1126,7 +1160,7 @@
 			}
 
 			p{
-				margin-top: 1.3rem;
+				margin-top: .5rem;
 				font-size:14px;
 				font-weight: 400;
 				line-height: 19.07px;
@@ -1136,7 +1170,7 @@
 			address{
 				margin-top: 1rem;
 				font-size:14px;
-				font-weight: 600!important;
+				font-weight: 800!important;
 				line-height: 31px;
 				width: 80%;
 			}
@@ -1202,13 +1236,14 @@
 					color:$default-gray;
 					margin-left: -3rem;
 					h5{
-						font-size: 18px;
+						font-size: 14px;
 						font-weight: 700;
 						color:$second-black;
 						line-height: 28px;
+						width: 100%;
 					}
 					p{
-						margin-top: 1.3rem;
+						margin-top: .3rem;
 						font-size:14px;
 						font-weight: 400;
 						line-height: 23px;
@@ -1222,10 +1257,10 @@
 						}
 					}
 					address{
-						margin-top: 13rem;
+						margin-top: 9rem;
 						width: 280px;
 						font-size:14px;
-						font-weight: 600!important;
+						font-weight: 800!important;
 						line-height: 21px;
 					}
 					img{

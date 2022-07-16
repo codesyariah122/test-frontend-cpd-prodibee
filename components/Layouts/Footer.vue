@@ -13,10 +13,11 @@
         :style="`${$device.isMobile ? 'width:230px;' : 'width:800px;'}`"
         />
 
-        <p class="mb-0">
-          <b>PT TELEMEDIKA INDONESIA MANAJEMEN
-          (TEDIKA)</b> <br> merupakan perusahaan teknologi <br> di Indonesia yang berfokus pada layanan berbasis pendidikan dan pelatihan di bidang kesehatan, memiliki member tenaga kesehatan yang teregistrasi maupun calon tenaga kesehatan serta Berpartner dengan ikatan himpunan kesehatan dan organisasi profesi.
-        </p>
+        <div class="mb-0">
+          <h5>PT TELEMEDIKA INDONESIA MANAJEMEN
+          (TEDIKA)</h5>
+          <p>merupakan perusahaan teknologi <br> di Indonesia yang berfokus pada layanan berbasis pendidikan dan pelatihan di bidang kesehatan, memiliki member tenaga kesehatan yang teregistrasi maupun calon tenaga kesehatan serta Berpartner dengan ikatan himpunan kesehatan dan organisasi profesi.</p>
+        </div>
         <address>Cipinang Indah Raya Blok M No 1,
         Jakarta Timur 13420</address>
       </mdb-col>

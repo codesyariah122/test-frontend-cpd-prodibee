@@ -11,12 +11,12 @@
 
             <div class="button">                
               <b-button
-              :class="`my__btn-secondary rounded-pill ${$device.isMobile ? 'btn-block btn-sm mt-3' : ''}`"
+              :class="`my__btn-secondary ${$device.isMobile ? 'btn-block btn-sm mt-3' : ''}`"
               @click="$router.push({ name: 'auth-registrasi' })"
               >Hubungi Kami</b-button>
 
               <b-button
-              :class="`my__btn-primary rounded-pill ${$device.isMobile ? 'btn-block btn-sm' : ''}`"
+              :class="`my__btn-primary ${$device.isMobile ? 'btn-block btn-sm' : ''}`"
               @click="$router.push({ name: 'auth-registrasi' })"
               >Daftar Sekarang</b-button
               >
