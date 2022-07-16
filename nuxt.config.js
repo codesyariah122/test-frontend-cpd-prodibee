@@ -54,17 +54,7 @@ export default {
       {
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css?family=Open+Sans",
-      },
-      {
-        rel: "stylesheet",
-        type: "text/css",
-        href: "/assets/glightbox/glightbox.min.css",
-      },
-      {
-        rel: "stylesheet",
-        type: "text/css",
-        href: "/assets/venobox/dev/venobox.min.css",
-      },
+      }
     ],
     script: [
       {
@@ -75,21 +65,13 @@ export default {
         src: "https://cdn.ampproject.org/v0/amp-ad-0.1.js",
         async: "true",
         "custom-element": "amp-ad",
-      },
-      {
-        src: "/assets/glightbox/glightbox.min.js",
-        type: "text/javascript",
-      },
-      {
-        src: "/assets/venobox/dev/venobox.min.js",
-        type: "text/javascript",
-      },
+      }
     ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
-    // 'bootstrap-css-only/css/bootstrap.min.css',
+    'bootstrap-css-only/css/bootstrap.min.css',
     "mdbvue/lib/mdbvue.css",
     "mdbvue/lib/css/mdb.min.css",
   ],

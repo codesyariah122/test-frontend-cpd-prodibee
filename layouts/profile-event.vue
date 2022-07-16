@@ -1,10 +1,6 @@
 <template>
 	<div>
-		<LayoutsNavigation :token="token" :profiles="profiles" :slug="slug" :event_id="data_event_path.event_id" :event_path="data_event_path.event_path" :style="style"/>
 		<Nuxt/>
-		<!-- Scrolling back to top page -->
-		<!-- <GlobalsToTop/> -->
-		<!-- end scroll top -->
 	</div>
 </template>
 
@@ -27,42 +23,134 @@
 
 		head:{
 			link: [
-				{ rel: 'stylesheet', type: 'text/css', href: '/assets/glightbox/glightbox.min.css'},
-				{ rel: 'stylesheet', type: 'text/css', href: '/assets/venobox/dev/venobox.min.css'},
-				{ rel: 'stylesheet', href: '/assets/docs/css/theme.css'},
-				// { rel: 'stylesheet', type: 'text/css', href: require('~/assets/css/main.css') }
+				{ rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap'},
+				{ rel: 'stylesheet', type: 'text/css', href: '/new-dashboard/css/simplebar.css'},
+				{ rel: 'stylesheet', type: 'text/css', href: '/new-dashboard/css/feather.css' },
+				{ rel: 'stylesheet', type: 'text/css', href: '/new-dashboard/css/select2.css' },
+				{ rel: 'stylesheet', type: 'text/css', href: '/new-dashboard/css/dropzone.css' },
+				{ rel: 'stylesheet', type: 'text/css', href: '/new-dashboard/css/uppy.min.css' },
+				{ rel: 'stylesheet', type: 'text/css', href: '/new-dashboard/css/jquery.steps.css' },
+				{ rel: 'stylesheet', type: 'text/css', href: '/new-dashboard/css/jquery.timepicker.css' },
+				{ rel: 'stylesheet', type: 'text/css', href: '/new-dashboard/css/quill.snow.css' },
+				{ rel: 'stylesheet', type: 'text/css', href: '/new-dashboard/css/daterangepicker.css' },
+				{ rel: 'stylesheet', type: 'text/css', href: '/new-dashboard/css/app-light.css' },
+				{ rel: 'stylesheet', type: 'text/css', href: '/new-dashboard/css/app-dark.css' }
 			],
 			
 			script: [
 				{
-					src: '/assets/glightbox/glightbox.min.js',
+					src: '/new-dashboard/js/jquery.min.js',
 					type: 'text/javascript'
 				},
 				{
-					src: '/assets/venobox/dev/venobox.min.js',
+					src: '/new-dashboard/js/popper.min.js',
 					type: 'text/javascript'
 				},
 				{
-					src: '/assets/docs/plugins/popper.min.js',
-					type: 'text/javascript'
-				},
-				// {
-				// 	src: '/assets/docs/fontawesome/js/all.min.js',
-				// 	type: 'text/javascript'
-				// },
-				{
-					src: '/assets/docs/plugins/bootstrap/js/bootstrap.min.js',
+					src: '/new-dashboard/js/moment.min.js',
 					type: 'text/javascript'
 				},
 				{
-					src: '/assets/docs/plugins/smoothscroll.min.js',
+					src: '/new-dashboard/js/bootstrap.min.js',
 					type: 'text/javascript'
 				},
-				
 				{
-					src: '/assets/docs/plugins/gumshoe/gumshoe.polyfills.min.js',
+					src: '/new-dashboard/js/simplebar.min.js',
+					type: 'text/javascript'
+				},
+				{
+					src: '/new-dashboard/js/daterangepicker.js',
+					type: 'text/javascript'
+				},
+				{
+					src: '/new-dashboard/js/jquery.stickOnScroll.js',
+					type: 'text/javascript'
+				},
+				{
+					src: '/new-dashboard/js/tinycolor-min.js',
+					type: 'text/javascript'
+				},
+				{
+					src: '/new-dashboard/js/config.js',
+					type: 'text/javascript'
+				},
+				{
+					src: '/new-dashboard/js/d3.min.js',
+					type: 'text/javascript'
+				},
+				{
+					src: '/new-dashboard/js/topojson.min.js',
+					type: 'text/javascript'
+				},
+				{
+					src: '/new-dashboard/js/datamaps.all.min.js',
+					type: 'text/javascript'
+				},
+				{
+					src: '/new-dashboard/js/datamaps-zoomto.js',
+					type: 'text/javascript'
+				},
+				{
+					src: '/new-dashboard/js/datamaps.custom.js',
+					type: 'text/javascript'
+				},
+				{
+					src: '/new-dashboard/js/Chart.min.js',
+					type: 'text/javascript'
+				},
+				{
+					src: '/new-dashboard/js/gauge.min.js',
+					type: 'text/javascript'
+				},
+				{
+					src: '/new-dashboard/js/jquery.sparkline.min.js',
+					type: 'text/javascript'
+				},
+				{
+					src: '/new-dashboard/js/apexcharts.min.js',
+					type: 'text/javascript'
+				},
+				{
+					src: '/new-dashboard/js/apexcharts.custom.js',
+					type: 'text/javascript'
+				},
+				{
+					src: '/new-dashboard/js/jquery.mask.min.js',
+					type: 'text/javascript'
+				},
+				{
+					src: '/new-dashboard/js/select2.min.js',
+					type: 'text/javascript'
+				},
+				{
+					src: '/new-dashboard/js/jquery.steps.min.js',
+					type: 'text/javascript'
+				},
+				{
+					src: '/new-dashboard/js/jquery.validate.min.js',
+					type: 'text/javascript'
+				},
+				{
+					src: '/new-dashboard/js/jquery.timepicker.js',
+					type: 'text/javascript'
+				},
+				{
+					src: '/new-dashboard/js/dropzone.min.js',
+					type: 'text/javascript'
+				},
+				{
+					src: '/new-dashboard/js/uppy.min.js',
+					type: 'text/javascript'
+				},
+				{
+					src: '/new-dashboard/js/quill.min.js',
+					type: 'text/javascript'
+				},
+				{
+					src: '/new-dashboard/js/apps.js',
 					type: 'text/javascript'
 				}
+				
 			]
 		},
 

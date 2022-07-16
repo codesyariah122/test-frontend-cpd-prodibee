@@ -176,15 +176,15 @@
 		font-weight: 700;
 		font-size:51px;
 		width: 100%;
-		line-height: 75px;
+		line-height: 85px;
 		.block-text{
 			background-color: $color-primary;
 			color:$default;
-			padding: 11px;
+			padding: 8px;
 		}
 		.copywrite{
 			color: $color-primary;
-			font-size: 23px;
+			font-size: 18px;
 			margin-bottom: -5rem;
 		}
 	}
@@ -195,11 +195,11 @@
 		text-align: left;
 		line-height: 37px;
 		word-spacing: 13px!important;
-		width:80%;
+		width:100%;
 	}
 	.jumbo__art-img{
 		width: 100%;
-		margin-top:11rem;
+		margin-top:12rem;
 		.col-card-1{
 			z-index: 9999;
 			position: absolute;
@@ -254,7 +254,7 @@
 				width: 450px;
 				height: 450px;
 				border-radius: 13px;
-				box-shadow: 50px 55px 1px 1px #EAFDFB;
+				box-shadow: 50px 65px 1px 1px #EAFDFB;
 			}
 			.card{
 				box-shadow: 12px 12px 2px 1px #EAFDFB;
