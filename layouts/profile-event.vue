@@ -1,6 +1,7 @@
 <template>
 	<div>
 		<LayoutsNavigation :token="token" :profiles="profiles" :slug="slug" :event_id="data_event_path.event_id" :event_path="data_event_path.event_path" :style="style"/>
+		
 		<Nuxt/>
 		<!-- Scrolling back to top page -->
 		<!-- <GlobalsToTop/> -->
@@ -27,6 +28,8 @@
 
 		head:{
 			link: [
+				{ rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Poppins&display=swap"      
+				},
 				{ rel: 'stylesheet', type: 'text/css', href: '/assets/glightbox/glightbox.min.css'},
 				{ rel: 'stylesheet', type: 'text/css', href: '/assets/venobox/dev/venobox.min.css'},
 				{ rel: 'stylesheet', href: '/assets/docs/css/theme.css'},

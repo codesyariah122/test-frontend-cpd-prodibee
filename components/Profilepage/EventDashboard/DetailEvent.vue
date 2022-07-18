@@ -33,7 +33,7 @@
 					<mdb-row class="inside__first mt-3">
 						<mdb-col md="4">
 							<h5>Jenis kegiatan</h5>
-							<mdb-badge class="badge btn-outline-primary mb-2" style="color:#004899!important;">
+							<mdb-badge class="badge btn-outline-primary mb-2 shadow-none" style="color:#048281!important;">
 								{{details.kategori_value}}
 							</mdb-badge>
 						</mdb-col>

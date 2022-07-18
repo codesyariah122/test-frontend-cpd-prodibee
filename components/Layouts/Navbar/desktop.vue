@@ -29,9 +29,11 @@
         </mdb-nav-item>
 
         <mdb-nav-item v-if="token.accessToken" waves-fixed>
-          <nuxt-link tag="li" navLink  :to="`/profile/${$username(slug)}/events`">Akses Pelatihan</nuxt-link>
+          <nuxt-link tag="li" navLink  :to="`/profile/${$username(slug)}/events`">
+            Akses Pelatihan
+          </nuxt-link>
         </mdb-nav-item>
-        <mdb-dropdown tag="li" class="nav-item">
+        <mdb-dropdown v-if="$route.name != 'profile-name-events' && $route.name != 'profile-name-events-id-slug'" tag="li" class="nav-item">
           <mdb-dropdown-toggle
           tag="a"
           navLink

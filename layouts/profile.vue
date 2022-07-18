@@ -21,6 +21,13 @@
 			}
 		},
 
+		head:{
+			link: [
+				{ rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Poppins&display=swap"      
+				},
+			]
+		},
+
 		beforeMount(){
 			this.ConfigApiUrl(),
 			this.CheckToken()
