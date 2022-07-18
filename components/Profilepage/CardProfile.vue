@@ -95,7 +95,7 @@
             <mdb-row class="d-flex justify-content-center">
               <mdb-col col="12" sm="6">
                 <mdb-btn class="shadow-none" outline="primary" size="sm">
-                  <nuxt-link :to="`/profile/edit/${profiles.id}`">
+                  <nuxt-link style="color:#048281;" :to="`/profile/edit/${profiles.id}`">
                     <mdb-icon icon="user-cog" size="sm" />Edit Profile
                   </nuxt-link>
                 </mdb-btn>
