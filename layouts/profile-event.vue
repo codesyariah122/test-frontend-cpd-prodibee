@@ -30,9 +30,10 @@
 			link: [
 				{ rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Poppins&display=swap"      
 				},
+				{ rel: 'stylesheet', href: '/assets/docs/scss/global.css'},
 				{ rel: 'stylesheet', type: 'text/css', href: '/assets/glightbox/glightbox.min.css'},
 				{ rel: 'stylesheet', type: 'text/css', href: '/assets/venobox/dev/venobox.min.css'},
-				{ rel: 'stylesheet', href: '/assets/docs/css/theme.css'},
+				{ rel: 'stylesheet', href: '/assets/docs/css/theme.css'}
 				// { rel: 'stylesheet', type: 'text/css', href: require('~/assets/css/main.css') }
 			],
 			
