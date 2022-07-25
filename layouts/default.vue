@@ -82,8 +82,8 @@ export default {
           position: "left",
         },
         brandSetting: {
-          brandName: "CPD Online",
-          brandSubTitle: "CPD Online Perawat",
+          brandName: "Tedika",
+          brandSubTitle: "Tedika Health Education",
           brandImg: require("~/assets/images/profile/call-center.jpg"),
           welcomeText:
             "Halo, new member\nada yang bisa kami bantu ?\ncukup kirimkan pesan kepada kami sekarang untuk mendapatkan info lebih lanjut tentang pelatihan tenaga kesehatan CPD Online.",
