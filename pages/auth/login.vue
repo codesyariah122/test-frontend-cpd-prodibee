@@ -131,6 +131,13 @@
                 id: this.paket_id.paket_id
               }
             });
+          } else if(this.previousPath.fullPath === '/'){
+            this.$router.push({
+              name: 'profile-name',
+              params: {
+                name: this.$username(res.user.nama)
+              }
+            })
           } else {
             // console.log("no event data")
             this.$router.push({
