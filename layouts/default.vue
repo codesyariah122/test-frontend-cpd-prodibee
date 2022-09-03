@@ -7,6 +7,7 @@
       :event_id="event_id"
       :event_path="event_path"
     />
+    
     <Nuxt />
 
     <LayoutsFooter

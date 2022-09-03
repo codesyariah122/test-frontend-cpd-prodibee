@@ -1,13 +1,13 @@
 <!-- Component base on directory /components/ppkc -->
 <template>
 	<div>
-		<ppkcSejarah :path="path" :lists="lists" :part1="part1" :list_history="list_history"/>
+		<tedikaSejarah :path="path" :lists="lists" :part1="part1" :list_history="list_history"/>
 	</div>
 </template>
 
 <script>
 	export default{
-		name: 'ppkc-testimoni',
+		name: 'tedika-sejarah',
 		layout: 'default',
 
 		data(){

@@ -1,13 +1,13 @@
 <!-- Component base on directory /components/ppkc -->
 <template>
 	<div>
-		<ppkcStrukturOrganisasi :path="path" :lists="lists"/>
+		<tedikaStrukturOrganisasi :path="path" :lists="lists"/>
 	</div>
 </template>
 
 <script>
 	export default{
-		name: 'ppkc-struktur_organisasi',
+		name: 'tedika-struktur-organisasi',
 		layout: 'default',
 
 		data(){

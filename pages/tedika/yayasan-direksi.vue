@@ -12,7 +12,7 @@
 
 <script>
 export default {
-  name: "ppkc-yayasan_direksi",
+  name: "tedika-yayasan_direksi",
   layout: "default",
 
   data() {

@@ -1,7 +1,7 @@
 <template>
   <div>
     <mdb-navbar
-    class="fixed-top shadow-none"
+    :class="`fixed-top ${scrolled ? 'z-depth-2' : 'shadow-none'}`"
     light
     color="white"
     expand="large"
@@ -126,9 +126,12 @@ export default {
         { id: 4, name: "Testimoni", link: "/tedika/testimoni" },
         { id: 5, name: "Fasilitator", link: "/tedika/fasilitator" }
       ],
+      scrolled: null
     };
   },
-
+  created(){
+    
+  },
   mounted() {
     console.log(this.event_id ? this.event_id : "-"),
     this.scroll()
@@ -155,16 +158,12 @@ export default {
       window.onscroll = () => {
         let bottomOfWindow = window.pageYOffset
         let fixeNav= document.querySelector('.fixed-top')
-          // console.log(bottomOfWindow)
+          console.log(bottomOfWindow)
           
-          if (bottomOfWindow) {
-           this.scrolledToBottom = true // replace it with your code
-           fixeNav.classList.remove('shadow-none')
-           fixeNav.classList.add('z-depth-2')
-         }else{
-          this.scrolledToBottom = false
-          fixeNav.classList.add('shadow-none')
-          fixeNav.classList.remove('z-depth-2')
+          if (bottomOfWindow > 100) {
+            this.scrolled = true // replace it with your code
+          }else{
+            this.scrolled = false
         }
       }
     },

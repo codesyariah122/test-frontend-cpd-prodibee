@@ -15,7 +15,7 @@
 
 <script>
 export default {
-  name: "ppkc-berita",
+  name: "tedika-berita",
   layout: "default",
 
   data() {

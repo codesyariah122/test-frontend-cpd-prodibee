@@ -1,13 +1,13 @@
 <!-- Component base on directory /components/ppkc -->
 <template>
   <div>
-    <ppkcVisiMisi :path="path" :lists="lists" :visi="visi" :misi="misi" />
+    <tedikaVisiMisi :path="path" :lists="lists" :visi="visi" :misi="misi" />
   </div>
 </template>
 
 <script>
 export default {
-  name: "ppkc-visi_misi",
+  name: "tedika-visi_misi",
   layout: "default",
 
   data() {

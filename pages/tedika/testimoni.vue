@@ -14,7 +14,7 @@
 
 <script>
   export default {
-    name: "ppkc-testimoni",
+    name: "tedika-testimoni",
     layout: "default",
 
     data() {

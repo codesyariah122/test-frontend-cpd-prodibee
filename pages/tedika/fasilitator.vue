@@ -13,7 +13,7 @@
 
 <script>
 export default {
-  name: "ppkc-fasilitator",
+  name: "tedika-fasilitator",
   layout: "default",
   data() {
     return {

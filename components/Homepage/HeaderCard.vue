@@ -47,7 +47,7 @@
 
 <script>
 export default {
-  props: ["items", "token"],
+  props: ["items"],
 
   data(){
     return {
