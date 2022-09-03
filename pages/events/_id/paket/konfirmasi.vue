@@ -1,5 +1,5 @@
 <template>
-	<div :class="`${$device.isDesktop ? 'event__detail mb-5' : 'event__detail mb-5'}`">cd 
+	<div :class="`${$device.isDesktop ? 'event__detail mb-5' : 'event__detail mb-5'}`">
 		<mdb-container>
 			<mdb-row :class="`${$device.isMobile ? 'row justify-content-center' : ''}`">
 				<mdb-col v-if="$device.isMobile" lg="4" xs="4" sm="12" col="12" class="event__flyer">
@@ -46,23 +46,19 @@
 								</mdb-btn>
 							</div>
 						</mdb-col>
+						<mdb-col v-else md="12" xs="12" sm="12" lg="12" class="mt-2">
+							<pre>
+								{{username}}
+							</pre>
+							<mdb-btn @click="LanjutPelatihan(details.kegiatan_id, details.kegiatan_title, username)" class="btn btn-success rounded-pill btn-block shadow-none" :size="`${$device.isDesktop ? 'md' : 'sm'}`"> 
+								<mdb-icon icon="check" :size="`${$device.isDesktop ? 'lg' : 'sm'}`"/> {{details.status_pendaftaran_value == 'Menunggu Konfirmasi' ? 'Check Status' : details.status_pendaftaran_value == 'Terdaftar' ? 'Lanjut Pelatihan' : details.status_pendaftaran_value}}
+							</mdb-btn>
+						</mdb-col>
 					</mdb-row>
 				</mdb-col>
 
 				<mdb-col v-if="$device.isDesktop" lg="4" xs="4" sm="12" class="event__flyer">
 					<img :src="details.photo">
-				</mdb-col>
-				
-				<mdb-col md="12" xs="12" sm="12" class="mt-5">
-					<div v-if="loading">
-						<span class="spinner-border spinner-border-sm text-primary" role="status" aria-hidden="true"></span>
-						Loading...
-					</div>
-					<div v-else>
-						<mdb-btn @click="LanjutPelatihan(details.kegiatan_id, details.kegiatan_title)" class="btn btn-success rounded-pill btn-block shadow-none" :size="`${$device.isDesktop ? 'md' : 'sm'}`"> 
-							<mdb-icon icon="check" :size="`${$device.isDesktop ? 'lg' : 'sm'}`"/> {{details.status_pendaftaran_value == 'Menunggu Konfirmasi' ? 'Check Status' : details.status_pendaftaran_value == 'Terdaftar' ? 'Lanjut Pelatihan' : details.status_pendaftaran_value}}
-						</mdb-btn>
-					</div>
 				</mdb-col>
 			</mdb-row>
 		</mdb-container>
@@ -77,12 +73,14 @@
 				loading: null,
 				id: this.$route.params.id,
 				kegiatan: {},
-				details: {}
+				details: {},
+				username: null
 			}
 		},
 		beforeMount(){
 			this.ConfigApiUrl(),
-			this.CheckToken()
+			this.CheckToken(),
+			this.UserProfileData()
 		},
 		mounted(){
 			this.CheckPembayaran(),
@@ -90,10 +88,11 @@
 			this.DetailEventProfileLogin()
 		},
 		methods:{
-			LanjutPelatihan(id, slug){
+			LanjutPelatihan(id, slug, username){
 				this.$router.push({
-					name: 'detail-event-id-slug',
+					name: 'profile-name-events-id-slug',
 					params: {
+						name: username,
 						id: id,
 						slug: slug
 					}
@@ -139,6 +138,24 @@
 						this.details = data.kegiatan
 					})
 					.catch(err => console.log(err))
+				}
+			},
+			UserProfileData() {
+				if (this.token) {
+					this.loading = true;
+					const url = `${this.api_url}/web/user`;
+					this.$axios.defaults.headers.common.Authorization = `Bearer ${this.token.accessToken}`;
+					this.$axios
+					.get(url)
+					.then(({ data }) => {
+						this.username = this.$username(data.user.nama);
+					})
+					.catch((err) => console.log(err.response ? err.response : ""))
+					.finally(() => {
+						setTimeout(() => {
+							this.loading = false;
+						}, 1000);
+					});
 				}
 			},
 			Alert(status, data){

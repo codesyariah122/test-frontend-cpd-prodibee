@@ -151,7 +151,7 @@
 	export default {
 		data() {
 			return {
-				listToShow: 3,
+				listToShow: 9,
 				loading: null,
 				lists: [],
 				header: {

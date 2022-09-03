@@ -4,7 +4,7 @@
       <small class="copyright"
         >Template Copyright &copy;
         <a href="https://cpd.halomedika.com" target="_blank"
-          >CPD Online Perawat</a
+          >Tedika Health Education</a
         ></small
       >
       <ul class="social-list list-unstyled pt-4 mb-0">

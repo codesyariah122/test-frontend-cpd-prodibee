@@ -28,9 +28,6 @@
       </mdb-row>
 
       <mdb-row v-else col="12" class="d-flex justify-content-start align-items-stretch mb-5 webinar__content">
-        <!-- <pre>
-          {{lists[listIndex - 1]s.slice(0,6)}}
-        </pre> -->
         <mdb-col v-if="empty || error_search" lg="12" xs="12" sm="12">
           <mdb-alert :color="`${error_search ? 'danger' : 'info'}`" class="text-center">
             <mdb-icon icon="info-circle" size="lg"/> {{message}}

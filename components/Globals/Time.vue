@@ -1,8 +1,8 @@
 <template>
   <div>
-    <mdb-row class="d-flex justify-content-start" col="12">
-      <mdb-col class="glow" md="3">
-        <h4>{{time}} <br> {{$moment(new Date()).format("LL")}} </h4>
+    <mdb-row class="d-flex justify-content-start" cols="12">
+      <mdb-col class="glow" md="12" xs="12" lg="12" sm="12">
+        <h4>{{time}}, {{$moment(new Date()).format("LL")}} </h4>
       </mdb-col>
     </mdb-row>
   </div>

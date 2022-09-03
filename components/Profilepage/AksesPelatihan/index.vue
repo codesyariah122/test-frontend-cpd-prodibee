@@ -137,7 +137,7 @@
     props: ["loading_event", "pelatihans", "username"],
     data() {
       return {
-        listToShow: 3,
+        listToShow: 9,
         header: {
           title: "Pelatihan Saya",
           context:

@@ -25,12 +25,14 @@
     layout: "auth",
     async asyncData({ from }) {
       const previousPath = from 
+      console.log(previousPath.fullPath)
       return {
         previousPath
       }
     },
     data() {
       return {
+        paket_id: localStorage.getItem('data-paket') ? JSON.parse(localStorage.getItem('data-paket')) : '',
         validation: {},
         show_alert: null,
         profiles: [],
@@ -117,10 +119,17 @@
           this.profiles = res.user;
 
           // redirect
-          if (event_id) {
+          if (this.previousPath.fullPath === event_path) {
             // console.log("ok send event")
             this.$router.push({
               path: event_path,
+            });
+          }else if(this.previousPath.fullPath === `/events/membership/${this.paket_id.paket_id}/registrasi`){
+            this.$router.push({
+              name: 'events-membership-id-registrasi',
+              params: {
+                id: this.paket_id.paket_id
+              }
             });
           } else {
             // console.log("no event data")

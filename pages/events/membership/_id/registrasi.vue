@@ -23,6 +23,7 @@
 		},
 
 		beforeMount(){
+			localStorage.setItem('event', ''),
 			this.CheckToken()
 		},
 

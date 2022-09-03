@@ -1,5 +1,10 @@
 // Global font from google font 
 // @import moving to nuxt.config.js at line link
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 html,
 body {
   overflow-x:hidden;

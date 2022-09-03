@@ -30,6 +30,7 @@
 						localStorage.setItem('data-paket', '')
 						localStorage.setItem('paket-membership-user', '')
 						localStorage.setItem('success', '')
+						localStorage.setItem('event', '')
 						this.$store.dispatch('config/setProfileLogout', JSON.stringify({logout: true, username: this.$username(this.profiles.nama)}))
 						this.$swal(
 							'Logout!',
