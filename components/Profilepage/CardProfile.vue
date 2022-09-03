@@ -38,7 +38,7 @@
               "
               >
               <b-avatar
-              variant="primary"
+              variant="none"
               :src="profiles.photo"
               :size="size"
               ></b-avatar>
@@ -94,11 +94,9 @@
           <mdb-col md="4" class="profile__options-page">
             <mdb-row class="d-flex justify-content-center">
               <mdb-col col="12" sm="6">
-                <mdb-btn outline="primary" size="sm" style="background-color: transparent !important;">
-                  <nuxt-link  :to="`/profile/edit/${profiles.id}`">
-                    <mdb-icon icon="user-cog" size="sm" /> Edit Profile
-                  </nuxt-link>
-                </mdb-btn>
+                <nuxt-link style="height: 2.3rem;" class="btn py-2 btn-sm btn-outline-primary" :to="`/profile/edit/${profiles.id}`">
+                  <mdb-icon icon="user-cog" size="sm"  /> Edit Profile
+                </nuxt-link>
               </mdb-col>
               <mdb-col col="12" sm="6">
                 <mdb-btn color="deep-orange" size="sm" @click="LogoutProfile">

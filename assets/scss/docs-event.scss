@@ -155,7 +155,7 @@
 @media (min-width: 992px) {
 	.docs-wrapper{
 		.docs-sidebar{	
-			margin-top: -5rem;
+			margin-top: -4rem;
 			width:380px!important;
 			height:100vh;
 			margin-bottom: 7rem;
@@ -181,7 +181,7 @@
 				overflow-x: hidden;
 				// overflow-y: hidden;
 				height: 120vh;
-				margin-top: -5em;
+				margin-top: 5em;
 				
 				.section-items{
 					position: relative;
@@ -286,7 +286,6 @@
 			margin-top: 7rem!important;
 			margin-left: 22rem;
 			height: auto!important;
-			font-family: 'Poppins';
 			.container{
 				.docs-article{
 					.embed__file{
@@ -321,6 +320,7 @@
 									border: 4px solid $scroll-bar-bg;
 									margin-left: 2rem;
 									margin-bottom: 3rem;
+									width: 75%;
 								}
 							}
 						}

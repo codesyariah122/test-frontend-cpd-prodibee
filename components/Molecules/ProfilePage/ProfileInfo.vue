@@ -1,5 +1,5 @@
 <template>
-  <div class="profile__info">
+  <div class="profile__info container">
     <div v-if="loading">
       <b-skeleton animation="wave" width="85%"></b-skeleton>
       <b-skeleton animation="wave" width="55%"></b-skeleton>

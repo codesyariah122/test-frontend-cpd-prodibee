@@ -16,17 +16,7 @@
             Status : {{details.status_pendaftaran_value}} <mdb-icon icon="check" color="white" size="sm"/>
           </b-badge>
         </li>
-        <!-- <li class="nav-item__sidebar">
-        <div class="row justify-content-start profile__fasilitator">
-          <div class="col-md-5 avatar">
-            <b-avatar :src="require('~/assets/images/Avatar/5.jpg')" variant="none" size="5rem"></b-avatar>
-          </div>
-          <div class="col-md-7 profile">
-            <h5>dr. Hasan Fadly</h5>
-            <blockquote>Dokter Umum</blockquote>
-          </div>
-        </div>
-      </li> -->
+        
         <b-dropdown-divider style="list-style: none"></b-dropdown-divider>
 
         <div v-if="loading">
