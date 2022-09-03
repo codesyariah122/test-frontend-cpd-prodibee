@@ -15,7 +15,7 @@
 
 <script>
 	export default {
-		name: 'profile-events',
+		name: 'profile-name-events',
 		layout: 'profile-event',
 
 		data(){

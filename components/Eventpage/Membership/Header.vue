@@ -4,7 +4,7 @@
 			<mdb-col col="12" lg="12" xs="12" sm="12" class="pembayaran__header">
 				<h2>Registrasi Paket Membership</h2>
 				<p>
-					Silahkan lakukan pembayaran dengan metode trasfer bank yang telah tersedia di bagian kolom input bank sebelah kanan.
+					Silahkan lakukan pembayaran dengan metode transfer Bank yang telah tersedia di bagian kolom input bank sebelah kanan.
 				</p>
 			</mdb-col>
 		</mdb-row>

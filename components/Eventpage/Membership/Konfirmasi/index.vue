@@ -99,13 +99,16 @@
 							<b-container>
 								<div v-if="parseInt(bank.id) == 1">
 									
-									<b-card no-body class="shadow-none overflow-hidden card__bank-list">
+									<b-card class="shadow-none overflow-hidden card__bank-list" title="Transfer Bank">
+										<blockquote class="blockquote-footer">
+											Berikut data Bank yang anda pilih sebagai metode pendaftaran paket membership.
+										</blockquote>
 										<b-row no-gutters>
 											<b-col md="4" class="mt-5">
 												<b-card-img :src="require('~/assets/images/bank/logo-bank-bca.svg')" alt="Image" class="rounded-0"></b-card-img>
 											</b-col>
 											<b-col md="8">
-												<b-card-body title="Transfer Bank">
+												<b-card-body>
 													<b-card-text>
 														<h6 class="mt-2">Bank {{bank.nama}} </h6>
 														<p> a.n : <span class="text-capitalize">{{bank.nama_rek}}</span> </p>
@@ -167,7 +170,7 @@
 											</div>
 										</mdb-col>
 										<mdb-col md="12">
-											<mdb-btn @click="LanjutPembayaran" class="btn my__btn-primary rounded-pill btn-block shadow-none">Lanjutkan Pendaftaran</mdb-btn>
+											<mdb-btn @click="LanjutPembayaran" class="btn text-white my__btn-primary rounded-pill btn-block">Lanjutkan Pendaftaran</mdb-btn>
 										</mdb-col>
 
 									</mdb-row>
@@ -180,6 +183,9 @@
 										</mdb-alert>
 									</div>
 									<div class="file-input">
+										<small>
+											Lanjutkan dengan mengunggah bukti pembayaran Anda.
+										</small>
 										<input type="file" id="file" class="rounded-pill file" @change="FileImage($event)">
 										<label for="file">
 											Unggah Bukti Pembayaran

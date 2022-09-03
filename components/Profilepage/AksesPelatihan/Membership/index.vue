@@ -69,12 +69,14 @@
 											</b-button>
 										</li>
 										<li class="my-1 item-check">
-											<i
+											<i v-if="lists[listIndex-1].status_value === 'Aktif'"
 											class="fa fa-check-circle"
 											aria-hidden="true"
 											style="color: #05a863; margin-right: 5px;"
 											></i
-											>Status {{lists[listIndex-1].status_value}}
+											>
+											<i v-else class="fa fa-exclamation-circle text-warning" aria-hidden="true" style="margin-right: 5px;"></i>
+											Status {{lists[listIndex-1].status_value}}
 										</li>
 										<li class="my-1 item-check">
 											<i

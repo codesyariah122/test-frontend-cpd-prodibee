@@ -84,10 +84,10 @@
 			DetailEventProfileLogin(){
 				if(this.token.accessToken){
 					const url = `${this.api_url}/web/event/${this.$route.params.id}`
-
 					this.$axios.defaults.headers.common.Authorization = `Bearer ${this.token.accessToken}`
 					this.$axios.get(url)
 					.then(({data}) => {
+						console.log(data)
 						this.details = data.kegiatan
 						this.schedules = data.pelatihans
 					})
@@ -103,7 +103,7 @@
 
 					FetchData(url)
 					.then((res) => {
-						this.lists = res.map(d => {
+						this.lists = res.list_jenis_kegiatan.map(d => {
 							d.list_kegiatan_terdekat.filter(d => d.id != this.id)
 						})
 						// console.log(res.list_kegiatan_terdekat)

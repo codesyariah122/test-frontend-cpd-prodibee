@@ -86,7 +86,9 @@
 		<mdb-row :class="`${$device.isDesktop ?  'row justify-content-end check__point' : 'row justify-content-end check__point mt-3'}`">
 			<mdb-col col="12" lg="4" sm="12">
 				<b-card title="Transfer Bank" class="shadow-none list__bank">
-					
+					<blockquote class="blockquote-footer">
+						Metode pembayaran melalui transfer bank, pilih pada bagian Bank yang tersedia untuk melanjutkan proses pendaftaran paket membership.
+					</blockquote>
 					<b-card-text>
 						<div class="input__bank">
 							<mdb-row v-if="error" class="row justify-content-center">
@@ -209,7 +211,7 @@
 					this.validation.message = "Harap checklist pada bagian bank yang tersedia"
 					setTimeout(() => {
 						this.loading_btn=false
-					}, 1500)
+					}, 500)
 
 				}
 			},
