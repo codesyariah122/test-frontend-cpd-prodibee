@@ -4,7 +4,7 @@
 			<mdb-col col="12"  lg="8" xs="10" sm="12" class="mb-3">
 				<b-card no-body class="overflow-hidden shadow-none">
 					<b-row v-if="$device.isDesktop" no-gutters class="mt-2 row justify-content-start ml-2 rincian__event-table">
-						<h5>Ringkasan Belanja</h5>
+						<h5>Ringkasan Belanja Pelatihan</h5>
 						<table class="table table-borderless">
 							<thead>
 								<tr>
@@ -113,7 +113,7 @@
 												<b-card-body title="Transfer Bank">
 													<b-card-text>
 														<h6 class="mt-2">Bank {{pembayaran.bank.nama}} </h6>
-														<p> a.n : <span class="text-capitalize">{{bank.nama_rek}}</span> </p>
+														<p> a.n : <span class="text-capitalize">{{pembayaran.bank.nama_rek}}</span> </p>
 
 														<h5>
 															{{pembayaran.bank.no_rek}}
@@ -224,14 +224,13 @@
 				pembayaran: {
 					bank: {},
 					kegiatan: {}
-				},
-				data_event: this.$route.params.data
+				}
 			}
 		},
 
 		mounted(){
-			// console.log(this.bank)
-			this.CheckPembayaran(this.$route.params.id),
+			console.log(this.id),
+			this.CheckPembayaran(this.id),
 			this.StatusPembayaran()
 		},
 
@@ -247,8 +246,8 @@
 			},
 
 			StatusPembayaran(){
-				this.pembayaran.bank = this.$route.params.bank
-				this.pembayaran.kegiatan = this.$route.params.kegiatan
+				this.pembayaran.bank = this.bank
+				this.pembayaran.kegiatan = this.kegiatan
 				console.log(this.pembayaran.bank)
 			},
 

@@ -5,53 +5,36 @@
 				<b-card no-body class="overflow-hidden shadow-none">
 					<b-row v-if="$device.isDesktop" no-gutters class="mt-2 row justify-content-start ml-2 rincian__event-table">
 						<h5>Ringkasan Belanja</h5>
-						<!-- <pre>
-							{{data_event}}
-						</pre> -->
-						<table class="table table-borderless">
-							<thead>
-								<tr>
-									<th scope="row">
-										<b>Kelas</b>
-									</th>
-									<th scope="row">
-										<b>Tanggal</b>
-									</th>
-									<th scope="row">
-										<b>Subtotal</b>
-									</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>
-										{{event.kegiatan_title}}
-									</td>
-									<td>
-										{{$moment(details.tanggal_awal).format("LLLL")}} - {{$moment(details.tanggal_akhir).format("LLLL")}}
-									</td>
-									<td>
-										{{$format(event.harga)}}
-									</td>
-								</tr>
-							</tbody>
-							<!-- <tfoot>
-								<tr>
-									<th colspan="12">
-										<div class="dropdown-divider"></div>
-									</th>
-								</tr>
-								<tr>
-									<th>Total</th>
-									<th>{{$format(event.harga)}}</th>
-								</tr>
-								<tr>
-									<th colspan="12">
-										<div class="dropdown-divider"></div>
-									</th>
-								</tr>
-							</tfoot> -->
-						</table>
+						<div class="table-responsive">
+							<table class="table table-borderless">
+								<thead>
+									<tr>
+										<th scope="row">
+											<b>Kelas</b>
+										</th>
+										<th scope="row">
+											<b>Tanggal</b>
+										</th>
+										<th scope="row">
+											<b>Subtotal</b>
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>
+											{{event.kegiatan_title}}
+										</td>
+										<td>
+											{{$moment(details.tanggal_awal).format("LLLL")}} - {{$moment(details.tanggal_akhir).format("LLLL")}}
+										</td>
+										<td>
+											{{$format(event.harga)}}
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
 						<b-col md="12" xs="12" sm="12">
 							<div class="dropdown-divider"></div>
 						</b-col>
@@ -125,12 +108,6 @@
 							</mdb-row>
 							<form @submit.prevent="RegisterEvent">
 								<b-container>
-									<!-- <div v-for="bank in banks" :key="bank.id">
-										<input type="radio" class="custom-control-input" :id="`bank-${bank.id}`" :value="bank.id" v-model="field.bank_id">
-										<label class="custom-control-label" :for="`bank-${bank.id}`">
-											<img :src="`${bank.id === 1 ? require('~/assets/images/bank/bsi.png') : require('~/assets/images/bank/permata-syariah.png')}`" width="100" height="50"> {{bank.nama}}
-										</label>
-									</div> -->
 									<b-form-radio class="mb-2" v-for="bank in banks" :key="bank.id" name="bank" :id="`bank-${bank.id}`" :value="bank.id" v-model="field.bank_id" >
 										<img :src="`${bank.id === 1 ? require('~/assets/images/bank/logo-bank-bca.svg') : require('~/assets/images/bank/logo-bank-mandiri.svg')}`" width="150" height="50"> <span>{{bank.nama}}</span>
 									</b-form-radio>
@@ -228,10 +205,8 @@
 				this.error = false
 				this.validation.message=""
 				this.loading_btn = true
-				console.log(this.field.bank_id)
 				if(this.field.bank_id){
 					const url = `${this.api_url}/web/event/${this.id}/daftar`
-
 					this.$axios.defaults.headers.common.Authorization = `Bearer ${this.token.accessToken}`
 					this.$axios.post(url, {
 						bank_id: this.field.bank_id
@@ -257,7 +232,7 @@
 						}
 					})
 					.catch(err => {
-						console.log(err)
+						console.log(err.response)
 					})
 					.finally(() => {
 						setTimeout(() => {

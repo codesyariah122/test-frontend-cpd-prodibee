@@ -7,10 +7,10 @@
       <b-row cols="12" class="row justify-content-start">
 
         <!-- Banner art image Mobile -->
-        <MoleculesHomepageMoleculesBannerArtMobile v-if="$device.isMobile"/>
+        <MoleculesHomepageMoleculesBannerArtMobile v-if="$device.isDesktop"/>
 
         <!-- Context -->
-        <b-col md="7" xs="12" sm="12">
+        <b-col md="7" xs="12" sm="12" class="caption__banner">
           <h2 class="display-6 text-capitalize">
             <span class="copywrite">Tedika Health Education</span> <br>
             <div :style="`${$device.isDesktop ? 'margin-top:-1.9rem!important;' : 'margin-top:-.5rem!important;'}`">kembangkan kompetensi tenaga <span class="block-text">kesehatan</span> </div>
@@ -75,7 +75,6 @@
           this.$axios
           .get(url)
           .then(({ data }) => {
-            console.log(data)
             this.profiles = data.user;
             this.slug = data.user.nama;
           })

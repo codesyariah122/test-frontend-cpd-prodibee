@@ -17,7 +17,7 @@
       </nuxt-link>
     </mdb-navbar-brand>
     <mdb-navbar-toggler>
-      <mdb-navbar-nav right>
+      <mdb-navbar-nav right style="margin-left: 1.5rem;">
         <mdb-nav-item active waves-fixed >
           <nuxt-link to="/" tag="li" navLink > Home </nuxt-link>
         </mdb-nav-item>
@@ -29,11 +29,9 @@
         </mdb-nav-item>
 
         <mdb-nav-item v-if="token.accessToken" waves-fixed>
-          <nuxt-link tag="li" navLink  :to="`/profile/${$username(slug)}/events`">
-            Akses Pelatihan
-          </nuxt-link>
+          <nuxt-link tag="li" navLink  :to="`/profile/${$username(slug)}/events`">Akses Pelatihan</nuxt-link>
         </mdb-nav-item>
-        <mdb-dropdown v-if="$route.name != 'profile-name-events' && $route.name != 'profile-name-events-id-slug'" tag="li" class="nav-item">
+        <mdb-dropdown tag="li" class="nav-item">
           <mdb-dropdown-toggle
           tag="a"
           navLink
@@ -99,7 +97,7 @@ style="font-size: 31px !important"
   <nuxt-link 
   to="/auth/login"
   class="ml-2 btn btn-outline-primary btn-md shadow-none"
-  size="md" style="border-radius: 5px;"
+  size="md"
   >Masuk</nuxt-link>
 
   <nuxt-link

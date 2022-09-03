@@ -27,6 +27,7 @@
 					if (result.isConfirmed) {
 						this.$store.dispatch('config/storeConfigAuth', '')
 						this.$store.dispatch('config/setEventToLogin', '')
+						localStorage.setItem('data-paket', '')
 						this.$store.dispatch('config/setProfileLogout', JSON.stringify({logout: true, username: this.$username(this.profiles.nama)}))
 						this.$swal(
 							'Logout!',

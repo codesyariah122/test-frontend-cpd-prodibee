@@ -1,87 +1,46 @@
 <template>
-  <div v-if="$device.isDesktop" class="banner">
-    <mdb-carousel
-      :interval="8000"
-      slide
-      :items="items"
-      controlls
-      indicators
-      fade
-      dark
-      class="jumbotron__home"
-      customClass="rounded"
-    >
-    </mdb-carousel>
-    <b-container class="container">
-      <b-row>
-        <b-col>
-          <div class="caption__banner">
-            <h2 class="display-6 text-capitalize white-text">
-              Selamat datang di CPD Online
-            </h2>
-            <p style="color: white; width: 50%">
-              CPD Online menyelenggarakan pelatihan di bidang kesehatan yang
-              profesional, unggul dan berlandaskan I-CARE serta mampu berdaya
-              saing di tingkat nasional.
-            </p>
-            <b-button
-              v-if="!token.accessToken"
-              class="my__btn-primary rounded"
-              @click="$router.push({ name: 'auth-registrasi' })"
-              >Daftar Sekarang</b-button
-            >
-          </div>
-        </b-col>
-      </b-row>
-    </b-container>
-  </div>
-
-  <!-- If Mobile using jumbotron -->
-  <div v-else>
+  <div>
     <b-jumbotron
-      class="jumbotron__home"
-      :style="`background-image: url(${bg});`"
+      class="jumbotron__home mt-5 shadow-none"
     >
-      <b-container>
-        <b-row>
-          <b-col>
+      <b-container class="container__jumbotron">
+        <b-row cols="12" class="row justify-content-start">
+          <!-- Banner art image Mobile -->
+          <MoleculesHomepageMoleculesBannerArtMobile v-if="$device.isMobile"/>
+          <!-- Context -->
+          <b-col md="7" xs="12" sm="12">
             <h2 class="display-6 text-capitalize">
-              Selamat datang di CPD Online
+              kembangkan kompetensi tenaga <span class="block-text">kesehatan</span>
             </h2>
             <p>
-              CPD Online menyelenggarakan pelatihan di bidang kesehatan yang
-              profesional, unggul dan berlandaskan I-CARE serta mampu berdaya
-              saing di tingkat nasional.
+             Tingkatkan kemampuan kompetensi sebagai tenaga kesehatan dengan ratusan kelas online bersertifikat resmi
             </p>
             <b-button
               v-if="!token.accessToken"
-              class="my__btn-primary rounded"
+              :class="`my__btn-primary rounded-pill ${$device.isMobile ? 'btn-block btn-sm' : ''}`"
               @click="$router.push({ name: 'auth-registrasi' })"
               >Daftar Sekarang</b-button
             >
+            <b-button
+              v-if="token.accessToken"
+              :class="`my__btn-secondary rounded-pill ${$device.isMobile ? 'btn-block btn-sm mt-3' : ''}`"
+              @click="$router.push({ name: 'auth-registrasi' })"
+              >Lihat kelas saya</b-button
+            >
           </b-col>
+
+          <!-- Banner art image -->
+          <MoleculesHomepageMoleculesBannerArtDesktop v-if="$device.isDesktop"/>
+
         </b-row>
       </b-container>
     </b-jumbotron>
-    <div class="banner">
-      <mdb-carousel
-        :interval="8000"
-        slide
-        :items="items"
-        controlls
-        indicators
-        fade
-        dark
-        class="jumbotron__home mb-5"
-        customClass="rounded"
-      >
-      </mdb-carousel>
-    </div>
+
   </div>
 </template>
 
 <script>
 export default {
-  props: ["bg", "items", "token"],
+  props: ["items", "token"],
 };
 </script>

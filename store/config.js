@@ -6,6 +6,7 @@ export const state = () => ({
 		token: {},
 		profiles:{},
 		event:{},
+		membership: {},
 		event_data: {},
 		logout: {},
 		logout_data: {}
@@ -24,7 +25,6 @@ export const mutations = {
 		}else{
 			localStorage.removeItem('token')
 		}
-		// state.config.auth=option ? localStorage.setItem('token', data) : localStorage.removeItem('token')
 	},
 
 	CONFIG_CHECK_LOGIN(state, name){
@@ -34,6 +34,10 @@ export const mutations = {
 
 	CONFIG_SET_EVENT_LOGIN(state, data){
 		state.config.event = localStorage.setItem('event', data)
+	},
+
+	CONFIG_SET_MEMBERSHIP(state, data){
+		state.config.membership = localStorage.setItem('memberhsip', data)
 	},
 
 	CONFIG_GET_EVENT_LOGIN(state, name){
@@ -68,6 +72,10 @@ export const actions = {
 		commit('CONFIG_SET_EVENT_LOGIN', data)
 	},
 
+	setMembershipToLogin({commit}, data){
+		commit('CONFIG_SET_MEMBERSHIP', data)
+	},
+
 	getEventDataToLogin({commit}, name){
 		commit('CONFIG_GET_EVENT_LOGIN', name)
 	},
@@ -95,6 +103,10 @@ export const getters = {
 
 	ConfigSetEventLogin(state){
 		return state.config.event
+	},
+
+	ConfigSetMembershipLogin(state){
+		return state.config.membership
 	},
 
 	ConfigEventDataLogin(state){

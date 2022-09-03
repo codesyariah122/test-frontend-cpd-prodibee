@@ -1,6 +1,15 @@
 <template>
 	<div>
-		<ProfilepageAksesPelatihan :loading_event="loading_event" :pelatihans="pelatihans" :username="username" @event-diikuti="EventYangDiikuti"/>
+		<mdb-container class="akses__pelatihan">
+			<b-tabs content-class="mt-3">
+				<b-tab title="Pelatihan Saya" active>
+					<ProfilepageAksesPelatihan :loading_event="loading_event" :pelatihans="pelatihans" :username="username" @event-diikuti="EventYangDiikuti"/>
+				</b-tab>
+				<b-tab title="Paket Membership">
+					<ProfilepageAksesPelatihanMembership/>
+				</b-tab>
+			</b-tabs>
+		</mdb-container>
 	</div>
 </template>
 
@@ -59,10 +68,10 @@
 			EventYangDiikuti(page = 0, category = "", month = "") {
 				this.loading_event = true;
 				const url = `${this.api_url}/web/kegiatan/saya/list/page?start=${page}&jenis_pelatihan=${category}&bulan_pelatihan=${month}`;
+				this.$axios.defaults.headers.common.Authorization = `Bearer ${this.token.accessToken}`;
 				this.$axios
 				.get(url)
 				.then(({ data }) => {
-					console.log(data)
 					if (data.list_data.length > 0) {
 						this.pelatihans = data.list_data;
 					} else {

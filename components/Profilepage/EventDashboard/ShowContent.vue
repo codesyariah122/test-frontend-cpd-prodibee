@@ -37,11 +37,9 @@
   <div v-else-if="type == 2" class="embed__file">
     <header class="docs-header">
       <section class="docs-intro">
-        <!-- <mdb-badge color="primary" class="mb-2">{{type_name}}</mdb-badge> -->
         <h5 class="type__name">{{ type_name }}</h5>
         <h2>{{ detailed_data.title }}</h2>
       </section>
-      <!--//docs-intro-->
     </header>
     <section class="docs-section mt-2" id="item-1-1">
       <mdb-alert

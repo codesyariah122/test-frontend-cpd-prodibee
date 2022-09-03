@@ -8,10 +8,13 @@
     <nav v-else id="docs-nav" class="docs-nav navbar shadow-none">
       <ul class="section-items list-unstyled nav flex-column pb-3">
         <li class="nav-item__sidebar section-title">
-          <!-- <img :src="details.photo" class="img-fluid" width="250"> -->
+          <img :src="details.photo" class="img-fluid img-thumbnail" width="250">
           <h5>
             {{ details.kegiatan_title }}
           </h5>
+           <b-badge variant="success">
+            Status : {{details.status_pendaftaran_value}} <mdb-icon icon="check" color="white" size="sm"/>
+          </b-badge>
         </li>
         <!-- <li class="nav-item__sidebar">
         <div class="row justify-content-start profile__fasilitator">

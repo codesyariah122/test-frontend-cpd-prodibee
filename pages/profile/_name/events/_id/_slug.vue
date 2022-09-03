@@ -14,10 +14,8 @@
 
       <div class="docs-content">
         <div class="container">
-          <!-- Sidebar Toggler -->
-          <MoleculesProfilePageTogglerSidebar />
 
-          <!-- <ColorModePicker/> -->
+          <MoleculesProfilePageTogglerSidebar />
 
           <article v-if="!show_file" class="docs-article">
             <header class="docs-header">
@@ -42,8 +40,7 @@
                     </h2>
                     <p>
                       <strong
-                        >Selamat Datang di Dashboard Pelatihan CPD
-                        Online</strong
+                        >Selamat Datang di Dashboard Pelatihan Tedika Health Education</strong
                       >
                       <br />
                       <mdb-alert color="warning">
@@ -62,15 +59,6 @@
                   </div>
                 </div>
               </section>
-              <!--//section-->
-              <section class="docs-intro mt-5" id="section-1">
-                <ProfilepageEventDashboardDetailEvent
-                  :details="details"
-                  :loading="loading"
-                  :status_pendaftaran="status_pendaftaran"
-                />
-              </section>
-              <!--//docs-intro-->
             </header>
           </article>
 
@@ -293,6 +281,7 @@ export default {
       this.show_close = true;
       this.detailed_data = raw;
       let field = "";
+      console.log(type)
       switch (type) {
         case 1:
           field = "video";

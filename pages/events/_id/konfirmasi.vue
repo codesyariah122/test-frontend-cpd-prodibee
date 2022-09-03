@@ -33,7 +33,7 @@
 					this.Alert('error', `Anda tidak dapat izin untuk mengakses halaman ini`)
 					setTimeout(() => {
 						this.$router.push({
-							path: `/detail/event/${this.$route.params.id}`
+							path: `/detail/event/${this.id}`
 						})
 					}, 900)
 				}
@@ -61,7 +61,7 @@
 			},
 			DetailEventProfileLogin(){
 				if(this.token.accessToken){
-					const url = `${this.api_url}/web/event/${this.$route.params.id}`
+					const url = `${this.api_url}/web/event/${this.id}`
 					this.$axios.defaults.headers.common.Authorization = `Bearer ${this.token.accessToken}`
 					this.$axios.get(url)
 					.then(({data}) => {

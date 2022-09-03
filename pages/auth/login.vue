@@ -4,12 +4,12 @@
       <mdb-row class="row justify-content-center">
         <mdb-col md="6" sm="8" xs="8">
           <AuthpageLoginCard
-            @login-profile="Login"
-            :validation="validation"
-            :show_alert="show_alert"
-            :loading="loading"
-            ref="AuthLogin"
-            :event_data="event_data"
+          @login-profile="Login"
+          :validation="validation"
+          :show_alert="show_alert"
+          :loading="loading"
+          ref="AuthLogin"
+          :event_data="event_data"
           />
         </mdb-col>
       </mdb-row>
@@ -18,93 +18,98 @@
 </template>
 
 <script>
-import { LoginProfile } from "@/helpers";
+  import { LoginProfile } from "@/helpers";
 
-export default {
-  name: "auth-login",
-  layout: "auth",
+  export default {
+    name: "auth-login",
+    layout: "auth",
+    async asyncData({ from }) {
+      const previousPath = from 
+      return {
+        previousPath
+      }
+    },
+    data() {
+      return {
+        validation: {},
+        show_alert: null,
+        profiles: [],
+        username: '',
+        loading: null,
+      };
+    },
 
-  data() {
-    return {
-      validation: {},
-      show_alert: null,
-      profiles: [],
-      username: '',
-      loading: null,
-    };
-  },
+    beforeMount() {
+      this.ConfigApiUrl(), this.CheckToken();
+    },
 
-  beforeMount() {
-    this.ConfigApiUrl(), this.CheckToken();
-  },
-
-  mounted() {
+    mounted() {
       this.EventDataLogin(),
       this.UserProfileData(),
       this.IsLoggedIn(),
       this.CheckLogout();
-  },
-
-  methods: {
-    IsLoggedIn() {
-      if (this.token.accessToken) {
-        this.Alert("success", `Anda sedang login`);
-        setTimeout(() => {
-          this.$router.push({
-            name: "profile-name",
-            params: {
-              name: this.username,
-            },
-          });
-        }, 1500);
-      }
     },
 
-    CheckToken() {
-      this.$store.dispatch("config/checkAuthLogin", "token");
-    },
+    methods: {
+      IsLoggedIn() {
+        if (this.token.accessToken) {
+          this.Alert("success", `Anda sedang login`);
+          setTimeout(() => {
+            this.$router.push({
+              name: "profile-name",
+              params: {
+                name: this.username,
+              },
+            });
+          }, 1500);
+        }
+      },
 
-    UserProfileData() {
-      if (this.token) {
-        const url = `${this.api_url}/web/user`;
-        this.$axios.defaults.headers.common.Authorization = `Bearer ${this.token.accessToken}`;
-        this.$axios
+      CheckToken() {
+        this.$store.dispatch("config/checkAuthLogin", "token");
+      },
+
+      UserProfileData() {
+        if (this.token) {
+          const url = `${this.api_url}/web/user`;
+          this.$axios.defaults.headers.common.Authorization = `Bearer ${this.token.accessToken}`;
+          this.$axios
           .get(url)
           .then(({ data }) => {
             console.log(data.user)
             this.profiles = data.user;
             this.username = this.$username(data.user.nama);
           })
-          .catch((err) => console.log(err.response ? err.response : ""));
-      }
-    },
-    CheckLogout() {
-      this.$store.dispatch("config/getProfileLogout", "logout");
-    },
+          .catch((err) => console.log(err.response ? err.response : "-"));
+        }
+      },
+      CheckLogout() {
+        this.$store.dispatch("config/getProfileLogout", "logout");
+      },
 
-    Login(params) {
-      this.$store.dispatch(
-        "config/setProfileLogout",
-        JSON.stringify({ logout: false })
-      );
-      this.loading = true;
-      const url = `${this.api_url}/web/auth/login`;
-      const event_id = this.event_data.event_id
+      Login(params) {
+        this.$store.dispatch(
+          "config/setProfileLogout",
+          JSON.stringify({ logout: false })
+          );
+        this.loading = true;
+        const url = `${this.api_url}/web/auth/login`;
+        const event_id = this.event_data.event_id
         ? this.event_data.event_id
         : false;
-      const event_path = this.event_data.event_path
+        const event_path = this.event_data.event_path
         ? this.event_data.event_path
         : false;
       // Method from helpers
       LoginProfile(url, params)
-        .then((res) => {
-          if (res.message) {
-            this.Alert("error", res.message);
-            this.show_alert = true;
-            this.validation = res.message;
-          }
-          const alert_data = `Halo, Selamat Datang ${res.user.nama}, Login berhasil !`;
-          this.Alert("success", alert_data);
+      .then((res) => {
+        if (res.message) {
+          this.Alert("error", res.message);
+          this.show_alert = true;
+          this.validation = res.message;
+        }
+        const alert_data = `Halo, Selamat Datang ${res.user.nama}, Login berhasil !`;
+        this.Alert("success", alert_data);
           // store access token
           this.ConfigAuthLogin(JSON.stringify(res.token));
 
@@ -120,39 +125,40 @@ export default {
           } else {
             // console.log("no event data")
             this.$router.push({
-              path: `/profile/${this.$username(res.user.nama)}`,
+              // path: `/profile/${this.$username(res.user.nama)}`,
+              path: this.previousPath.path
               // params: {
               // 	slug: this.$username(res.user.nama)
               // }
             });
           }
         })
-        .catch((err) => console.log(err))
-        .finally(() => {
-          setTimeout(() => {
-            this.loading = false;
-          }, 900);
-        });
+      .catch((err) => console.log(err))
+      .finally(() => {
+        setTimeout(() => {
+          this.loading = false;
+        }, 900);
+      });
     },
 
     Alert(status, data) {
       switch (status) {
         case "error":
-          return this.$swal({
-            icon: status,
-            title: "Oops...",
-            text: data,
-          });
-          break;
+        return this.$swal({
+          icon: status,
+          title: "Oops...",
+          text: data,
+        });
+        break;
         case "success":
-          return this.$swal({
-            position: "top-end",
-            icon: status,
-            title: data,
-            showConfirmButton: false,
-            timer: 1500,
-          });
-          break;
+        return this.$swal({
+          position: "top-end",
+          icon: status,
+          title: data,
+          showConfirmButton: false,
+          timer: 1500,
+        });
+        break;
       }
     },
 

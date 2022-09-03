@@ -90,8 +90,8 @@
 }
 
 @media only screen 
-   and (max-width : 720px) 
-   and (max-height : 1280px) {
+and (max-width : 720px) 
+and (max-height : 1280px) {
 	.jumbotron__home{
 		margin-top: 3.5rem!important;
 		margin-bottom: 15rem!important;
@@ -621,12 +621,27 @@
 			transform: rotateY(180deg);
 		}
 	}
+
+	.bg__content2{
+		z-index: -1;
+		margin-left: -10rem;
+		margin-top:-25rem;
+		img{
+			transform: rotateY(180deg);
+		}
+	}
+
 }
 
 @media (min-width: 992px) {
 	.panel__target-content{
 		min-height: 185px;
 		margin-bottom: 2rem;
+
+		h2{
+			font-size: 20px;
+		}
+
 		.panel__header{
 			h5{
 				font-size:16px;
@@ -648,7 +663,7 @@
 			margin-left: 2rem;
 			.card{
 				background-color: $bg-button-gray;
-				height: 330px;
+				height: 370px;
 				.card-title{
 					font-size: 21px;
 					font-weight: 600;
@@ -660,6 +675,16 @@
 			z-index: -1;
 			margin-left: 100rem;
 			margin-top:-14rem;
+			img{
+				transform: rotateY(365deg);
+			}
+		}
+
+		.bg__content2{
+			position:absolute;
+			z-index: -1;
+			margin-left: -15rem;
+			margin-top:-15rem;
 			img{
 				transform: rotateY(365deg);
 			}
@@ -754,7 +779,6 @@
 		width: 100%;
 		background-color: transparent;
 		height: auto;
-		margin-bottom: 5rem;
 		@include header_inside_list_desktop($color-primary);
 		.col__berita{
 			// width: 100%;
@@ -770,6 +794,7 @@
 			margin-left: 2rem;
 			.card{
 				border-radius:13px;
+				width: 100%;
 				height: auto!important;
 				.card-body{
 					.card-title{
@@ -800,6 +825,7 @@
 // Testimoni component
 .testimoni__list{
 	width: 100%;
+	margin-top: -5rem;
 	@include header_inside_list_mobile($color-primary);
 	.col__testimoni{
 		width: 100%;
@@ -826,6 +852,7 @@
 	.testimoni__list{
 		@include header_inside_list_desktop($color-primary);
 		width: 100%;
+		margin-top: 8rem;
 		.col__testimoni{
 			width: 100%;
 			margin-bottom: 3rem;
@@ -834,7 +861,7 @@
 				margin-top: -.5rem;
 				.card__testimoni-content{
 					width: 95%;
-					height: 325px!important;
+					height: 325px auto !important;
 				}
 			}
 
@@ -1236,35 +1263,30 @@
 					color:$default-gray;
 					margin-left: -3rem;
 					h5{
-						font-size: 14px;
+						font-size: 18px;
 						font-weight: 700;
 						color:$second-black;
 						line-height: 28px;
-						width: 100%;
 					}
 					p{
-						margin-top: .3rem;
+						margin-top: 1.3rem;
 						font-size:14px;
 						font-weight: 400;
 						line-height: 23px;
 						top:128px;
 						height: 76px;
 						width: 288px;
-						left: 224px;
-						text-align: justify!important;
-						b{
-							text-align: left!important;
-						}
+						left: 224px;	
 					}
 					address{
-						margin-top: 9rem;
-						width: 280px;
+						margin-top: 10rem;
+						width: 100%;
 						font-size:14px;
 						font-weight: 800!important;
 						line-height: 21px;
 					}
 					img{
-						max-width: 250px!important;
+						max-width: 200px!important;
 					}
 				}
 
@@ -1371,7 +1393,7 @@
 // Akses Pelatihan
 @media (min-width: 992px) {
 	.akses__pelatihan{
-		margin-top:8rem;
+		margin-top:5rem;
 		.jumbotron{
 			.card__pelatihan{
 				.card{

@@ -215,7 +215,7 @@
 		},
 
 		mounted(){
-			// console.log(this.bank)
+			console.log(this.id),
 			this.CheckPembayaran(this.$route.params.id),
 			this.StatusPembayaran()
 		},
@@ -224,8 +224,8 @@
 
 			StatusPembayaran(){
 				console.log(this.$route.params.data_storage)
-				const check = this.$route.params.check
-				const data = check ? this.$route.params.data_storage.data : this.$route.params.data_storage 
+				const check = this.checks
+				const data = check 
 				console.log(data)
 				this.pembayaran.bank = data.bank
 				this.pembayaran.kegiatan = data.kegiatan

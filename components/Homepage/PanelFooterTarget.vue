@@ -25,7 +25,6 @@
           </mdb-col>
 
           <mdb-col col="12" md="6" xs="12" sm="12" class="panel__art">
-            <!-- <img :src="require('~/assets/images/homepage/footer-info-img.svg')"> -->
             <mdb-row class="d-flex justify-content-center">
               <mdb-col sm="3" class="art-1">
                 <img :src="require('~/assets/art/vector-art-footer-2.png')">
@@ -39,27 +38,6 @@
             </mdb-row>
           </mdb-col>
         </mdb-row>
-
-        <!-- <mdb-row class="row justify-content-start mt-1 panel__context">
-           <mdb-col col="12" md="12" xs="12" sm="10" class="visi__misi-context">
-            <h1>Visi</h1>
-            <p v-if="context.visi">{{ context.visi }}</p>
-            <br />
-            <h1>Misi</h1>
-            <ol v-if="context.misi">
-              <li v-for="n in context.misi.length" v-if="n % 2 == 1">
-                {{ context.misi[n] }}
-              </li>
-            </ol>
-            <br />
-            <h1>Motto</h1>
-            <p>Mencintai Allah Menyayangi Sesama</p>
-            <br />
-            <h1>Makna Kerja</h1>
-            <p>Berkhidmat Menyelamatkan Umat</p>
-            <br />
-          </mdb-col>
-        </mdb-row> -->
 
       </mdb-container>
     </div>

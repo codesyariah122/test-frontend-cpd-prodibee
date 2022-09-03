@@ -1,42 +1,44 @@
 <template>
   <div>
-    <!-- Homepage Content -->
-    <!-- inside container -->
     <mdb-container>
       <mdb-row class="justify-content-center mt-5">
         <mdb-col lg="12" sm="12" xs="12">
-          <HomepageNewHeader :bg="bg_image" :items="items" :token="token" />
+          <HomepageHeaderCard :bg="bg_image" :items="items" :token="token" />
         </mdb-col>
       </mdb-row>
 
       <mdb-row class="justify-content-center mt-5">
         <mdb-col lg="12" sm="12" xs="12">
-          <HomepageEventList :lists="lists.list_kegiatan_terdekat" :listToShow="listToShow" />
+          <HomepageEventList
+            :lists="lists.list_kegiatan_terdekat"
+            :listToShow="listToShow"
+          />
         </mdb-col>
 
         <mdb-col lg="12" sm="12" xs="12">
-          <HomepagePanelTarget/>
+          <HomepagePanelTarget />
         </mdb-col>
       </mdb-row>
     </mdb-container>
-    <!-- End inside container -->
+    <mdb-row
+      class="justify-content-center mt-5"
+      style="margin-left: 56px; margin-right: 56px"
+    >
+      <mdb-col lg="12" sm="12" xs="12">
+        <HomepagePilihanPaket />
+      </mdb-col>
+    </mdb-row>
 
-    <!-- out container -->
-    <!-- Testimoni -->
-    <HomepageTestimoni :lists="lists.list_testimoni"/>
-    <!-- parallax -->
+    <HomepageTestimoni :lists="lists.list_testimoni" />
+
     <HomepageParallaxHome />
-    <!-- berita -->
+
     <HomepageBerita :lists="lists.list_berita" />
 
-    <!-- panel footer -->
     <HomepagePanelFooterTarget />
-    <!-- End panel footer -->
-    <!-- visi misi content -->
+ 
     <HomepageVisiMisi />
-    <!-- End out container -->
-
-    <!-- End Homepage Content -->
+  
   </div>
 </template>
 
@@ -44,7 +46,7 @@
 //Image base on assets directory
 import HeroImage from "~/assets/images/homepage/hero-image.svg";
 import HeroImageMobile from "~/assets/images/homepage/banner.svg";
-import NewHeroImage from "~/assets/images/homepage/new-hero-3.svg"
+import NewHeroImage from "~/assets/images/homepage/new-hero-3.svg";
 
 export default {
   name: "IndexPage",
@@ -54,75 +56,73 @@ export default {
     return {
       bg_image: this.$device.isMobile ? HeroImageMobile : HeroImage,
       items: [],
-      events:[],
+      events: [],
       testimonis: [],
       news: [],
-      listToShow: 2
-    }
+      listToShow: 2,
+    };
   },
-
-  
 
   async asyncData({ $axios }) {
     const lists = await $axios.$get("/web/home");
     return {
-      lists
-    }
+      lists,
+    };
   },
-  beforeMount(){
-    this.CheckToken()
+  beforeMount() {
+    this.CheckToken();
   },
   mounted() {
-    this.CarouselItem()
+    this.CarouselItem();
   },
 
   methods: {
-    scrollTo(){
-      const element = document.querySelector("#testimoni-list")
+    scrollTo() {
+      const element = document.querySelector("#testimoni-list");
       element.scrollIntoView();
     },
-    CheckToken(){
-      this.$store.dispatch('config/checkAuthLogin', 'token')
+    CheckToken() {
+      this.$store.dispatch("config/checkAuthLogin", "token");
     },
 
     CarouselItem() {
       this.items = [
-      {
-        img: true,
-        src: "https://api.ppkc-online.com/image-banner/banner1.jpeg",
-      },
-      {
-        img: true,
-        src: "https://api.ppkc-online.com/image-banner/banner2.jpeg",
-      },
-      {
-        img: true,
-        src: "https://api.ppkc-online.com/image-banner/banner3.jpeg",
-      },
-      {
-        img: true,
-        src: "https://api.ppkc-online.com/image-banner/banner4.jpeg",
-      },
-      {
-        img: true,
-        src: "https://api.ppkc-online.com/image-banner/banner5.jpeg",
-      },
-      {
-        img: true,
-        src: "https://api.ppkc-online.com/image-banner/banner6.jpeg",
-      },
-      {
-        img: true,
-        src: "https://api.ppkc-online.com/image-banner/banner7.jpeg",
-      }
-      ]
-    }
+        {
+          img: true,
+          src: "https://api.ppkc-online.com/image-banner/banner1.jpeg",
+        },
+        {
+          img: true,
+          src: "https://api.ppkc-online.com/image-banner/banner2.jpeg",
+        },
+        {
+          img: true,
+          src: "https://api.ppkc-online.com/image-banner/banner3.jpeg",
+        },
+        {
+          img: true,
+          src: "https://api.ppkc-online.com/image-banner/banner4.jpeg",
+        },
+        {
+          img: true,
+          src: "https://api.ppkc-online.com/image-banner/banner5.jpeg",
+        },
+        {
+          img: true,
+          src: "https://api.ppkc-online.com/image-banner/banner6.jpeg",
+        },
+        {
+          img: true,
+          src: "https://api.ppkc-online.com/image-banner/banner7.jpeg",
+        },
+      ];
+    },
   },
 
   computed: {
-    token(){
-      return this.$store.getters['config/ConfigCheckLogin']
-    }
-  }
-}
+    token() {
+      return this.$store.getters["config/ConfigCheckLogin"];
+    },
+  },
+};
 </script>

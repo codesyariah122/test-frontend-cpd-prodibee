@@ -42,8 +42,7 @@
                 {{ $moment(item.tanggal_awal).format("LL") }} -
                 {{ $moment(item.tanggal_akhir).format("LL") }}</span
               >
-
-              <!-- <mdb-btn @click="ToDetailEvent(lists[listIndex-1].kegiatan_id)" block class="btn btn-outline-primary mt-3 mb-2" color="primary">Detail Event</mdb-btn> -->
+              
               <hr />
 
               <nuxt-link
@@ -95,6 +94,7 @@
 
 <script>
 import { SampleEvents } from "@/helpers";
+
 export default {
   props: ["lists", "listsToShow"],
   data() {

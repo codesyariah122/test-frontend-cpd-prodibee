@@ -6,7 +6,6 @@
       <mdb-row
       :class="`${$device.isMobile ? 'd-flex justify-content-center' : 'row'}`"
       >
-      <!-- footer branding content -->
       <mdb-col col="12" sm="3" class="mt-5 col-1">
         <img
         :src="brand"
