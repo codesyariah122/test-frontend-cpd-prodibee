@@ -8,9 +8,10 @@
           <!-- Banner art image Mobile -->
           <MoleculesHomepageMoleculesBannerArtMobile v-if="$device.isMobile"/>
           <!-- Context -->
-          <b-col md="7" xs="12" sm="12" :style="`${$device.isDesktop ? 'margin-top: 5rem;' : 'margin-top: 1rem;'}`">
+          <b-col md="7" xs="12" sm="12" :style="`${$device.isDesktop ? 'margin-top: -2rem;' : 'margin-top: 1rem;'}`">
             <h2 class="display-6 text-capitalize">
-              kembangkan kompetensi tenaga <span class="block-text">kesehatan</span>
+              <span class="copywrite">Tedika Health Education</span> <br>
+              <div :style="`${$device.isDesktop ? 'margin-top:-1.9rem!important;' : 'margin-top:-.5rem!important;'}`">kembangkan kompetensi tenaga <span class="block-text">kesehatan</span> </div>
             </h2>
             <p>
              Tingkatkan kemampuan kompetensi sebagai tenaga kesehatan dengan ratusan kelas online bersertifikat resmi
