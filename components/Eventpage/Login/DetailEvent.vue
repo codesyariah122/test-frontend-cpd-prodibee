@@ -90,7 +90,7 @@
           </div>
           <div v-else>
             <mdb-btn @click="MenungguKonfirmasi(details.kegiatan_id)" class="btn my__btn-secondary rounded-pill btn-block shadow-none" :size="`${$device.isDesktop ? 'md' : 'sm'}`"> 
-              <mdb-icon icon="check" :size="`${$device.isDesktop ? 'lg' : 'sm'}`"/> {{status_pendaftaran == 'Menunggu Konfirmasi' ? 'Konfirmasi Pendaftaran' : status_pendaftaran}}
+              <mdb-icon icon="check" :size="`${$device.isDesktop ? 'lg' : 'sm'}`"/> {{status_pendaftaran == 'Menunggu Konfirmasi' ? 'Check Konfirmasi Pendaftaran' : status_pendaftaran}}
             </mdb-btn>
           </div>
         </mdb-col>
