@@ -4,6 +4,7 @@
 			<mdb-col col="12"  lg="8" xs="10" sm="12" class="mb-3">
 				<b-card no-body class="overflow-hidden shadow-none">
 					<b-row v-if="$device.isDesktop" no-gutters class="mt-2 row justify-content-start ml-2 rincian__event-table">
+						
 						<h5>Ringkasan Belanja Pelatihan</h5>
 						<table class="table table-borderless">
 							<thead>
@@ -22,13 +23,13 @@
 							<tbody>
 								<tr>
 									<td>
-										{{pembayaran.kegiatan.kegiatan_title}}
+										{{kegiatan.kegiatan_title}}
 									</td>
 									<td>
 										{{$moment(details.tanggal_awal).format("LLLL")}} - {{$moment(details.tanggal_akhir).format("LLLL")}}
 									</td>
 									<td>
-										{{$format(pembayaran.kegiatan.harga)}}
+										{{$format(kegiatan.harga)}}
 									</td>
 								</tr>
 							</tbody>
@@ -39,7 +40,7 @@
 						<b-col md="5" xs="12" sm="12">
 							<b-card title="Total Harga" class="shadow-none rincian__bayar">
 								<b-card-text>
-									<h2> {{$format(pembayaran.kegiatan.harga)}} </h2>
+									<h2> {{$format(kegiatan.harga)}} </h2>
 								</b-card-text>
 							</b-card>
 						</b-col>
@@ -63,13 +64,13 @@
 							<tbody>
 								<tr>
 									<td>
-										{{pembayaran.kegiatan.kegiatan_title}}
+										{{kegiatan.kegiatan_title}}
 									</td>
 									<td>
 										{{$moment(details.tanggal_awal).format("LLLL")}} - {{$moment(details.tanggal_akhir).format("LLLL")}}
 									</td>
 									<td>
-										{{$format(pembayaran.kegiatan.harga)}}
+										{{$format(kegiatan.harga)}}
 									</td>
 								</tr>
 							</tbody>
@@ -80,7 +81,7 @@
 						<b-col md="5" xs="12" sm="12">
 							<b-card title="Total Harga" class="shadow-none rincian__bayar">
 								<b-card-text>
-									<h2> {{$format(pembayaran.kegiatan.harga)}} </h2>
+									<h2> {{$format(kegiatan.harga)}} </h2>
 								</b-card-text>
 							</b-card>
 						</b-col>
@@ -228,9 +229,12 @@
 			}
 		},
 
+		// created(){
+		// 	this.CheckPembayaran()
+		// },
+
 		mounted(){
-			console.log(this.id),
-			this.CheckPembayaran(this.id),
+			this.CheckPembayaran(this.$route.params.id),
 			this.StatusPembayaran()
 		},
 
@@ -297,6 +301,7 @@
 				})
 			},
 
+			
 			CheckPembayaran(id){
 				const url = `${this.api_url}/web/event/${id}/daftar`
 				this.$axios.defaults.headers.common.Authorization = `Bearer ${this.token.accessToken}`
@@ -304,7 +309,7 @@
 					bank_id: this.bank.id
 				})
 				.then(({data}) => {
-					// console.log(data)
+					console.log(data)
 					if(data.message === "Anda telah terdaftar pada event ini" || data.message === ""){
 						this.status_pembayaran = true
 						this.new_message = "Terima kasih telah mendaftar, segera lakukan pembayaran, kemudian unggah bukti pembayaran Anda melalui tombol di bawah ini !"

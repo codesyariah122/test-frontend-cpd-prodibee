@@ -221,13 +221,7 @@
 								new_message = data.message
 							}
 							this.Alert('success', new_message)
-							// this.$router.push({
-							// 	name: 'events-id-konfirmasi',
-							// 	params: {
-							// 		id: data.kegiatan_peserta.kegiatan_id,
-
-							// 	}
-							// })
+							
 							this.CheckPembayaran(data.kegiatan_peserta.kegiatan_id)
 						}
 					})

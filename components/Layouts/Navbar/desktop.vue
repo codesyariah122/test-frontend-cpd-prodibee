@@ -158,7 +158,7 @@ export default {
       window.onscroll = () => {
         let bottomOfWindow = window.pageYOffset
         let fixeNav= document.querySelector('.fixed-top')
-          console.log(bottomOfWindow)
+          // console.log(bottomOfWindow)
           
           if (bottomOfWindow > 100) {
             this.scrolled = true // replace it with your code
