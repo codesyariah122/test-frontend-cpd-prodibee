@@ -22,6 +22,115 @@
 	.container__jumbotron{
 		margin-top: 1rem;
 		@include container_jumbotron();
+		.jumbo__art-img{
+			width: 100%;
+			margin-top:4rem;
+			.col-card-1{
+				z-index: 9999;
+				position:absolute;
+				.card{
+					margin-left: 8.5rem;
+					margin-top: -3.5rem;
+					border-radius:13px;
+					width: 165px!important;
+					height: 80px!important;
+					img{
+						margin-left: 7.7rem;
+						margin-top: -9rem;
+						border-radius:10px;
+						height: 55px;
+					}
+					.container{
+						margin-top: .3rem;					
+						h1{
+							color:$primary-button;
+							font-weight: 800;
+							font-size: 18px;
+						}
+						p{
+							color: $second-black;
+							font-size:11px;
+							text-align: left;
+							width: 100%;
+							font-weight:500;
+						}
+					}
+				}
+			}
+			.first-box{
+				box-sizing: content-box;
+				border: solid $primary-button 2px;
+				border-radius:13px;
+				border-style: dashed;
+				height:25vh;
+				width: 165px;
+				background-color: transparent;
+				z-index: -1;
+				position: absolute;
+				margin-top: -1rem;
+			}
+
+			.card__image-box{
+				z-index: 3;
+				position: absolute;
+				margin-left: -.1rem;
+				margin-top: .1rem;
+				.card{
+					border-radius:13px;
+					width: 277px!important;
+					height: 270px!important;
+					img{
+						border-radius: 13px;
+					}
+				}
+			}
+
+			.second-box{
+				box-sizing: content-box;
+				border: solid $primary-button 2px;
+				border-radius:13px;
+				padding: 5px;
+				margin-top: 2rem;
+				width: 195px;
+				margin-left: 6rem!important;
+				height: 27vh;
+				background-color: transparent;
+				z-index: -1;
+			}
+			.col-card-2{
+				z-index: 9999;
+				position:relative;
+				.card{
+					margin-left: -1.5rem;
+					margin-top: -5rem;
+					border-radius:13px;
+					width: 175px!important;
+					height: 100px!important;
+					img{
+						margin-left: 7.9rem;
+						margin-top: -11.5rem;
+						border-radius:10px;
+						height: 50px;
+						width: 50px;
+					}
+					.container{
+						margin-top: .8rem;					
+						h1{
+							color:$primary-button;
+							font-weight: 800;
+							font-size: 25px;
+						}
+						p{
+							color: $second-black;
+							font-size:11px;
+							text-align: left;
+							width: 150px;
+							font-weight:500;
+						}
+					}
+				}
+			}
+		}
 	}
 	
 	.display-6{
