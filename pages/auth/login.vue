@@ -111,16 +111,13 @@
           this.validation = res.message;
         }
         const alert_data = `Halo, Selamat Datang ${res.user.nama}, Login berhasil !`;
-        this.Alert("success", alert_data);
-          // store access token
+          this.Alert("success", alert_data);
+
           this.ConfigAuthLogin(JSON.stringify(res.token));
 
-          // assignment
           this.profiles = res.user;
 
-          // redirect
           if (this.previousPath.fullPath === event_path) {
-            // console.log("ok send event")
             this.$router.push({
               path: event_path,
             });
@@ -139,13 +136,8 @@
               }
             })
           } else {
-            // console.log("no event data")
             this.$router.push({
-              // path: `/profile/${this.$username(res.user.nama)}`,
               path: this.previousPath.path
-              // params: {
-              // 	slug: this.$username(res.user.nama)
-              // }
             });
           }
         })
