@@ -51,6 +51,7 @@
 				this.$axios.defaults.headers.common.Authorization = `Bearer ${this.token.accessToken}`
 				this.$axios.get(url)
 				.then(({data}) => {
+					console.log(data)
 					this.kegiatan = data.kegiatan
 					this.bank = data.bank
 				})

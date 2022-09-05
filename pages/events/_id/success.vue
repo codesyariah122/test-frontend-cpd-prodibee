@@ -3,6 +3,7 @@
 		<mdb-container>
 			<EventpageSuccessHeader :data_pendaftaran="data_pendaftaran" :message="pembayaran.message" :bank="pembayaran.bank" :kegiatan="pembayaran.kegiatan" :checks="checks" />
 
+
 			<EventpageSuccess :id="id" :your_events="your_events" :token="token" :api_url="api_url" :bank="pembayaran.bank" :data_pendaftaran="data_pendaftaran" :kegiatan="pembayaran.kegiatan" :checks="checks" :details="details"/>
 
 		</mdb-container>

@@ -229,13 +229,9 @@
 			}
 		},
 
-		// created(){
-		// 	this.CheckPembayaran()
-		// },
-
 		mounted(){
-			this.CheckPembayaran(this.$route.params.id),
-			this.StatusPembayaran()
+			this.CheckPembayaranUser(),
+			this.CheckPembayaran(this.id)
 		},
 
 		methods: {
@@ -249,10 +245,20 @@
 				console.log(this.photo)
 			},
 
-			StatusPembayaran(){
-				this.pembayaran.bank = this.bank
-				this.pembayaran.kegiatan = this.kegiatan
-				console.log(this.pembayaran.bank)
+			CheckPembayaranUser(){
+				this.loading = true
+				const url = `${this.api_url}/web/event/${this.$route.params.id}/konfirmasi`
+				this.$axios.defaults.headers.common.Authorization = `Bearer ${this.token.accessToken}`
+				this.$axios.get(url)
+				.then(({data}) => {
+					console.log(data)
+					this.pembayaran.kegiatan = data.kegiatan
+					this.pembayaran.bank = data.bank
+				})
+				.catch(err => console.log(err))
+				.finally(() => {
+					this.loading = false
+				})
 			},
 
 			LanjutPendaftaran(){
@@ -306,7 +312,7 @@
 				const url = `${this.api_url}/web/event/${id}/daftar`
 				this.$axios.defaults.headers.common.Authorization = `Bearer ${this.token.accessToken}`
 				this.$axios.post(url, {
-					bank_id: this.bank.id
+					bank_id: this.pembayaran.bank.id
 				})
 				.then(({data}) => {
 					console.log(data)
