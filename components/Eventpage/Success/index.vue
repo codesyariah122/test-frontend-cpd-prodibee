@@ -165,11 +165,17 @@
 									</mdb-col>
 
 									<mdb-col md="12">
-										<mdb-btn disabled class="btn my__btn-primary rounded-pill btn-block shadow-none"> {{data_pendaftaran.status_pendaftaran_value }} </mdb-btn>
+										<mdb-btn disabled class="btn my__btn-primary text-white rounded-pill btn-block shadow-none">{{data_pendaftaran.status_pendaftaran_value }} &nbsp; <mdb-icon icon="pause" size="lg"/> </mdb-btn>
 									</mdb-col>
 
 									<mdb-col md="12" class="mt-3">
-										<nuxt-link :to="`/detail/event/${id}/${$slug(your_events.kegiatan_title ? your_events.kegiatan_title : '')}`" class="btn btn-primary rounded-pill btn-block shadow-none"><mdb-icon icon="arrow-left" /> Selesai </nuxt-link>
+										<nuxt-link :to="`/detail/event/${id}/${$slug(your_events.kegiatan_title ? your_events.kegiatan_title : '')}`" class="btn btn-primary rounded-pill btn-block shadow-none">
+											<div v-if='data_pendaftaran.status_pendaftaran_value === "Menunggu Konfirmasi"'><mdb-icon far icon="calendar-alt" size="lg"/>&nbsp; Check Status Pendaftaran
+											</div>
+											<div v-else>
+												Selesai Terkonfirmasi &nbsp;  <mdb-icon icon="check-double" size="lg"/>
+											</div>
+										</nuxt-link>
 									</mdb-col>
 
 								</mdb-row>

@@ -47,11 +47,8 @@
 							</div>
 						</mdb-col>
 						<mdb-col v-else md="12" xs="12" sm="12" lg="12" class="mt-2">
-							<pre>
-								{{username}}
-							</pre>
-							<mdb-btn @click="LanjutPelatihan(details.kegiatan_id, details.kegiatan_title, username)" class="btn btn-success rounded-pill btn-block shadow-none" :size="`${$device.isDesktop ? 'md' : 'sm'}`"> 
-								<mdb-icon icon="check" :size="`${$device.isDesktop ? 'lg' : 'sm'}`"/> {{details.status_pendaftaran_value == 'Menunggu Konfirmasi' ? 'Check Status' : details.status_pendaftaran_value == 'Terdaftar' ? 'Lanjut Pelatihan' : details.status_pendaftaran_value}}
+							<mdb-btn @click="LanjutPelatihan(details.kegiatan_id, details.kegiatan_title, username)" class="btn btn-success rounded-pill btn-block shadow-none" :size="`${$device.isDesktop ? 'lg' : 'sm'}`"> 
+								{{details.status_pendaftaran_value == 'Menunggu Konfirmasi' ? 'Check Status' : details.status_pendaftaran_value == 'Terdaftar' ? 'Lanjut Pelatihan' : details.status_pendaftaran_value}} &nbsp; <mdb-icon icon="chalkboard-teacher" :size="`${$device.isDesktop ? 'lg' : 'sm'}`"/>
 							</mdb-btn>
 						</mdb-col>
 					</mdb-row>

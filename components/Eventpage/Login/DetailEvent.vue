@@ -69,7 +69,7 @@
               <mdb-row class="row justify-content-start">
                 <mdb-col md="12" col="12" sm="12">
                   <mdb-btn @click="BeliKelas(details.kegiatan_id, details)" class="btn my__btn-secondary rounded-pill btn-block mb-2" :size="`${$device.isDesktop ? 'md' : 'sm'}`">
-                    {{status_pendaftaran == "Daftar" ? "Beli Kelas" : status_pendaftaran}}
+                   <mdb-icon far icon="credit-card" size="lg"/>&nbsp; {{status_pendaftaran == "Daftar" ? "Beli Kelas" : status_pendaftaran}}
                   </mdb-btn>
                 </mdb-col>
 
@@ -89,8 +89,8 @@
             Loading...
           </div>
           <div v-else>
-            <mdb-btn @click="MenungguKonfirmasi(details.kegiatan_id)" class="btn my__btn-secondary rounded-pill btn-block shadow-none" :size="`${$device.isDesktop ? 'md' : 'sm'}`"> 
-              <mdb-icon icon="check" :size="`${$device.isDesktop ? 'lg' : 'sm'}`"/> {{status_pendaftaran == 'Menunggu Konfirmasi' ? 'Check Konfirmasi Pendaftaran' : status_pendaftaran}}
+            <mdb-btn @click="MenungguKonfirmasi(details.kegiatan_id)" class="btn my__btn-primary rounded-pill btn-block shadow-none" :size="`${$device.isDesktop ? 'md' : 'sm'}`"> 
+              <mdb-icon icon="calendar-alt" :size="`${$device.isDesktop ? 'lg' : 'sm'}`"/> {{status_pendaftaran == 'Menunggu Konfirmasi' ? 'Check Konfirmasi Pendaftaran' : status_pendaftaran}}
             </mdb-btn>
           </div>
         </mdb-col>
@@ -115,7 +115,7 @@
           </div>
           <div v-else>
             <mdb-btn @click="ProfileEvent($username(profiles.nama), data_event.event_id, $slug(details.kegiatan_title))" v-if="data_event || token.accessToken" class="btn my__btn-primary rounded-pill btn-block shadow-none" :size="`${$device.isDesktop ? 'md' : 'sm'}`">
-              <h5>Lanjut Pelatihan <mdb-icon icon="chalkboard-teacher" size="md"/> </h5>
+              <h5>Lanjut Pelatihan <mdb-icon icon="chalkboard-teacher" size="lg"/> </h5>
             </mdb-btn>
           </div>
           <mdb-btn v-else size="md" color="grey" disabled class="mb-3 not__allowed">Daftar</mdb-btn>

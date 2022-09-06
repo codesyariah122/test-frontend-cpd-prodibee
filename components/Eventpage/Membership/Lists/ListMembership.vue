@@ -88,7 +88,7 @@
 					<mdb-btn v-if="item.status_value === 'Aktif'" @click="BeliKelas(kegiatan_id, item.paket_membership_id)" block color="primary" :class="`btn rounded-pill mt-3 mb-2${
 						$device.isMobile ? 'btn-sm' : 'btn-md'
 					}`">
-					Beli Kelas
+					<mdb-icon far icon="credit-card" size="lg"/> Beli Kelas
 				</mdb-btn>
 
 				<mdb-btn v-else block color="warning" disabled :class="`btn rounded-pill mt-3 mb-2${
