@@ -4,10 +4,10 @@
 			<mdb-col lg="12">
 				<b-card>
 					<b-row>
-						<b-col cols="4">
+						<b-col>
 							<b-skeleton-img></b-skeleton-img>
 						</b-col>
-						<b-col cols="8">							
+						<b-col>							
 							<b-skeleton animation="wave" width="85%"></b-skeleton>
 							<b-skeleton animation="wave" width="55%"></b-skeleton>
 							<b-skeleton animation="wave" width="70%"></b-skeleton>
