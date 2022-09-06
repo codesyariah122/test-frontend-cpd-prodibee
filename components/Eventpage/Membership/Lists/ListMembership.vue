@@ -19,7 +19,7 @@
 			:key="item.id"
 			>
 
-			<mdb-card class="mt-2" :style="`${$device.isMobile ? 'width: 335px; margin-left: -3.5rem;border-radius: 25px' : 'border-radius: 25px'}`">
+			<mdb-card class="mt-2" :style="`${$device.isMobile ? 'width: 335px; margin-left: -1rem;border-radius: 25px' : 'border-radius: 25px'}`">
 				<mdb-container class="mt-2 p-2 rounded-3">
 					<h1 class="text-center font-weight-bold small" style="color: #013a51;">
 						{{item.paket_nama}}

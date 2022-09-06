@@ -115,7 +115,7 @@
 }
 .event__detail{
 	overflow:hidden!important;
-	margin-top: 5.3rem;
+	margin-top: 7.5rem;
 	margin-left: -.1rem;
 	z-index: 9999;
 	height: auto;
@@ -127,7 +127,7 @@
 			h1{
 				font-weight: 600;
 				text-align: left;
-				font-size:31px;
+				font-size:23px;
 			}
 			.badge__category{
 				background-color: transparent!important;
@@ -147,6 +147,7 @@
 			}
 			p{
 				font-size: 14px;
+				text-align: justify;
 			}
 		}
 		.event__flyer{
@@ -154,7 +155,7 @@
 			img{
 				object-fit:cover;
 				// height: 75%;
-				width: 375px;
+				width: 345px;
 				border-radius: 13px;
 			}
 		}
@@ -238,58 +239,57 @@
 }
 // Desktop
 @media (min-width: 992px) {
-	.webinar__list{
-		.card__content-lists{
-			margin-top: -1rem;
-			margin-left: 5rem;
-			.webinar__content{
-				.card {
-					height: auto;
-					.event__image-wrap{
-						position: relative;
-						width: 350px;
-						height: 250px;
-						object-fit: cover;
-					}
-					.card-body{					
-						.badge__category{
-							background-color: transparent!important;
-							color: $color-primary!important;
-							border:1px $color-primary solid;
+	.card__content-lists{
+		margin-top: -1rem;
+		margin-left: 5rem;
 
-						}
-					}
-					@include card_rounded_desktop;
+		.webinar__content{
+			.card {
+				height: auto;
+				.event__image-wrap{
+					position: relative;
+					width: 350px;
+					height: 250px;
+					object-fit: cover;
 				}
+				.card-body{					
+					.badge__category{
+						background-color: transparent!important;
+						color: $color-primary!important;
+						border:1px $color-primary solid;
+
+					}
+				}
+				@include card_rounded_desktop;
 			}
 		}
-		.header__event{
-			margin-left: 6rem;
-			margin-top:8rem;
-			color:$second-black;
-			h2{
-				font-weight: 800;
-				line-height: 23px;
+	}
+	.header__event{
+		margin-top:8rem;
+		color:$second-black;
+		h2{
+			font-weight: 800;
+			line-height: 23px;
+		}
+		p{
+			font-weight: 400;
+		}
+
+		.filter__event{
+			h6{
+				font-size:16px;
+				margin-top: .5rem;
 			}
-			p{
-				font-weight: 400;
+			select{
+				background-color: $jumbotron-bg!important;			
+				color:$default-black;
+				font-weight: 600;
+				width:100%!important;
+				font-size: 16px;
 			}
 
-			.filter__event{
-				h6{
-					font-size:16px;
-					margin-top: .5rem;
-				}
-				select{
-					background-color: $jumbotron-bg!important;			
-					color:$default-black;
-					font-weight: 600;
-					width:100%!important;
-				}
-
-				.count__event{
-					margin-left: 24rem;
-				}
+			.count__event{
+				margin-left: 23rem;
 			}
 		}
 	}
@@ -409,10 +409,6 @@
 						}
 					}
 				}
-			}
-
-			.row__paket-membership{
-				width: 100vw;
 			}
 
 		}
