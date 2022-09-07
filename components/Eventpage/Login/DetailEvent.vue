@@ -75,7 +75,10 @@
 
                 <mdb-col md="12" col="12" sm="12" class="mt-2">
                   <mdb-btn @click="pilihPaket" class="btn btn-info rounded-pill btn-block mb-2" :size="`${$device.isDesktop ? 'lg' : 'sm'}`">
-                   <mdb-icon icon="id-card" /> {{status_pendaftaran == "Daftar" ? "Beli Menggunakan Paket Membership" : status_pendaftaran}} 
+                    <div v-if="loadingPaket" class="d-flex justify-content-center mb-3">
+                      <b-spinner type="grow" label="Loading..."></b-spinner>
+                    </div>
+                   <mdb-icon v-else icon="id-card" size="lg"/> {{status_pendaftaran == "Daftar" ? "Beli Menggunakan Paket Membership" : status_pendaftaran}} 
                  </mdb-btn>
                </mdb-col>
              </mdb-row>
@@ -129,7 +132,7 @@
             <b-spinner label="Loading..."></b-spinner>
           </div>
         </mdb-col>
-        <mdb-col v-else>
+        <mdb-col lg="12" md="12" xs="12" sm="12" v-else>
           <EventpageMembershipListsListMembership v-if="aktifPaket" :token="token" :api_url="api_url" :kegiatan_id="details.kegiatan_id" :details="details"/>
         </mdb-col>
       </mdb-row>

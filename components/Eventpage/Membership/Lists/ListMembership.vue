@@ -15,7 +15,7 @@
 			md="4"
 			xs="12"
 			sm="12"
-			class="mb-3 card__pelatihan"
+			class="mb-3"
 			:key="item.id"
 			>
 
