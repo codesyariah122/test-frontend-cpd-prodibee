@@ -36,11 +36,10 @@
 		},
 
 		mounted(){
-			console.log(this.checks),
-			this.StatusPembayaran(),
 			this.GoYourEvent(),
 			this.IsLoggedIn(),
-			this.CheckPembayaran()
+			this.CheckPembayaran(),
+			this.DetailEventProfileLogin()
 		},
 
 		methods: {
@@ -64,11 +63,11 @@
 				this.$store.dispatch('config/storeConfigApiUrl', url)
 			},
 
-			StatusPembayaran(){
-				this.pembayaran.bank = this.checks.bank
-				this.pembayaran.kegiatan = this.checks.kegiatan
-				this.pembayaran.message = this.checks.message
-			},
+			// StatusPembayaran(){
+			// 	this.pembayaran.bank = this.checks.bank
+			// 	this.pembayaran.kegiatan = this.checks.kegiatan
+			// 	this.pembayaran.message = this.checks.message
+			// },
 
 			GoYourEvent(){
 				this.$axios.defaults.headers.common.Authorization = `Bearer ${this.token.accessToken}`
@@ -81,11 +80,12 @@
 
 			CheckPembayaran(){
 				this.loading = true
-				const url = `${this.api_url}/web/event/${this.$route.params.id}`
+				const url = `${this.api_url}/web/event/${this.$route.params.id}/konfirmasi`
 				this.$axios.defaults.headers.common.Authorization = `Bearer ${this.token.accessToken}`
 				this.$axios.get(url)
 				.then(({data}) => {
-					this.data_pendaftaran = data.kegiatan
+					this.pembayaran.kegiatan = data.kegiatan
+					this.pembayaran.nbank = data.bank
 				})
 				.catch(err => console.log(err))
 				.finally(() => {
@@ -103,6 +103,7 @@
 					this.$axios.defaults.headers.common.Authorization = `Bearer ${this.token.accessToken}`
 					this.$axios.get(url)
 					.then(({data}) => {
+						this.data_pendaftaran = data.kegiatan
 						this.details = data.kegiatan
 					})
 					.catch(err => console.log(err))

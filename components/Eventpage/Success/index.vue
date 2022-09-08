@@ -154,7 +154,6 @@
 						</div>
 						<mdb-col lg="12" xs="12" sm="12" class="col__card-upload-file mt-2 mb-2">
 
-
 							<div v-if="checks.data" class="form-group">
 								<mdb-row class="row justify-content-center">
 									<mdb-col md="12" class="mt-2 mb-2">
@@ -170,6 +169,28 @@
 
 									<mdb-col md="12" class="mt-3">
 										<nuxt-link :to="`/detail/event/${id}/${$slug(your_events.kegiatan_title ? your_events.kegiatan_title : '')}`" class="btn btn-primary rounded-pill btn-block shadow-none">
+											<div v-if='data_pendaftaran.status_pendaftaran_value === "Menunggu Konfirmasi"'><mdb-icon far icon="calendar-alt" size="lg"/>&nbsp; Check Status Pendaftaran
+											</div>
+											<div v-else>
+												Selesai Terkonfirmasi &nbsp;  <mdb-icon icon="check-double" size="lg"/>
+											</div>
+										</nuxt-link>
+									</mdb-col>
+
+								</mdb-row>
+							</div>
+
+							<div v-else-if="data_pendaftaran.status_pendaftaran_value" class="form-group">
+								<mdb-row class="row justify-content-center">
+									<mdb-col md="12">
+										<small class="text-danger mt-5 mb-2 blockquote-footer">
+											{{data_pendaftaran.status_pendaftaran_value === 'Menunggu Konfirmasi' ? 'Admin kami akan segera mengkonfirmasi' : 'Terkonfirmasi' }}
+										</small>
+										<mdb-btn disabled class="btn my__btn-primary text-white rounded-pill btn-sm btn-block shadow-none">{{data_pendaftaran.status_pendaftaran_value }} &nbsp; <mdb-icon icon="pause" size="lg"/> </mdb-btn>
+									</mdb-col>
+
+									<mdb-col md="12" class="mt-3">
+										<nuxt-link :to="`/detail/event/${id}/${$slug(your_events.kegiatan_title ? your_events.kegiatan_title : '')}`" class="btn btn-primary rounded-pill btn-sm btn-block shadow-none">
 											<div v-if='data_pendaftaran.status_pendaftaran_value === "Menunggu Konfirmasi"'><mdb-icon far icon="calendar-alt" size="lg"/>&nbsp; Check Status Pendaftaran
 											</div>
 											<div v-else>
@@ -223,7 +244,7 @@
 		},
 
 		mounted(){
-			console.log(this.id),
+			console.log(this.bank),
 			this.CheckPembayaranUser()
 		},
 

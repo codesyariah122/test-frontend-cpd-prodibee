@@ -62,6 +62,15 @@
 							<mdb-btn class="btn my__btn-secondary rounded-pill btn-block mb-2" :size="`${$device.isDesktop ? 'md' : 'sm'}`" @click="GoToLogin"> Beli kelas
 							</mdb-btn>
 						</mdb-col>
+
+						<mdb-col md="12" col="12" sm="12" class="mt-2">
+							<mdb-btn @click="GoToLogin" class="btn btn-info rounded-pill btn-block mb-2" :size="`${$device.isDesktop ? 'lg' : 'sm'}`">
+								<div v-if="loadingPaket" class="d-flex justify-content-center mb-3">
+									<b-spinner type="grow" label="Loading..."></b-spinner>
+								</div>
+								<mdb-icon v-else icon="id-card" size="lg"/> Beli Menggunakan Paket Membership
+							</mdb-btn>
+						</mdb-col>
 					</mdb-row>
 				</mdb-col>
 
