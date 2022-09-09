@@ -7,7 +7,7 @@
     </div>
     <nav v-else id="docs-nav" class="docs-nav navbar shadow-none">
       <ul class="section-items list-unstyled nav flex-column pb-3">
-        <li class="nav-item__sidebar section-title">
+        <li class="nav-item__sidebar section-title fixed__header">
           <img :src="details.photo" class="img-fluid img-thumbnail" width="250">
           <h5>
             {{ details.kegiatan_title }}
