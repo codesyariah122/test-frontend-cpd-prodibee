@@ -105,8 +105,8 @@
           </div>
           <div v-else>
 
-            <mdb-btn @click="CheckPembayaran(details.kegiatan_id)" class="btn my__btn-secondary rounded-pill btn-block shadow-none" :size="`${$device.isDesktop ? 'md' : 'sm'}`"> 
-              <mdb-icon icon="check" :size="`${$device.isDesktop ? 'lg' : 'sm'}`"/> {{status_pendaftaran == 'Menunggu Pembayaran' ? 'Check Status' : status_pendaftaran}}
+            <mdb-btn @click="CheckPembayaran(details.kegiatan_id)" color="warning" class="btn rounded-pill btn-block" :size="`${$device.isDesktop ? 'md' : 'sm'}`"> 
+              <mdb-icon icon="credit-card" :size="`${$device.isDesktop ? 'lg' : 'lg'}`"/> &nbsp; {{status_pendaftaran == 'Menunggu Pembayaran' ? 'Menunggu Pembayaran' : status_pendaftaran}}
             </mdb-btn>
           </div>
         </mdb-col>
