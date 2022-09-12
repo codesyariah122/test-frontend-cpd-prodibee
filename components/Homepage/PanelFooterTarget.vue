@@ -11,14 +11,14 @@
 
             <div class="button">                
               <b-button
-              :class="`my__btn-secondary ${$device.isMobile ? 'btn-block btn-sm mt-3' : ''}`"
-              @click="$router.push({ name: 'auth-registrasi' })"
-              >Hubungi Kami</b-button>
+              :class="`my__btn-secondary rounded-pill ${$device.isMobile ? 'btn-sm mt-3' : ''} ${token.accessToken ? 'btn-block' : ''}`"
+              @click="$router.push({ name: 'contact' })"
+              ><mdb-icon icon="comments" size="lg"/>&nbsp; Hubungi Kami</b-button>
 
-              <b-button
-              :class="`my__btn-primary ${$device.isMobile ? 'btn-block btn-sm' : ''}`"
+              <b-button v-if="!token.accessToken"
+              :class="`my__btn-primary rounded-pill ${$device.isMobile ? 'btn-block btn-sm' : ''}`"
               @click="$router.push({ name: 'auth-registrasi' })"
-              >Daftar Sekarang</b-button
+              >Daftar Sekarang&nbsp;<mdb-icon icon="user-plus" size="md"/></b-button
               >
             </div>
 
@@ -60,7 +60,8 @@ export default {
   },
 
   beforeMount() {
-    this.ConfigApiUrl();
+    this.ConfigApiUrl(),
+    this.CheckToken()
   },
 
   mounted() {
@@ -72,6 +73,11 @@ export default {
       const url = process.env.NUXT_ENV_API_URL;
       this.$store.dispatch("config/storeConfigApiUrl", url);
     },
+
+    CheckToken() {
+      this.$store.dispatch("config/checkAuthLogin", "token");
+    },
+
     ContextData() {
       FetchData(`${this.api_url}/web/home`)
         .then((res) => {
@@ -91,8 +97,11 @@ export default {
     api_url() {
       return this.$store.getters["config/ConfigApiUrl"];
     },
-  },
-};
+    token() {
+      return this.$store.getters["config/ConfigCheckLogin"];
+    }
+  }
+}
 </script>
 
 <style scoped>

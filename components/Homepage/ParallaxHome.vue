@@ -35,7 +35,7 @@
 </template>
 
 <script>
-import ParallaxImage from "~/assets/images/homepage/new-parallax.svg";
+import ParallaxImage from "~/assets/images/homepage/new-parallax2.jpeg";
 
 export default {
   data() {

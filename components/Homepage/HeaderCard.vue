@@ -20,7 +20,7 @@
               v-if="!token.accessToken" block
               :class="`my__btn-primary rounded-pill ${$device.isMobile ? 'btn-block btn-sm' : ''}`"
               @click="$router.push({ name: 'auth-registrasi' })"
-              >Daftar Sekarang</b-button
+              >Daftar Sekarang <mdb-icon icon="sign-in-alt" size="lg"/></b-button
             >
 
             <b-button :style="`${$device.isDesktop ? 'margin-left: -3rem;margin-top: -.3rem;' : ''}`"
@@ -32,7 +32,7 @@
                   name: username
                 }
               })"
-              >Lihat Kelas Saya</b-button
+              >Lihat Kelas Saya <mdb-icon icon="chalkboard-teacher" size="lg"/></b-button
             >
           </b-col>
 

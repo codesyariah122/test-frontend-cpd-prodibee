@@ -5,7 +5,7 @@
 				<b-tab title="Pelatihan Saya" active>
 					<ProfilepageAksesPelatihan :loading_event="loading_event" :pelatihans="pelatihans" :username="username" @event-diikuti="EventYangDiikuti"/>
 				</b-tab>
-				<b-tab title="Paket Membership">
+				<b-tab title="Membership Saya">
 					<ProfilepageAksesPelatihanMembership/>
 				</b-tab>
 			</b-tabs>

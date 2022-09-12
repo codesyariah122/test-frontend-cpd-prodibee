@@ -70,11 +70,11 @@ export default {
       s.type = "text/javascript";
       s.async = true;
       s.src = url;
-      let cta_text = this.$device.isDesktop ? "Admin CPD Online" : "";
+      let cta_text = this.$device.isDesktop ? "Admin Tedika Health Education" : "";
       let options = {
         enabled: true,
         chatButtonSetting: {
-          backgroundColor: "#06875C",
+          backgroundColor: "#048281",
           ctaText: "",
           borderRadius: "25",
           marginLeft: "20",
@@ -87,10 +87,10 @@ export default {
           brandSubTitle: "Tedika Health Education",
           brandImg: require("~/assets/images/profile/call-center.jpg"),
           welcomeText:
-            "Halo, new member\nada yang bisa kami bantu ?\ncukup kirimkan pesan kepada kami sekarang untuk mendapatkan info lebih lanjut tentang pelatihan tenaga kesehatan CPD Online.",
+            "Halo, new member\nada yang bisa kami bantu ?\ncukup kirimkan pesan kepada kami sekarang untuk mendapatkan info lebih lanjut tentang pelatihan tenaga kesehatan Tedika|Health Education.",
           messageText:
             "Halo, Admin CPD Online ! kami butuh bantuan untuk mengikuti pelatihan CPD Online  {{page_link}}",
-          backgroundColor: "#06875C",
+          backgroundColor: "#048281",
           ctaText: "Start Chat",
           borderRadius: "25",
           autoShow: false,

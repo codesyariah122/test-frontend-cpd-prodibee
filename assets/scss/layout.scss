@@ -77,6 +77,14 @@
 		margin-top: .7rem;
 	}
 }
+
+.nav-profile{
+	margin-left: .5rem;
+	.dropdown-menu{
+		margin-top: 1rem;
+		margin-left: -1.5rem;
+	}
+}
 @media (min-width: 992px) {
 	.navbar-brand{
 		img{

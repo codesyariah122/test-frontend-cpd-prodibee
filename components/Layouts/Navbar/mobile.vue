@@ -63,7 +63,7 @@
 
    <mdb-row v-if="token.accessToken">
     <mdb-col col="12" sm="12">
-      <mdb-dropdown tag="li" class="nav-item mt-4 text-black">
+      <mdb-dropdown tag="li" class="nav-item nav-profile mt-4 text-dark">
         <mdb-dropdown-toggle tag="a" navLink slot="toggle">
           <b-avatar
           v-if="

@@ -674,7 +674,7 @@ and (max-height : 1280px) {
 			position:absolute;
 			z-index: -1;
 			margin-left: 100rem;
-			margin-top:-14rem;
+			margin-top:-35rem;
 			img{
 				transform: rotateY(365deg);
 			}
@@ -732,7 +732,7 @@ and (max-height : 1280px) {
 		}
 	}
 	.col__berita{
-		width: 100%;
+		// width: 100%;
 		.bg__content{
 			position:absolute;
 			z-index: -1;
@@ -781,7 +781,7 @@ and (max-height : 1280px) {
 		height: auto;
 		@include header_inside_list_desktop($color-primary);
 		.col__berita{
-			// width: 100%;
+			width: 100%;
 			.bg__content{
 				position:absolute;
 				z-index: -1;
@@ -792,6 +792,7 @@ and (max-height : 1280px) {
 		.card__berita-list{
 			margin-right: -2.5rem;
 			margin-left: 2rem;
+			
 			.card{
 				border-radius:13px;
 				width: 100%;
@@ -960,8 +961,8 @@ and (max-height : 1280px) {
 		}
 		.visi-misi__content{
 			color:$default;
-			margin-left: 5.5rem;
-			width:80%;
+			margin-left: 1.5rem;
+			width:100%;
 			z-index: 9999;
 			margin-top: 3rem;
 			h1{
@@ -981,12 +982,10 @@ and (max-height : 1280px) {
 			ol li{
 				list-style: none;
 				list-style-type: decimal;
-				text-align: justify;
 				line-height: 21px;
 				width: 640px;
 				font-size:14px;
 				// margin-bottom: 1rem;
-				margin-left: 1.5rem;
 				font-weight: 700;
 			}
 		}

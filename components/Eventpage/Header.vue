@@ -1,10 +1,10 @@
 <template>
   <div>
-    <mdb-container class="header__event">
+    <mdb-container :style="`${$device.isMobile ? 'margin-top: 7rem;' : ''}`" class="header__event">
       <mdb-row class="justify-content-center">
         <mdb-col col="12" lg="12" xs="12" sm="12">
           <h2>Katalog Kelas</h2>
-          <p class="text-justify mt-5 mb-2">
+          <p class="text-justify mt-2 mb-5">
             Temukan kelas sesuai kompeteni yang ingin Anda tingkatkan.
           </p>
         </mdb-col>
@@ -16,9 +16,6 @@
             </div>
             <div class="p-2 bd-highlight mr-2">
               <div class="form-group">
-                <!-- <pre>
-                  {{categories}}
-                </pre> -->
                 <select
                 @change="ChangeCategory($event)"
                 v-model="field.category_id"

@@ -51,7 +51,6 @@
 						class="mb-3 card__pelatihan"
 						:key="lists[listIndex - 1].id"
 						>
-
 						<mdb-card class="mt-2" :style="`${$device.isMobile ? 'width: 335px; margin-left: -3.5rem;border-radius: 25px' : 'border-radius: 25px'}`">
 							<mdb-container class="mt-2 p-2 rounded-3">
 								<h1 class="text-center font-weight-bold small" style="color: #013a51;">
@@ -64,9 +63,8 @@
 									
 									<ul class="list-unstyled text-left mb-0 small">
 										<li class="my-1 mb-2">
-											<b-button pill variant="white" size="md" block disabled>
-												Total Pelatihan <b-badge pill variant="primary">{{total}}</b-badge>
-											</b-button>
+											
+												Sisa Jumlah Pelatihan : <b-badge pill variant="primary">{{total}}</b-badge>
 										</li>
 										<li class="my-1 item-check">
 											<i v-if="lists[listIndex-1].status_value === 'Aktif'"
@@ -92,7 +90,7 @@
 											aria-hidden="true"
 											style="color: #05a863; margin-right: 5px"
 											></i
-											>Tidak ada batasan waktu
+											>Berlaku : {{$moment(lists[listIndex - 1].tanggal).format("LL")}}
 										</li>
 										<li class="my-1 lists[listIndex-1]-check">
 											<i
@@ -118,6 +116,7 @@
 										Merchandise gratis dari pelatihan
 									</li>
 								</ul>
+								<mdb-btn class="my__btn-primary rounded-pill btn-block mt-5 mb-2">Detail Paket <mdb-icon icon="archive" size="lg"/></mdb-btn>
 							</mdb-card-body>
 						</mdb-container>
 					</mdb-card>

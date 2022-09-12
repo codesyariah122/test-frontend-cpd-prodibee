@@ -71,11 +71,11 @@
             params: {
               id: item.id
             }
-          }" :class="`btn my__btn-secondary rounded-pill mt-3 mb-2 btn-block ${
+          }" :class="`btn my__btn-primary text-white rounded-pill mt-5 mb-2 btn-block ${
                 $device.isMobile ? 'btn-sm' : 'btn-md'
               }`" style="color: #424242"
           >
-            Pilih Sekarang
+            Pilih Sekarang <mdb-icon icon="box-open" size="lg"/>
           </nuxt-link>
         </mdb-card-body>
         </mdb-container>

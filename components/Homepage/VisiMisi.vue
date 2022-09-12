@@ -13,7 +13,7 @@
           <p v-if="context.visi">{{ context.visi }}</p>
           
           <h1>Misi</h1>
-          <ol v-if="context.misi">
+          <ol :style="`${$device.isDesktop ? 'margin-left: 2.5rem;' : 'margin-left:1.5rem;'}`" v-if="context.misi">
             <li v-for="n in context.misi.length" v-if="n % 2 == 1">
               {{ context.misi[n] }}
             </li>

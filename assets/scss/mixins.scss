@@ -486,7 +486,7 @@
 }
 
 @mixin parallax_desktop{
-	min-height: 180px; 
+	min-height: 190px; 
 	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -546,7 +546,7 @@
 	.header__inside-content{
 		margin-left: 2rem;
 		h5{
-			font-size:16px;
+			font-size:25px;
 			font-weight: 600;
 			color:$color;
 			line-height: 40.85px;

@@ -22,7 +22,7 @@
          v-if="!token.accessToken"
          :class="`my__btn-primary shadow-none ${$device.isMobile ? 'btn-block btn-sm' : ''}`"
          @click="$router.push({ name: 'auth-registrasi' })"
-         >Daftar Sekarang</b-button
+         >Daftar Sekarang <mdb-icon icon="sign-in-alt" /></b-button
          >
          
         <b-button
