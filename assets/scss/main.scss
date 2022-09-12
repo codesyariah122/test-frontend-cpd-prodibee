@@ -744,28 +744,28 @@ and (max-height : 1280px) {
 		margin-right: -2.5rem;
 		margin-left: 1.5rem;
 		
-		.card{
-			width: 90%;
-			border-radius:13px;
-			.card-body{				
-				.card-title{
-					color:$second-black;
-					font-weight: 600;
-					font-size:16px;
-				}
-				.card-text{
-					color:$second-gray;
-				}
-				a{
-					color: $color-primary;
-				}
-			}
-			img{
-				border-radius:13px!important;
-				object-fit: cover;
-				width:100%;
-			}
-		}
+		// .card{
+		// 	width: 90%;
+		// 	border-radius:13px;
+		// 	.card-body{				
+		// 		.card-title{
+		// 			color:$second-black;
+		// 			font-weight: 600;
+		// 			font-size:16px;
+		// 		}
+		// 		.card-text{
+		// 			color:$second-gray;
+		// 		}
+		// 		a{
+		// 			color: $color-primary;
+		// 		}
+		// 	}
+		// 	img{
+		// 		border-radius:13px!important;
+		// 		object-fit: cover;
+		// 		width:100%;
+		// 	}
+		// }
 
 		.btn__link{
 			width: 90%;
@@ -791,32 +791,32 @@ and (max-height : 1280px) {
 		}
 		.card__berita-list{
 			margin-right: -2.5rem;
-			margin-left: 2rem;
+			margin-left: 6rem;
 			
-			.card{
-				border-radius:13px;
-				width: 100%;
-				height: auto!important;
-				.card-body{
-					.card-title{
-						color:$second-black;
-						text-transform:capitalize;
-						font-weight: 700;
-						font-size:18px;
-					}
-					.card-text{
-						color:$second-gray;
-					}
-					a{
-						color: $color-primary;
-					}
-				}
-				img{
-					border-radius:13px!important;
-					object-fit: cover;
-					width:100%;
-				}
-			}
+			// .card{
+			// 	border-radius:13px;
+			// 	width: 100%;
+			// 	height: auto!important;
+			// 	.card-body{
+			// 		.card-title{
+			// 			color:$second-black;
+			// 			text-transform:capitalize;
+			// 			font-weight: 700;
+			// 			font-size:18px;
+			// 		}
+			// 		.card-text{
+			// 			color:$second-gray;
+			// 		}
+			// 		a{
+			// 			color: $color-primary;
+			// 		}
+			// 	}
+			// 	img{
+			// 		border-radius:13px!important;
+			// 		object-fit: cover;
+			// 		width:100%;
+			// 	}
+			// }
 		}
 
 	}
@@ -836,7 +836,7 @@ and (max-height : 1280px) {
 			margin-bottom: 1rem;
 			.card__testimoni-content{
 				width: 345px;
-				margin-left: -.1rem;
+				margin-left: .3rem;
 			}
 		}
 		.bg__content{

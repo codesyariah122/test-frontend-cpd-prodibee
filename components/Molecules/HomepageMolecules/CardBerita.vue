@@ -1,7 +1,7 @@
 <style lang="scss" scoped>
   .card{
     width: 21rem!important;
-    margin-left: -5.7rem;
+    margin-left: 1.7rem;
     border: none;
     transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
     overflow:hidden;
@@ -87,23 +87,7 @@
     }
 
     @media (min-width: 992px) {
-      .card{
-        width: 18rem!important;
-        .card-body{
-         margin-left: 1rem;
-         margin-top: 2rem;
-         p{
-          width: 50%;
-        }
-      }
-      .card-footer{
-        margin-left: 2rem;
-        margin-bottom: 2rem;
-        .media{
-          color: $default;
-        }
-      }
-    }
+      
   }
 </style>
 <template>
@@ -116,7 +100,7 @@
     </mdb-row>
 
     <mdb-row class="row justify-content-center">
-      <mdb-col v-for="(item, index) in lists" class="mb-4" md="4" xs="12" sm="12" :key="item.id" style="margin-left: 7rem;">
+      <mdb-col v-for="(item, index) in lists" class="col-sm-12 col-md-6 col-lg-4 mb-4" :key="item.id" :style="`${$device.isDesktop ? 'margin-left: 6rem;' : 'margin-left: -.3rem;'}`">
         <mdb-card v-if="index <= 3" class="text-white card-has-bg click-col" :style="`background-image:url('${item.foto_url}');`">
           <img class="card-img d-none" src="https://source.unsplash.com/600x900/?tech,street" alt="Goverment Lorem Ipsum Sit Amet Consectetur dipisi?">
 
@@ -155,7 +139,8 @@
     lg="12"
     xs="12"
     sm="12"
-    :class="`${$device.isDesktop ? 'mb-5 mt-5 shadow-none' : 'mb-2'}`"
+    :style="`${$device.isMobile ? 'width: 80%;' : ''}`"
+    :class="`${$device.isDesktop ? 'mb-5 mt-5 shadow-none' : 'mb-2 mt-2'}`"
     >
     <nuxt-link
     to="/tedika/berita"
