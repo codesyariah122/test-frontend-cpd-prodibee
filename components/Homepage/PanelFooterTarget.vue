@@ -11,7 +11,7 @@
 
             <div class="button">                
               <b-button
-              :class="`my__btn-secondary rounded-pill ${$device.isMobile ? 'btn-sm mt-3' : ''} ${token.accessToken ? 'btn-block' : ''}`"
+              :class="`my__btn-secondary rounded-pill ${$device.isMobile ? 'btn-sm mt-3 btn-block' : ''} ${token.accessToken ? 'btn-block' : ''}`"
               @click="$router.push({ name: 'contact' })"
               ><mdb-icon icon="comments" size="lg"/>&nbsp; Hubungi Kami</b-button>
 

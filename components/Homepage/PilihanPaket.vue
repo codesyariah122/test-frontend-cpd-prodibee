@@ -16,7 +16,7 @@
     style="margin-top: 16px"
     >
     <mdb-col v-if="listpakets" v-for="item in listpakets" :key="item.id" col="12" xs="12" sm="12" md="4" lg="4" :class="`${$device.isMobile ? 'mb-3' : 'mt-2'}`">
-      <mdb-card class="mt-2" :style="`${$device.isMobile ? 'width: 335px; margin-left: -3.5rem; border-radius: 25px' : 'border-radius: 25px'}`">
+      <mdb-card class="mt-2" :style="`${$device.isMobile ? 'width: 335px; margin-left: -3.3rem; border-radius: 25px' : 'border-radius: 25px'}`">
         <mdb-container class="mt-2 p-2 rounded-3">
           <h1 class="text-center font-weight-bold small" style="color: #013a51">
             {{item.paket_nama}}
