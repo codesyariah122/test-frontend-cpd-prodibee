@@ -36,12 +36,19 @@ export default {
   },
 
   mounted() {
-    this.WidgetChat(), this.UserProfileData();
+    this.WidgetChat(), this.UserProfileData(), this.closeCollapsed()
   },
 
   methods: {
     CheckToken() {
       this.$store.dispatch("config/checkAuthLogin", "token");
+    },
+    closeCollapsed(){
+      let bsCollapse = document.querySelector('.navbar-collapse')
+      document.body.addEventListener('click', () => {
+          // alert("okk")
+          bsCollapse.classList.remove('show')
+        })
     },
     ConfigApiUrl() {
       const api_url = process.env.NUXT_ENV_API_URL;

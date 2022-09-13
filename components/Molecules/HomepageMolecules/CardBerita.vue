@@ -1,7 +1,6 @@
 <style lang="scss" scoped>
   .card{
     width: 21rem!important;
-    margin-left: -3rem;
     margin-right: 2rem;
     border: none;
     transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
@@ -102,7 +101,7 @@
 
     <mdb-row class="row justify-content-center">
       <mdb-col v-for="(item, index) in lists" class="col-sm-12 col-md-6 col-lg-4 mb-4" :key="item.id" :style="`${$device.isDesktop ? 'margin-left: 6rem;' : 'margin-left: -.3rem;'}`">
-        <mdb-card v-if="index <= 3" class="text-white card-has-bg click-col" :style="`background-image:url('${item.foto_url}');`">
+        <mdb-card v-if="index <= 3" class="text-white card-has-bg click-col" :style="`background-image:url('${item.foto_url}');${$device.isDesktop ? 'margin-left: -3rem;' : 'margin-left: 2rem;'}`">
           <img class="card-img d-none" src="https://source.unsplash.com/600x900/?tech,street" alt="Goverment Lorem Ipsum Sit Amet Consectetur dipisi?">
 
           <div class="card-img-overlay d-flex flex-column">

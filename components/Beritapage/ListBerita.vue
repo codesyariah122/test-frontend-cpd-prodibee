@@ -2,7 +2,7 @@
   .card{
     width: 21rem!important;
     margin-left: 1.7rem;
-    margin-bottom: 5rem;
+    margin-bottom: 1.5rem;
     border: none;
     transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
     overflow:hidden;
@@ -95,13 +95,13 @@
   <div>
     <div ref="berita_square" class="card__list" :style="berita__list_style">
       <mdb-container>
-        <mdb-row class="row justify-content-center header__ppkc-list-page">
-          <mdb-col lg="12" xs="12" sm="12" style="margin-top: 32px">
-            <h2 style="font-weight: 700">Berita</h2>
-          </mdb-col>
+        <mdb-row class="row justify-content-center header__ppkc-list-page mb-5">
           <mdb-col lg="12" xs="12" sm="12">
-            <span style="color: #666666 !important; font-size: 14px">
-              Ikuti semua kegiatan dan berita dari Tedika Indonesia
+            <h1>Berita</h1>
+          </mdb-col>
+          <mdb-col class="mt-3" lg="12" xs="12" sm="12">
+            <span style="color: #666666 !important;">
+              Ikuti semua kegiatan dan info maupun berita terbaru seputar pelatihan tenaga kesehatan, dari Tedika Health Education.
             </span>
           </mdb-col>
         </mdb-row>
