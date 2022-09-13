@@ -1,7 +1,8 @@
 <style lang="scss" scoped>
   .card{
     width: 21rem!important;
-    margin-left: 1.7rem;
+    margin-left: -3rem;
+    margin-right: 2rem;
     border: none;
     transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
     overflow:hidden;
@@ -139,7 +140,7 @@
     lg="12"
     xs="12"
     sm="12"
-    :style="`${$device.isMobile ? 'width: 80%;' : ''}`"
+    :style="`${$device.isMobile ? 'width: 80%;' : 'width: 100%;'}`"
     :class="`${$device.isDesktop ? 'mb-5 mt-5 shadow-none' : 'mb-2 mt-2'}`"
     >
     <nuxt-link

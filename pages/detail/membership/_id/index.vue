@@ -1,6 +1,8 @@
 <template>
 	<div :class="`${$device.isDesktop ? 'event__detail mb-5' : 'event__detail mb-5'}`">
-		
+		<h1>
+			{{paket_id}}
+		</h1>
 	</div>
 </template>
 

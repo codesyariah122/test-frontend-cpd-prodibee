@@ -53,11 +53,11 @@
 						>
 						<mdb-card class="mt-2" :style="`${$device.isMobile ? 'width: 335px; margin-left: -3.5rem;border-radius: 25px' : 'border-radius: 25px'}`">
 							<mdb-container class="mt-2 p-2 rounded-3">
-								<h1 class="text-center font-weight-bold small" style="color: #013a51;">
+								<h1 class="text-center font-weight-bold" style="color: #013a51;">
 									{{lists[listIndex-1].paket_nama}}
 								</h1>
 								<mdb-card-body>
-									<h5 class="text-center font-weight-bold" style="color: #013a51">
+									<h5 class="text-center font-weight-bold" style="color: #048281;">
 										{{ $format(lists[listIndex-1].harga) }}
 									</h5>
 									
@@ -116,7 +116,12 @@
 										Merchandise gratis dari pelatihan
 									</li>
 								</ul>
-								<mdb-btn class="my__btn-primary rounded-pill btn-block mt-5 mb-2">Detail Paket <mdb-icon icon="archive" size="lg"/></mdb-btn>
+								<mdb-btn @click="$router.push({
+									name: 'detail-membership-id',
+									params: {
+										id: lists[listIndex-1].id
+									}
+								})" class="my__btn-primary rounded-pill btn-block mt-5 mb-2">Detail Paket <mdb-icon icon="archive" size="lg"/></mdb-btn>
 							</mdb-card-body>
 						</mdb-container>
 					</mdb-card>

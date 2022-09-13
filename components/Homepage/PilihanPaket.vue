@@ -18,11 +18,11 @@
     <mdb-col v-if="listpakets" v-for="item in listpakets" :key="item.id" col="12" xs="12" sm="12" md="4" lg="4" :class="`${$device.isMobile ? 'mb-3' : 'mt-2'}`">
       <mdb-card class="mt-2" :style="`${$device.isMobile ? 'width: 335px; margin-left: -2.8rem; border-radius: 25px' : 'border-radius: 25px'}`">
         <mdb-container class="mt-2 p-2 rounded-3">
-          <h1 class="text-center font-weight-bold small" style="color: #013a51">
+          <h1 class="text-center font-weight-bold" style="color: #013a51;">
             {{item.paket_nama}}
           </h1>
           <mdb-card-body>
-            <h2 class="text-center font-weight-bold" style="color: #013a51">
+            <h2 class="text-center font-weight-bold" style="color: #048281;">
               {{ $format(item.harga) }}
             </h2>
             <ul class="list-unstyled text-left mt-5 mb-0 small">
