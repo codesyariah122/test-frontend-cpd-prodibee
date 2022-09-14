@@ -44,7 +44,7 @@
     <section class="docs-section mt-2" id="item-1-1">
       <mdb-alert
         v-if="
-          detailed.file_pdf == 'https://api.ppkc-online.com/file-pelatihan/null'
+          detailed.file_pdf == 'https://capi.halomedika.com/file-pelatihan/null'
         "
         color="danger"
       >
@@ -139,7 +139,7 @@
     <section class="docs-section mt-2" id="item-1-1">
       <mdb-alert
         v-if="
-          detailed.file_pdf == 'https://api.ppkc-online.com/file-pelatihan/null'
+          detailed.file_pdf == 'https://capi.halomedika.com/file-pelatihan/null'
         "
         color="danger"
       >

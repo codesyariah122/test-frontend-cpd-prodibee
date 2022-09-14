@@ -31,42 +31,12 @@
 				{ rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Poppins&display=swap"      
 				},
 				{ rel: 'stylesheet', href: '/assets/docs/scss/global.css'},
-				{ rel: 'stylesheet', type: 'text/css', href: '/assets/glightbox/glightbox.min.css'},
-				{ rel: 'stylesheet', type: 'text/css', href: '/assets/venobox/dev/venobox.min.css'},
 				{ rel: 'stylesheet', href: '/assets/docs/css/theme.css'}
 				// { rel: 'stylesheet', type: 'text/css', href: require('~/assets/css/main.css') }
 			],
 			
 			script: [
-				{
-					src: '/assets/glightbox/glightbox.min.js',
-					type: 'text/javascript'
-				},
-				{
-					src: '/assets/venobox/dev/venobox.min.js',
-					type: 'text/javascript'
-				},
-				{
-					src: '/assets/docs/plugins/popper.min.js',
-					type: 'text/javascript'
-				},
-				// {
-				// 	src: '/assets/docs/fontawesome/js/all.min.js',
-				// 	type: 'text/javascript'
-				// },
-				{
-					src: '/assets/docs/plugins/bootstrap/js/bootstrap.min.js',
-					type: 'text/javascript'
-				},
-				{
-					src: '/assets/docs/plugins/smoothscroll.min.js',
-					type: 'text/javascript'
-				},
 				
-				{
-					src: '/assets/docs/plugins/gumshoe/gumshoe.polyfills.min.js',
-					type: 'text/javascript'
-				}
 			]
 		},
 
@@ -109,7 +79,7 @@
 					.then(({data}) => {
 						this.status_pendaftaran = data.kegiatan.status_pendaftaran_value
 					})
-					.catch(err => console.log(err))
+					.catch(err => console.error(err.response))
 					.finally(() => {
 						setTimeout(() => {
 							this.loading=false

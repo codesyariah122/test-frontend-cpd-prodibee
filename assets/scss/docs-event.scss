@@ -1,3 +1,4 @@
+*{box-sizing: border-box;}
 .docs-wrapper{
 	margin-top: -5rem!important;
 	.docs-sidebar{
@@ -21,9 +22,8 @@
 			overflow-x: hidden; 
 			position: static;
 			height: 120vh;
-			margin-top:-5.7rem!important;
+			margin-top:-2rem;
 			margin-bottom: 5rem;
-			
 			.section-items{
 				.section-title{
 					width: 90%;
@@ -182,7 +182,7 @@
 				overflow-x: hidden;
 				// overflow-y: hidden;
 				height: 120vh;
-				margin-top: 5em;
+				margin-top: 1em;
 				
 				.section-items{
 					position: relative;

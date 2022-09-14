@@ -51,7 +51,7 @@
           class="mb-3 card__pelatihan"
           :key="pelatihans[listIndex - 1].id"
           >
-          <mdb-card>
+          <mdb-card :style="`${$device.isMobile ? 'width: 320px;' : ''}`">
             <mdb-card-image
             :src="pelatihans[listIndex - 1].photo"
             alt="No image found"
@@ -73,9 +73,9 @@
               }}</mdb-card-text
               >
 
-              <h6 class="mt-2 idr__color">
+              <h5 class="mt-2 font-weight-bold" style="color: #048281;">
                 {{ $format(pelatihans[listIndex - 1].harga) }}
-              </h6>
+              </h5>
 
               <span style="font-size: 12px; margin-top: 1.5rem"
               ><i
@@ -102,8 +102,8 @@
                     pelatihans[listIndex - 1].kegiatan_id
                   }/${$slug(pelatihans[listIndex - 1].kegiatan_title)}`"
                   size="sm"
-                  class="btn my__btn-primary rounded-pill btn-block"
-                  >Akses Pelatihan</nuxt-link
+                  class="btn my__btn-primary text-white rounded-pill btn-block"
+                  >Akses Pelatihan&nbsp;<mdb-icon icon="chalkboard-teacher" size="lg"/></nuxt-link
                   >
                 </mdb-card-body>
               </mdb-card>
@@ -149,7 +149,6 @@
     methods: {
       ShowMore(page = 0) {
         this.listToShow += 3;
-        console.log(this.listToShow);
         if (this.listToShow % 2 == 20) {
           const page = page * 2;
         }

@@ -632,8 +632,8 @@ and (max-height : 1280px) {
 
 	.bg__content2{
 		z-index: -1;
-		margin-left: -10rem;
-		margin-top:-25rem;
+		margin-left: 2rem;
+		margin-top:-15rem;
 		img{
 			transform: rotateY(180deg);
 		}
@@ -834,7 +834,7 @@ and (max-height : 1280px) {
 // Testimoni component
 .testimoni__list{
 	width: 100%;
-	margin-top: -5rem;
+	margin-top: -15rem;
 	@include header_inside_list_mobile($color-primary);
 	.col__testimoni{
 		width: 100%;

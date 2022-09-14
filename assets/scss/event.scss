@@ -115,7 +115,7 @@
 }
 .event__detail{
 	overflow:hidden!important;
-	margin-top: 7.5rem;
+	margin-top: 5.3rem;
 	margin-left: -.1rem;
 	z-index: 9999;
 	height: auto;
@@ -232,12 +232,7 @@
 						}
 					}
 				}
-
 			}
-		}
-
-		.row__paket-membership{
-			width: 100vw;
 		}
 
 	}
@@ -271,6 +266,7 @@
 	}
 	.header__event{
 		margin-top:8rem;
+		margin-left: 8rem;
 		color:$second-black;
 		h2{
 			font-weight: 800;
@@ -288,7 +284,7 @@
 			select{
 				background-color: $jumbotron-bg!important;			
 				color:$default-black;
-				font-weight: 600;
+				font-weight: 500;
 				width:100%!important;
 				font-size: 16px;
 			}
@@ -415,11 +411,6 @@
 					}
 				}
 			}
-
-			.row__paket-membership{
-				width: 100vw;
-			}
-
 
 		}
 	}
