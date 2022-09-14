@@ -1,8 +1,15 @@
 <template>
 	<div :class="`${$device.isDesktop ? 'event__detail mb-5' : 'event__detail mb-5'}`">
-		<h1>
-			{{paket_id}}
-		</h1>
+		<mdb-container>
+			<mdb-row v-if="loading" class="justify-content-center">
+				<mdb-col lg="12" sm="12" xs="12">
+					Loading ....
+				</mdb-col>
+			</mdb-row>		
+			<pre v-else>
+				{{paket}}
+			</pre>
+		</mdb-container>
 	</div>
 </template>
 
@@ -12,11 +19,16 @@
 		layout: 'default',
 		data(){
 			return {
-				paket_id: this.$route.params.id
+				loading: null,
+				paket_id: this.$route.params.id,
+				paket: {}
 			}
 		},
 		beforeMount(){
 			this.ConfigApiUrl()
+		},
+		mounted(){
+			this.DetailMembership()
 		},
 		methods: {
 			ConfigApiUrl(){
@@ -25,8 +37,18 @@
 			},
 
 			DetailMembership(){
-				const url = `${this.api_url}/`
-				this.$axios.get()
+				this.loading = true
+				const url = `${this.api_url}/web/paket-membership-user/${this.paket_id}`
+				this.$axios.get(url)
+				.then(({data}) => {
+					this.paket = data.paket
+				})
+				.catch(err => console.error(err))
+				.finally(() => {
+					setTimeout(() => {
+						this.loading = false
+					}, 1500)
+				})
 			}
 		},
 

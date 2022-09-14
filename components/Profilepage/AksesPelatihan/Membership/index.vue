@@ -53,6 +53,8 @@
 						>
 						<mdb-card class="mt-2" :style="`${$device.isMobile ? 'width: 335px; margin-left: -3.5rem;border-radius: 25px' : 'border-radius: 25px'}`">
 							<mdb-container class="mt-2 p-2 rounded-3">
+								<img v-if="lists[listIndex-1].paket_nama === 'Biasa'" :src="require('~/assets/art/medical-professional2.jpg')" class="img-fluid">
+								<img v-else :src="require('~/assets/art/medical-professional.jpg')" class="img-fluid" style="height: 190px;">
 								<h1 class="text-center font-weight-bold" style="color: #013a51;">
 									{{lists[listIndex-1].paket_nama}}
 								</h1>
@@ -64,7 +66,7 @@
 									<ul class="list-unstyled text-left mb-0 small">
 										<li class="my-1 mb-2">
 											
-												Sisa Jumlah Pelatihan : <b-badge pill variant="primary">{{total}}</b-badge>
+											Sisa Jumlah Pelatihan : <b-badge pill variant="primary">{{total}}</b-badge>
 										</li>
 										<li class="my-1 item-check">
 											<i v-if="lists[listIndex-1].status_value === 'Aktif'"

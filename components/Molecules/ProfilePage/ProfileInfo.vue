@@ -22,11 +22,22 @@
     <li class="mb-3">
       <div class="col-md-12 col-xs-12 col-sm-12">
         <strong class="text-primary text-uppercase font-weight-bold"
+        >Nama Lengkap</strong
+        >
+        <br />
+        <p><b>
+          {{profiles.gelar_depan}} {{ profiles.nama }}. {{profiles.gelar_belakang}}
+        </b></p>
+      </div>
+    </li>
+    <li class="mb-3">
+      <div class="col-md-12 col-xs-12 col-sm-12">
+        <strong class="text-primary text-uppercase font-weight-bold"
         >Nira</strong
         >
         <br />
         <p>
-          {{ profiles.no_anggota }}
+          <b>{{ profiles.no_anggota }}</b>
         </p>
       </div>
     </li>
@@ -44,7 +55,7 @@
           <h6 class="font-weight-bold text-capitalize">
             {{ works.jabatan }}
           </h6>
-          <p class="info__context">
+          <p class="info__context font-weight-bold">
             {{ works.nama_perusahaan }} <br />
             {{ works.alamat_perusahaan }}
           </p>
@@ -65,7 +76,7 @@
          <h6 class="font-weight-bold text-capitalize">
           {{ studs.nama_institusi }}
         </h6>
-        <p class="info__context">
+        <p class="info__context font-weight-bold">
           {{ studs.jenjang_value }} - {{ studs.jurusan }} <br />
           {{ $moment(studs.mulai_pend).format("Y") }} -
           {{ $moment(studs.akhir_pend).format("Y") }}
@@ -76,7 +87,7 @@
   <li>
     <div class="col-6 col-md-6 col-xl-6">
       <strong class="text-primary font-weight-bold">Domisili</strong> <br />
-      <p>{{ profiles.kabupaten_name }}, {{ profiles.propinsi_name }}</p>
+      <p class="font-weight-bold">{{ profiles.kabupaten_name }}, {{ profiles.propinsi_name }}</p>
     </div>
   </li>
 </ul>
