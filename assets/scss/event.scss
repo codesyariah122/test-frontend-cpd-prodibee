@@ -17,7 +17,7 @@
 						background-color: transparent!important;
 						color: $color-primary!important;
 						border:1px $color-primary solid;
-
+						font-size: 13px;
 					}
 				}
 				@include card_rounded_desktop;
@@ -115,7 +115,7 @@
 }
 .event__detail{
 	overflow:hidden!important;
-	margin-top: 5.3rem;
+	margin-top: 7.5rem;
 	margin-left: -.1rem;
 	z-index: 9999;
 	height: auto;
@@ -257,7 +257,7 @@
 						background-color: transparent!important;
 						color: $color-primary!important;
 						border:1px $color-primary solid;
-
+						font-size: 13px;
 					}
 				}
 				@include card_rounded_desktop;

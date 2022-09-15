@@ -1,3 +1,22 @@
+<style lang="scss">
+  .card__content-lists{
+    .webinar__content{
+      .badge__category{
+        background-color: transparent!important;
+        color: $color-primary!important;
+        border:1px $color-primary solid;
+        font-size: 13px;
+      }
+      .card{
+        .card-body{
+          .card-title{
+            color: $default-black!important;
+          }
+        }
+      }
+    }
+  }
+</style>
 <template>
   <div class="card__content-lists">
     <mdb-container>
@@ -67,7 +86,7 @@
             >{{ lists[listIndex - 1].kegiatan_desc }}</mdb-card-text
             >
 
-            <h6 class="mt-2 idr__color">
+            <h6 class="mt-2 idr__color" style="color: #048281;">
               {{ $format(lists[listIndex - 1].harga) }}
             </h6>
 

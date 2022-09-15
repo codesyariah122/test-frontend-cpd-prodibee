@@ -51,7 +51,7 @@
 						class="mb-3 card__pelatihan"
 						:key="lists[listIndex - 1].id"
 						>
-						<mdb-card class="mt-2" :style="`${$device.isMobile ? 'width: 335px; margin-left: -3.5rem;border-radius: 25px' : 'border-radius: 25px'}`">
+						<mdb-card class="mt-2" :style="`${$device.isMobile ? 'width: 335px; margin-left: -1.5rem;border-radius: 25px' : 'border-radius: 25px'}`">
 							<mdb-container class="mt-2 p-2 rounded-3">
 								<img v-if="lists[listIndex-1].paket_nama === 'Biasa'" :src="require('~/assets/art/medical-professional2.jpg')" class="img-fluid">
 								<img v-else :src="require('~/assets/art/medical-professional.jpg')" class="img-fluid" style="height: 190px;">
@@ -123,7 +123,7 @@
 									params: {
 										id: lists[listIndex-1].id
 									}
-								})" class="my__btn-primary rounded-pill btn-block mt-5 mb-2">Detail Paket <mdb-icon icon="archive" size="lg"/></mdb-btn>
+								})" class="text-white my__btn-primary rounded-pill btn-block mt-5 mb-2">Detail Paket <mdb-icon icon="archive" size="lg"/></mdb-btn>
 							</mdb-card-body>
 						</mdb-container>
 					</mdb-card>
