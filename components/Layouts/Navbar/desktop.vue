@@ -94,17 +94,15 @@ style="font-size: 31px !important"
   size="md"
   ><mdb-icon icon="shopping-cart" size="md" /></nuxt-link> -->
 
-  <nuxt-link 
-  to="/auth/login"
-  class="ml-2 btn btn-outline-primary btn-md shadow-none"
-  size="md"
-  >Masuk</nuxt-link>
-
-  <nuxt-link
+  <nuxt-link v-if="$route.name === 'auth-login'"
   to="/auth/registrasi"
-  class="my__btn-primary btn btn-md shadow-none"
-  size="md"
+  class="btn  my__btn-primary btn-md shadow-none rounded"
   >Daftar</nuxt-link>
+
+  <nuxt-link v-else
+  to="/auth/login"
+  class="btn my__btn-primary btn-block btn-md shadow-none rounded"
+  >Masuk</nuxt-link>
 </div>
 <!-- end check -->
 </mdb-navbar-toggler>

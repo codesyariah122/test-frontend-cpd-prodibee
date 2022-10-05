@@ -5,8 +5,8 @@
 // Navigation
 @mixin navbar_desktop{
 	text-transform: capitalize;
-	font-size:14px;
-	font-weight: 600;
+	font-size:16px;
+	font-weight: 500;
 	line-height: 21.79px;
 }
 
@@ -266,7 +266,7 @@
 			padding: 5px;
 			margin-top: 10.5rem!important;
 			margin-left: 7.5rem!important;
-			height:34.5vh!important;
+			height:47.5vh!important;
 			background-color: transparent;
 			z-index: -1;
 		}
@@ -310,25 +310,32 @@
 @mixin button_primary {
 	background-color:$primary-button!important;
 	color:$default;
-	font-weight: 600;
+	font-weight: 500;
 	font-size:14px;
-	text-transform: capitalize;
+	// height: 35px;
+	// padding: 5px;
+	letter-spacing: 1.3px;
+	text-transform: uppercase;
 	letter-spacing: 1.3px;
 	&:hover{
-		color: $bg-blue-gray!important;
+		border: 2px solid $color-primary;
+		background-color: transparent!important;
+		color: $color-primary!important;
+		font-weight: 700;
 	}
 }
 
 @mixin button_secondary{
-	background-color:$button-gray!important;
+	background-color:transparent!important;
 	color:$default-black;
-	font-weight: 600;
+	font-weight: 500;
 	font-size:14px;
-	text-transform: capitalize;
+	text-transform: uppercase;
 	letter-spacing: 1.3px;
+	border: 2px solid $color-primary;
 	&:hover{
-		color: $scroll-bar-color!important;
-		background-color: $bg-hover-first;
+		color: $default!important;
+		background-color: $bg-primary!important;
 	}
 }
 
