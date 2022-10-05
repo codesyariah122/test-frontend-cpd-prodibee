@@ -94,7 +94,7 @@
           <mdb-col md="4" class="profile__options-page">
             <mdb-row class="d-flex justify-content-center">
               <mdb-col col="12" sm="6">
-                <nuxt-link style="height: 2.3rem;" class="btn py-2 btn-sm btn-outline-primary" :to="`/profile/edit/${profiles.id}`">
+                <nuxt-link style="height: 2.3rem;" class="btn py-2 btn-sm btn-outline-primary text-white" :to="`/profile/edit/${profiles.id}`">
                   <mdb-icon icon="user-cog" size="sm"  /> Edit Profile
                 </nuxt-link>
               </mdb-col>

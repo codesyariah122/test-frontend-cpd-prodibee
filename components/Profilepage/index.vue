@@ -1,5 +1,5 @@
 <template>
-	<div class="profile__page mb-5">
+	<div class="profile__page mt-5 mb-5">
 		<mdb-container>
 			<mdb-row class="row justify-content-center card__profile-page">
 				<mdb-col lg="12" xs="12" sm="12">
