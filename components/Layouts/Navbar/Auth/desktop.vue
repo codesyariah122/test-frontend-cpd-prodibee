@@ -1,7 +1,7 @@
 <template>
   <div>
     <mdb-navbar
-    :class="`fixed-top ${scrolled ? 'z-depth-2' : 'shadow-none'}`"
+    class="fixed-top"
     light
     color="white"
     expand="large"

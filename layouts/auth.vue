@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<LayoutsNavigation :token="token" :profiles="profiles" :slug="slug" :event_id="event_id" :event_path="event_path"/>
+		<LayoutsAuthNavigation :token="token" :profiles="profiles" :slug="slug" :event_id="event_id" :event_path="event_path"/>
 
 		<Nuxt/>
 
