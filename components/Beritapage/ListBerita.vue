@@ -184,9 +184,9 @@ export default {
       currentPage: 1,
 
       berita__list_style:
-        this.$router.path == "berita" && this.$device.isDeskktop
-          ? "margin-top: 15rem;"
-          : "margin-top: 5rem;",
+        this.$device.isDesktop
+          ? "margin-top: 15rem;margin-bottom: 10rem;"
+          : "margin-top: 7rem;",
     };
   },
 

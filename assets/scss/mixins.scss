@@ -318,16 +318,16 @@
 	text-transform: uppercase;
 	letter-spacing: 1.3px;
 	&:hover{
-		border: 2px solid $color-primary;
-		background-color: transparent!important;
-		color: $color-primary!important;
+		border: 2px solid $default;
+		background-color: $bg-primary!important;
+		color: $default!important;
 		font-weight: 700;
 	}
 }
 
 @mixin button_secondary{
-	background-color:transparent!important;
-	color:$default-black;
+	background-color:$default!important;
+	color:$color-primary!important;
 	font-weight: 500;
 	font-size:14px;
 	text-transform: uppercase;
@@ -355,6 +355,7 @@
 		text-align: center;
 		line-height: 40px!important;
 		font-size: 31px!important;
+		margin-top: 2rem!important;
 	}
 	h2{
 		color: $second-black;
@@ -375,6 +376,16 @@
 		font-weight: 600!important;
 		color:$color!important;
 		line-height: 40.85px!important;
+	}
+
+	h1{
+		color: $color;
+		font-weight: 800!important;
+		width: 85%!important;
+		text-align: center;
+		line-height: 40px!important;
+		font-size: 23px!important;
+		margin-top: 2rem!important;
 	}
 
 	h2{
@@ -551,7 +562,7 @@
 // For header inside container
 @mixin header_inside_list_desktop($color){
 	.header__inside-content{
-		margin-left: 2rem;
+		margin-left: 1.5rem;
 		h5{
 			font-size:25px;
 			font-weight: 600;

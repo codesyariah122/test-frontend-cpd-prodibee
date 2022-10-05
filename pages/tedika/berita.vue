@@ -1,7 +1,6 @@
 <!-- Component base on directory /components/ppkc -->
 <template>
   <div>
-    <!-- List berita page content -->
     <BeritapageListBerita
       :path="path"
       :lists="lists"

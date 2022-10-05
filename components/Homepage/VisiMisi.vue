@@ -3,7 +3,7 @@
     <mdb-container>
       <mdb-row class="justify-content-center visi-misi__header">
         <mdb-col lg="12">
-         
+          <h1>Tentang Kami</h1>
         </mdb-col>
       </mdb-row>
 

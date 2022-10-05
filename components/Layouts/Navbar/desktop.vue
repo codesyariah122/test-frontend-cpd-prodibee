@@ -1,7 +1,7 @@
 <template>
   <div>
     <mdb-navbar
-    :class="`fixed-top ${scrolled ? 'z-depth-2' : 'shadow-none'}`"
+    class="fixed-top"
     light
     color="white"
     expand="large"
@@ -17,7 +17,7 @@
       </nuxt-link>
     </mdb-navbar-brand>
     <mdb-navbar-toggler>
-      <mdb-navbar-nav right style="margin-right: 2rem;">
+      <mdb-navbar-nav right style="margin-right: 1.5rem;">
         <mdb-nav-item active waves-fixed >
           <nuxt-link to="/" tag="li" navLink > Home </nuxt-link>
         </mdb-nav-item>
@@ -127,8 +127,12 @@ export default {
       scrolled: null
     };
   },
+
+  beforeMount(){
+    this.scroll()
+  },
   created(){
-    
+    this.scroll()
   },
   mounted() {
     console.log(this.event_id ? this.event_id : "-"),
@@ -156,7 +160,7 @@ export default {
       window.onscroll = () => {
         let bottomOfWindow = window.pageYOffset
         let fixeNav= document.querySelector('.fixed-top')
-          // console.log(bottomOfWindow)
+          console.log(bottomOfWindow)
           
           if (bottomOfWindow > 100) {
             this.scrolled = true // replace it with your code

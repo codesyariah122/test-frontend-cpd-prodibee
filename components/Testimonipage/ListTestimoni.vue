@@ -2,12 +2,11 @@
   <div>
     <div ref="testimoni_square" class="card__list" :style="berita__list_style">
       <mdb-container>
-        <!-- header -->
         <mdb-row class="row justify-content-center header__ppkc-list-page mb-5">
-          <mdb-col class="text-center" lg="12" xs="12" sm="12">
+           <mdb-col lg="12" xs="12" sm="12">
             <h1>Testimoni</h1>
           </mdb-col>
-          <mdb-col class="mt-3" lg="6" xs="12" sm="12">
+          <mdb-col class="mt-3" lg="12" xs="12" sm="12">
             <span style="color: #666666 !important;">
               Tedika Health Education telah melakukan berbagai macam pelatihan dan telah
               banyak membantu meningkatkan kemampuan tenaga kesehatan
@@ -76,8 +75,8 @@ export default {
       currentPage: 1,
       listToShow: 6,
       berita__list_style:
-        this.$router.path == "/ppkc/berita" && this.$device.isDesktop
-          ? "margin-top: 15rem;"
+         this.$device.isDesktop
+          ? "margin-top: 15rem;margin-bottom: 10rem;"
           : "margin-top: 7rem;",
     };
   },

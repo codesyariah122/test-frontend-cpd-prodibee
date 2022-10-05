@@ -25,7 +25,7 @@
 
             <b-button :style="`${$device.isDesktop ? 'margin-left: -3rem;margin-top: -.3rem;' : ''}`"
               v-if="token.accessToken" block
-              :class="`my__btn-secondary  btn rounded-pill ${$device.isMobile ? 'btn-sm mt-3' : ''}`"
+              :class="`my__btn-secondary  btn rounded-pill ${$device.isMobile ? 'btn-sm mt-3' : 'btn-md'}`"
               @click="$router.push({
                 name: 'profile-name-events',
                 params: {

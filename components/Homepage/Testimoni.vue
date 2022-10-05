@@ -9,7 +9,7 @@
           </mdb-col>
 
           <mdb-col v-if="$device.isDesktop" col="12" md="4" >
-            <nuxt-link to="/tedika/testimoni" class="btn btn-sm my__btn-secondary rounded-pill">Lihat Semua Testimoni <mdb-icon icon="arrow-right" size="lg"/></nuxt-link>
+            <nuxt-link to="/tedika/testimoni" class="btn btn-sm my__btn-secondary rounded-pill shadow-none">Lihat Semua Testimoni <mdb-icon icon="arrow-right" size="lg"/></nuxt-link>
           </mdb-col>
 
           <!-- <mdb-col md="4"></mdb-col> -->

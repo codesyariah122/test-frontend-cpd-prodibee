@@ -4,19 +4,18 @@
       <mdb-container>
         <mdb-row class="row justify-content-center panel__context">
           <mdb-col col="12" md="6" xs="12" sm="12">
-            <h1>Tentang Kami</h1>
             <p class="text-justify">
               Buat akun dan dapatkan akses kelas-kelas terbaik di berbagai bidang kesehatan atau hubungi admin kami untuk konsultasi pilihan kelas terbaik sesuai kompetensi yang Anda miliki.
             </p>
 
             <div class="button">                
               <b-button
-              :class="`my__btn-secondary rounded-pill ${$device.isMobile ? 'btn-sm mt-3 btn-block' : ''} ${token.accessToken ? 'btn-block' : ''}`"
+              :class="`my__btn-primary rounded-pill ${$device.isMobile ? 'btn-sm mt-3 btn-block' : 'btn-block'} ${token.accessToken ? 'btn-block' : ''}`"
               @click="$router.push({ name: 'contact' })"
               ><mdb-icon icon="comments" size="lg"/>&nbsp; Hubungi Kami</b-button>
 
               <b-button v-if="!token.accessToken"
-              :class="`my__btn-primary rounded-pill ${$device.isMobile ? 'btn-block btn-sm' : ''}`"
+              :class="`my__btn-primary rounded-pill ${$device.isMobile ? 'btn-block btn-sm' : 'btn-block mt-3'}`"
               @click="$router.push({ name: 'auth-registrasi' })"
               >Daftar Sekarang&nbsp;<mdb-icon icon="user-plus" size="md"/></b-button
               >
